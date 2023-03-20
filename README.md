@@ -1,24 +1,19 @@
-# README
+# Viewing Party
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### :movie_camera:About this Project:movie_camera:
 
-Things you may want to cover:
+Viewing Party Lite is an application in which users can explore movie options and create a viewing party event for themselves and other users of the application.
 
-* Ruby version
+## Setup
 
-* System dependencies
+- :heavy_check_mark: Fork and Clone the repo
+- :heavy_check_mark: Install gem packages: `bundle install`
+- :heavy_check_mark: Setup the database: `rails db:create`
 
-* Configuration
+## Versions
 
-* Database creation
+- Ruby 3.1.1
 
-* Database initialization
+- Rails 7.0.4
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Example wireframes to follow are found [here](https://backend.turing.edu/module3/projects/viewing_party_lite/wireframes)
