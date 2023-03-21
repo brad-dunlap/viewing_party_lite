@@ -1,0 +1,7 @@
+<h1> Welcome to Viewing Party </h1>
+
+<%= button_to "New User", register_path, method: :get %>
+
+<% @users.each do |user| %>
+  <p><%= link_to "#{user.name}", "/users/#{user.id}", method: :get %></p>
+<% end %>
