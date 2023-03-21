@@ -1,2 +1,14 @@
-<h1>User New</h1>
+<h1>Register as a User!</h1>
+
+<form action="/users" method="post">
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+	<label for="name">Name:</label>
+	<input type="text" name="user[name]" id="name", value="<%=@user.name %>">
+
+	<label for="email">Email:</label>
+	<input type="email" name="user[email]" id="email", value="<%= @user.email %>">
+
+	<input type="submit" value="Register">
+	</form>
 
