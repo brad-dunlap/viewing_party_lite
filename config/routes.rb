@@ -5,4 +5,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  root 'landing#index'
+
+  get '/register', to: 'users#new'
+  post '/register', to: 'users#create'
 end
