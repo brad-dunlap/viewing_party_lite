@@ -68,6 +68,7 @@ group :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'simplecov'
+  gem 'vcr'
   gem 'webmock'
 end
 gem 'figaro'
