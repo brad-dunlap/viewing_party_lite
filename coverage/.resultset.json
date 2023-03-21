@@ -245,6 +245,8 @@
           1,
           null,
           1,
+          1,
+          null,
           null
         ]
       },
@@ -258,6 +260,8 @@
       },
       "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/spec/features/users/new_spec.rb": {
         "lines": [
+          null,
+          null,
           1,
           null,
           1,
@@ -279,6 +283,36 @@
           1,
           null,
           1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/spec/features/users/show_spec.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          2,
+          2,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
           null,
           null,
           null,
@@ -414,7 +448,7 @@
           null,
           1,
           1,
-          2,
+          4,
           null,
           null,
           1,
@@ -441,8 +475,17 @@
           null,
           null
         ]
+      },
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/app/controllers/discover_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1679429447
+    "timestamp": 1679431618
   }
 }

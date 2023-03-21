@@ -23,7 +23,7 @@ RSpec.describe 'Landing Page' do
 
         visit root_path
 
-				expect(page).to have_link('Landing Page', href: '/')
+        expect(page).to have_link('Landing Page', href: '/')
         expect(page).to have_link('User 1', href: "/users/#{user1.id}")
         expect(page).to have_link('User 2', href: "/users/#{user2.id}")
         expect(page).to have_link('User 3', href: "/users/#{user3.id}")
