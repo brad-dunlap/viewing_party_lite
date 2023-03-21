@@ -32,7 +32,7 @@ RSpec.describe 'Register New User' do
 
         click_on 'Register'
 
-        expect(page).to have_current_path("/register")
+        expect(page).to have_current_path('/register')
         expect(page).to have_content('Unable to add user')
       end
     end

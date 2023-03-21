@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-03-21T16:49:28-06:00">2023-03-21T16:49:28-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-03-21T17:07:10-06:00">2023-03-21T17:07:10-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -106,7 +106,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#d7fc2a846f100fe563715e2a0ab7fd972e1a2784" class="src_link" title="app/controllers/movies_controller.rb">app/controllers/movies_controller.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">6</td>
+            <td class="cell--number">7</td>
             <td class="cell--number">3</td>
             <td class="cell--number">3</td>
             <td class="cell--number">0</td>
@@ -293,7 +293,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#785e04c9ae9da1b932d88ee8ba5cb7c794f3c7c2" class="src_link" title="spec/features/users/discover/index_spec.rb">spec/features/users/discover/index_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">33</td>
+            <td class="cell--number">34</td>
             <td class="cell--number">17</td>
             <td class="cell--number">17</td>
             <td class="cell--number">0</td>
@@ -691,7 +691,29 @@
     <ol>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="1">
+          <li class="never" data-hits="" data-linenumber="1">
+            
+            
+
+            
+
+            <code class="ruby"># frozen_string_literal: true</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="2">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="3">
             <span class="hits">1</span>
             
 
@@ -702,7 +724,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="2">
+          <li class="covered" data-hits="1" data-linenumber="4">
             <span class="hits">1</span>
             
 
@@ -713,7 +735,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="3">
+          <li class="covered" data-hits="2" data-linenumber="5">
             <span class="hits">2</span>
             
 
@@ -724,18 +746,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="4">
-            
-            
-
-            
-
-            <code class="ruby">    # @movies = MovieFacade.top_rated_movies</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="5">
+          <li class="never" data-hits="" data-linenumber="6">
             
             
 
@@ -746,7 +757,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="6">
+          <li class="never" data-hits="" data-linenumber="7">
             
             
 
@@ -4240,7 +4251,7 @@
 
             
 
-            <code class="ruby">  resources :users, only: [:show, :create] do</code>
+            <code class="ruby">  resources :users, only: %i[show create] do</code>
           </li>
         </div>
       
@@ -4320,13 +4331,13 @@
     <ol>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="1">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="1">
+            
             
 
             
 
-            <code class="ruby">require &#39;rails_helper&#39;</code>
+            <code class="ruby"># frozen_string_literal: true</code>
           </li>
         </div>
       
@@ -4348,29 +4359,29 @@
 
             
 
-            <code class="ruby">RSpec.describe &#39;Discover Index Page&#39; do</code>
+            <code class="ruby">require &#39;rails_helper&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="4">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  describe &#39;As a user&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="5">
+          <li class="never" data-hits="" data-linenumber="4">
             
             
 
             
 
             <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="5">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">RSpec.describe &#39;Discover Index Page&#39; do</code>
           </li>
         </div>
       
@@ -4381,18 +4392,18 @@
 
             
 
-            <code class="ruby">    before do</code>
+            <code class="ruby">  describe &#39;As a user&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="7">
-            <span class="hits">3</span>
+          <li class="covered" data-hits="1" data-linenumber="7">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      @bob = User.create!(name: &#39;Bob&#39;, email: &#39;bob@bob.com&#39;)</code>
+            <code class="ruby">    before do</code>
           </li>
         </div>
       
@@ -4403,18 +4414,18 @@
 
             
 
-            <code class="ruby">      visit user_discover_index_path(@bob)</code>
+            <code class="ruby">      @bob = User.create!(name: &#39;Bob&#39;, email: &#39;bob@bob.com&#39;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="9">
-            
-            
-
+          <li class="covered" data-hits="3" data-linenumber="9">
+            <span class="hits">3</span>
             
 
-            <code class="ruby">    end</code>
+            
+
+            <code class="ruby">      visit user_discover_index_path(@bob)</code>
           </li>
         </div>
       
@@ -4425,18 +4436,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="11">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="11">
+            
             
 
             
 
-            <code class="ruby">    describe &#39;When I visit the /users/:id/discover path&#39; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4447,7 +4458,7 @@
 
             
 
-            <code class="ruby">      it &#39;I see a button for top rated movies&#39; do</code>
+            <code class="ruby">    describe &#39;When I visit the /users/:id/discover path&#39; do</code>
           </li>
         </div>
       
@@ -4458,12 +4469,23 @@
 
             
 
+            <code class="ruby">      it &#39;I see a button for top rated movies&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="14">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">        expect(page).to have_button(&#39;Top Rated Movies&#39;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="14">
+          <li class="never" data-hits="" data-linenumber="15">
             
             
 
@@ -4474,7 +4496,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="15">
+          <li class="covered" data-hits="1" data-linenumber="16">
             <span class="hits">1</span>
             
 
@@ -4485,35 +4507,24 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="16">
+          <li class="never" data-hits="" data-linenumber="17">
             
             
 
             
 
-            <code class="ruby">        </code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="17">
+          <li class="covered" data-hits="1" data-linenumber="18">
             <span class="hits">1</span>
             
 
             
 
             <code class="ruby">        expect(current_path).to eq(&quot;/users/#{@bob.id}/movies&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="18">
-            
-            
-
-            
-
-            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -4524,18 +4535,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="20">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="20">
+            
             
 
             
 
-            <code class="ruby">      it &quot;I see a text field to enter keyword(s) to search by movie title&quot; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4546,18 +4557,18 @@
 
             
 
-            <code class="ruby">        expect(page).to have_field(:search)</code>
+            <code class="ruby">      it &#39;I see a text field to enter keyword(s) to search by movie title&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="22">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="22">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">      end</code>
+            
+
+            <code class="ruby">        expect(page).to have_field(:search)</code>
           </li>
         </div>
       
@@ -4568,18 +4579,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="24">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="24">
+            
             
 
             
 
-            <code class="ruby">      it &quot;I see a button to search by movie title&quot; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4590,12 +4601,23 @@
 
             
 
-            <code class="ruby">        expect(page).to have_button(&quot;Find Movies&quot;)</code>
+            <code class="ruby">      it &#39;I see a button to search by movie title&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="26">
+          <li class="covered" data-hits="1" data-linenumber="26">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_button(&#39;Find Movies&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="27">
             
             
 
@@ -4606,7 +4628,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="27">
+          <li class="covered" data-hits="1" data-linenumber="28">
             <span class="hits">1</span>
             
 
@@ -4617,7 +4639,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="28">
+          <li class="never" data-hits="" data-linenumber="29">
             
             
 
@@ -4628,7 +4650,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="29">
+          <li class="covered" data-hits="1" data-linenumber="30">
             <span class="hits">1</span>
             
 
@@ -4639,7 +4661,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="30">
+          <li class="never" data-hits="" data-linenumber="31">
             
             
 
@@ -4650,7 +4672,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="31">
+          <li class="never" data-hits="" data-linenumber="32">
             
             
 
@@ -4661,7 +4683,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="32">
+          <li class="never" data-hits="" data-linenumber="33">
             
             
 
@@ -4672,7 +4694,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="33">
+          <li class="never" data-hits="" data-linenumber="34">
             
             
 
@@ -5094,7 +5116,7 @@
 
             
 
-            <code class="ruby">        expect(page).to have_current_path(&quot;/register&quot;)</code>
+            <code class="ruby">        expect(page).to have_current_path(&#39;/register&#39;)</code>
           </li>
         </div>
       
