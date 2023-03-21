@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ViewingParty < ApplicationRecord
   has_many :user_viewing_parties, dependent: :destroy
   has_many :users, through: :user_viewing_parties, dependent: :destroy
