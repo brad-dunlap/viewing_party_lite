@@ -21,6 +21,19 @@ RSpec.describe 'Register New User' do
         click_on 'Register'
 
         expect(page).to have_current_path("/users/#{User.last.id}")
+        expect(page).to have_content('User successfully created')
+      end
+
+      it 'sad path for creates a new user' do
+        visit register_path
+
+        fill_in 'Name', with: 'Jimbob'
+        fill_in 'Email', with: ''
+
+        click_on 'Register'
+
+        expect(page).to have_current_path("/register")
+        expect(page).to have_content('Unable to add user')
       end
     end
   end
