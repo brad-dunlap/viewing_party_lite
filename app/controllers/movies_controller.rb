@@ -8,12 +8,11 @@ class MoviesController < ApplicationController
       @movies = movie_service.top_twenty_movies
     elsif params[:search]
       movie_service = MovieService.new
-      # binding.pry
-      @movies = movie_service.search_results(params: params[:search])
+      @movies = movie_service.search_results(params[:search])
     end
   end
 
   def show
-    
+  
   end
 end

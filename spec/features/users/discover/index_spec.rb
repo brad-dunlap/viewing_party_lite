@@ -34,7 +34,7 @@ RSpec.describe 'Discover Index Page' do
         expect(page).to have_button('Search Movies')
 
         search_results = File.read('spec/fixtures/search_results.json')
-        stub_request(:get, "https://api.themoviedb.org/3/search/movie?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458&query=%7B:params=%3E%22%22%7D").
+        stub_request(:get, "https://api.themoviedb.org/3/search/movie?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458&query=").
         with(
           headers: {
          'Accept'=>'*/*',

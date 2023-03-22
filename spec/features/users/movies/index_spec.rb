@@ -26,6 +26,16 @@ RSpec.describe 'Movies Index Page' do
           }).
           to_return(status: 200, body: search_results, headers: {})
 
+
+          stub_request(:get, "https://api.themoviedb.org/3/search/movie?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458&query=godfather").
+         with(
+           headers: {
+          'Accept'=>'*/*',
+          'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'User-Agent'=>'Faraday v2.7.4'
+           }).
+         to_return(status: 200, body: search_results, headers: {})
+
         @bob = User.create!(name: 'Bob', email: 'bob@bob.com')
 
         visit "/users/#{@bob.id}/discover"
@@ -69,7 +79,7 @@ RSpec.describe 'Movies Index Page' do
       describe "Shows a Discover Movies button" do
         it "I see a button to Discover Movies page" do
           click_button "Top Rated Movies"
-          
+
           expect(page).to have_button("Discover Movies")
 
           click_button "Discover Movies"
