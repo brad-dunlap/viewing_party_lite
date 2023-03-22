@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 class MoviesController < ApplicationController
   def index
     @user = User.find(params[:user_id])
-   
 
     if params[:top_rated]
       movie_service = MovieService.new
@@ -12,7 +13,5 @@ class MoviesController < ApplicationController
     end
   end
 
-  def show
-  
-  end
+  def show; end
 end
