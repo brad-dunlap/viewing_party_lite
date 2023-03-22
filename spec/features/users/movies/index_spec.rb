@@ -32,6 +32,7 @@ RSpec.describe 'Movies Index Page' do
 					expect(page).to have_content('Search Movies')
 
 					expect(page).to have_content('The Godfather')
+					expect(page).to have_content('Vote Average 8.7')
 
 					click_link('The Godfather')
 
