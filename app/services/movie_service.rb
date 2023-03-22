@@ -3,13 +3,12 @@ class MovieService
     response = conn.get('movie/top_rated')
     parsed = JSON.parse(response.body, symbolize_names: true)
     movies = parsed[:results].take(20)
-    movie_info = movies.map do |movie|
+    movies.map do |movie|
       {
         title: movie[:title],
         vote_average: movie[:vote_average]
       }
     end
-    movie_info
   end
 
   private
