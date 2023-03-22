@@ -148,6 +148,8 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.14.2-x86_64-darwin)
       racc (~> 1.4)
+    nokogiri (1.14.2-x86_64-linux)
+      racc (~> 1.4)
     orderly (0.1.1)
       capybara (>= 1.1)
       rspec (>= 2.14)
@@ -268,7 +270,6 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.4.2)
-    vcr (6.1.0)
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -288,6 +289,7 @@ GEM
 PLATFORMS
   x86_64-darwin-21
   x86_64-darwin-22
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap (>= 1.1.0)
@@ -315,7 +317,6 @@ DEPENDENCIES
   stimulus-rails
   turbo-rails
   tzinfo-data
-  vcr
   web-console (>= 3.3.0)
   webmock
 
