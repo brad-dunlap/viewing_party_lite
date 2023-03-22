@@ -10,7 +10,9 @@ RSpec.describe 'Movies Index Page' do
 
         @bob = User.create!(name: 'Bob', email: 'bob@bob.com')
 
-        visit "/users/#{@bob.id}/movies"
+        visit "/users/#{@bob.id}/discover"
+				click_button "Top Rated Movies"
+				save_and_open_page
       end
 
       describe 'and click on either the Top Movies button or the Search button,' do

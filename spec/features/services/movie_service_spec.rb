@@ -20,8 +20,8 @@ describe MovieService do
 
         expect(movies).to be_an(Array)
         expect(movies.count).to eq(20)
-        expect(movies.first).to have_key(:title)
-        expect(movies.first).to have_key(:vote_average)
+        expect(movies.first.title).to eq('The Godfather')
+        expect(movies.first.vote_average).to eq(8.7)
       end
     end
   end

@@ -5,9 +5,10 @@ require 'rails_helper'
 RSpec.describe 'Discover Index Page' do
   describe 'As a user' do
     before do
+			top_movies = File.read('spec/fixtures/top_movies.json')
       stub_request(:get, 'https://api.themoviedb.org/3/movie/top_rated')
         .with(query: hash_including(api_key: ENV['MOVIE_API_KEY']))
-        .to_return(status: 200, body: '{"results":[]}', headers: {})
+        .to_return(status: 200, body: top_movies, headers: {})
 
       @bob = User.create!(name: 'Bob', email: 'bob@bob.com')
 
