@@ -20,7 +20,6 @@ RSpec.describe 'Movies Index Page' do
 
         visit "/users/#{@bob.id}/discover"
 				click_button "Top Rated Movies"
-				save_and_open_page
       end
 
       describe 'and click on either the Top Movies button or the Search button,' do
@@ -38,6 +37,14 @@ RSpec.describe 'Movies Index Page' do
 
 					expect(page).to have_current_path("/users/#{@bob.id}/movies/238")
 				end
+      end
+
+      it "I see a button to Discover Movies page" do
+        expect(page).to have_button("Discover Movies")
+
+        click_button "Discover Movies"
+        
+        expect(current_path).to eq("/users/#{@bob.id}/discover")
       end
     end
   end

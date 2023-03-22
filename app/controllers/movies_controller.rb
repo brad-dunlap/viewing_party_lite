@@ -4,4 +4,8 @@ class MoviesController < ApplicationController
     movie_service = MovieService.new
     @movies = movie_service.top_twenty_movies
   end
+
+  def show
+    
+  end
 end
