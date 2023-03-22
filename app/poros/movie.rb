@@ -1,5 +1,5 @@
 class Movie
-  attr_reader :title, 
+  attr_accessor :title,
               :vote_average
 
   def initialize(data)
