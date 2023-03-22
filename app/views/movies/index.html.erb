@@ -3,10 +3,13 @@
 <%= button_to "Discover Movies", "/users/#{@user.id}/discover", method: :get %>
 
 <ul id="top-rated">
+
 	<h3>Top Rated Movies</h3>
+
 	<% @movies.each do |movie| %>
 		<p><li> <%= link_to movie.title, "/users/#{@user.id}/movies/#{movie.id}" %> Vote Average <%= movie.vote_average %></li> </p>
 	<% end %>
+	
 </ul>
 
 <h3>Search Movies</h3>

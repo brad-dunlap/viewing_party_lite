@@ -5,5 +5,5 @@
 <%= form_with url: "/users/#{@user.id}/movies", method: :get, local: true do |f| %>
   <%= f.label :search, "Discover Movies" %>
   <%= f.text_field :search, value: params[:search] %>
-  <%= f.submit "Find Movies" %>
+  <%= f.submit "Search Movies" %>
 <% end%>
