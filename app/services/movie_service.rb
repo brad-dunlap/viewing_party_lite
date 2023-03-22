@@ -1,21 +1,23 @@
+# frozen_string_literal: true
+
 class MovieService
   def top_twenty_movies
     response = conn.get('movie/top_rated')
     parsed = JSON.parse(response.body, symbolize_names: true)
     movies = parsed[:results].take(20)
-		# x = []
-		x= movies.map do |movie|
-			new_movie = Movie.new(movie)
-			# x << new_movie
-		end
-		# x
-    # movies.each do |movie|
-    #   array << Movie.new({
-    #     title: movie[:title],
-    #     vote_average: movie[:vote_average]
-    #   })
-    # end
-	end
+    movies.map do |movie|
+      new_movie = Movie.new(movie)
+    end
+  end
+
+  def search_results(query)
+    response = conn.get("search/movie?query=#{query}")
+    parsed = JSON.parse(response.body, symbolize_names: true)
+    movies = parsed[:results].take(20)
+    movies.map do |movie|
+      new_movie = Movie.new(movie)
+    end
+  end
 
   private
 

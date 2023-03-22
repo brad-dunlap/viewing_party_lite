@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Movie do
@@ -15,10 +17,10 @@ RSpec.describe Movie do
       .to_return(status: 200, body: top_movies, headers: {})
   end
 
-  let(:movie) { Movie.new({ title: 'The Godfather' }) }
+  let(:movie) { described_class.new({ title: 'The Godfather' }) }
 
   it 'exists' do
-    expect(movie).to be_a(Movie)
+    expect(movie).to be_a(described_class)
     expect(movie.title).to eq('The Godfather')
   end
 end
