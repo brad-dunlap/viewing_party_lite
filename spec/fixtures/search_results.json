@@ -1,0 +1,387 @@
+{
+  "page": 1,
+  "results": [
+      {
+          "adult": false,
+          "backdrop_path": null,
+          "genre_ids": [],
+          "id": 755450,
+          "original_language": "kn",
+          "original_title": "Godfather",
+          "overview": "A 2012 Kannada film",
+          "popularity": 1.041,
+          "poster_path": "/ipV6QtfFnrj80Ar2eH24gjSZHir.jpg",
+          "release_date": "2012-07-27",
+          "title": "Godfather",
+          "video": false,
+          "vote_average": 8.0,
+          "vote_count": 3
+      },
+      {
+          "adult": false,
+          "backdrop_path": "/tmU7GeKVybMWFButWEGl2M4GeiP.jpg",
+          "genre_ids": [
+              18,
+              80
+          ],
+          "id": 238,
+          "original_language": "en",
+          "original_title": "The Godfather",
+          "overview": "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.",
+          "popularity": 117.567,
+          "poster_path": "/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+          "release_date": "1972-03-14",
+          "title": "The Godfather",
+          "video": false,
+          "vote_average": 8.712,
+          "vote_count": 17633
+      },
+      {
+          "adult": false,
+          "backdrop_path": "/e4S1jhTMXJRjhG1S8doUW81DH2i.jpg",
+          "genre_ids": [
+              16,
+              18,
+              35
+          ],
+          "id": 13398,
+          "original_language": "ja",
+          "original_title": "東京ゴッドファーザーズ",
+          "overview": "On Christmas Eve, three homeless people living on the streets of Tokyo discover a newborn baby among the trash and set out to find its parents.",
+          "popularity": 15.963,
+          "poster_path": "/ukhvxpVcBsb1MpRRwiqEIwyKdUX.jpg",
+          "release_date": "2003-12-29",
+          "title": "Tokyo Godfathers",
+          "video": false,
+          "vote_average": 7.879,
+          "vote_count": 990
+      },
+      {
+          "adult": false,
+          "backdrop_path": "/kGzFbGhp99zva6oZODW5atUtnqi.jpg",
+          "genre_ids": [
+              18,
+              80
+          ],
+          "id": 240,
+          "original_language": "en",
+          "original_title": "The Godfather Part II",
+          "overview": "In the continuing saga of the Corleone crime family, a young Vito Corleone grows up in Sicily and in 1910s New York. In the 1950s, Michael Corleone attempts to expand the family business into Las Vegas, Hollywood and Cuba.",
+          "popularity": 69.386,
+          "poster_path": "/hek3koDUyRQk7FIhPXsa6mT2Zc3.jpg",
+          "release_date": "1974-12-20",
+          "title": "The Godfather Part II",
+          "video": false,
+          "vote_average": 8.597,
+          "vote_count": 10685
+      },
+      {
+          "adult": false,
+          "backdrop_path": "/zNnjHLDtV8Ti3aworltaeaLMov4.jpg",
+          "genre_ids": [
+              80,
+              18,
+              53
+          ],
+          "id": 242,
+          "original_language": "en",
+          "original_title": "The Godfather Part III",
+          "overview": "In the midst of trying to legitimize his business dealings in 1979 New York and Italy, aging mafia don, Michael Corleone seeks forgiveness for his sins while taking a young protege under his wing.",
+          "popularity": 60.218,
+          "poster_path": "/lm3pQ2QoQ16pextRsmnUbG2onES.jpg",
+          "release_date": "1990-12-25",
+          "title": "The Godfather Part III",
+          "video": false,
+          "vote_average": 7.4,
+          "vote_count": 5376
+      },
+      {
+          "adult": false,
+          "backdrop_path": null,
+          "genre_ids": [
+              28,
+              80,
+              18
+          ],
+          "id": 79026,
+          "original_language": "en",
+          "original_title": "El padrino",
+          "overview": "In the streets of East Los Angeles, Manny is a formidable drug dealer. Impressed by his extravagant lifestyle and prowess, his young son, Kilo, yearns to follow in his footsteps. Kilo resolves to learn how to prosper in the drug world, and his new life as a dealer begins. In a world where a man wants everything, he may end up with nothing.",
+          "popularity": 10.299,
+          "poster_path": "/10J7EQ8WvMYku8lcZrLewV2Ko4I.jpg",
+          "release_date": "2004-09-27",
+          "title": "El padrino: The Latin Godfather",
+          "video": false,
+          "vote_average": 6.8,
+          "vote_count": 31
+      },
+      {
+          "adult": false,
+          "backdrop_path": "/2KV0E3EwmIxMiF4bR0j5yeryddB.jpg",
+          "genre_ids": [
+              28,
+              18
+          ],
+          "id": 863931,
+          "original_language": "te",
+          "original_title": "గాడ్‌ఫాదర్‌",
+          "overview": "The sudden demise of the celebrated leader PKR leaves the ruling party in a political crisis and shakes up the family. The party has to elect a leader, and more than one player is in contention. Everyone’s intentions are blurred, and loyalties are in question. Brahma is a game changer in this squabble. Who will succeed as the leader and become the CM?",
+          "popularity": 5.451,
+          "poster_path": "/umELvwOThFPvytDvu4oq9BgKcD3.jpg",
+          "release_date": "2022-10-05",
+          "title": "GodFather",
+          "video": false,
+          "vote_average": 5.214,
+          "vote_count": 8
+      },
+      {
+          "adult": false,
+          "backdrop_path": "/jVBGqeD1IUXnc6cIJZleKdX6jOg.jpg",
+          "genre_ids": [
+              28,
+              80,
+              18
+          ],
+          "id": 107641,
+          "original_language": "ja",
+          "original_title": "鬼龍院花子の生涯",
+          "overview": "Onimasa is the egocentric boss of a small yakuza clan on Shikoku Island, whose criminal duties conflict with his self-image as a chivalrous samurai. His struggles with his boss, the Shikoku Godfather, and the tumultuous life of his adopted daughter, Matsue, form the backdrop of this epic tale of justice, obedience, and bloody vengeance.",
+          "popularity": 6.319,
+          "poster_path": "/vGP9WAxhXFTtEmoemhy3ysIwLkT.jpg",
+          "release_date": "1982-06-05",
+          "title": "Onimasa: A Japanese Godfather",
+          "video": false,
+          "vote_average": 6.4,
+          "vote_count": 17
+      },
+      {
+          "adult": false,
+          "backdrop_path": "/fE0Xmb0GaAm1R5NkrMuPezjoGwS.jpg",
+          "genre_ids": [
+              28,
+              35,
+              53
+          ],
+          "id": 70829,
+          "original_language": "ko",
+          "original_title": "The Last Godfather",
+          "overview": "Young-goo the son of mafia boss Don Carini, is too foolish to be part of the mafia elite. One day, Young-goo comes to his father and is trained by Tony V to be his father's successor. A few days later, Young-goo accidentally rescues Nancy, the only daughter of Don Bonfante, the boss of a rival mafia family. But Vinnie, an under-boss of the Bonfante family kidnapped her and fabricates that Young-goo has taken her. Vinnie's behavior provokes an armed conflict between the two families.",
+          "popularity": 3.206,
+          "poster_path": "/zLcKGxKn8qgrGaUZAWZY3Nvi5fr.jpg",
+          "release_date": "2010-12-29",
+          "title": "The Last Godfather",
+          "video": false,
+          "vote_average": 4.7,
+          "vote_count": 13
+      },
+      {
+          "adult": false,
+          "backdrop_path": null,
+          "genre_ids": [
+              99,
+              10402
+          ],
+          "id": 445198,
+          "original_language": "en",
+          "original_title": "Godfathers and Sons",
+          "overview": "Director Marc Levin travels to Chicago with hip-hop legend Chuck D (from Public Enemy) and Marshall Chess (son of Leonard Chess and heir to the legacy of Chess Records) to explore the heyday of the Chicago blues and how they come together to produce an album that seeks to bring veteran blues players along with contemporary hip hop musicians. Along with never before seen footage from Howlin 'Wolf, Muddy Waters and Paul Butterfield Blues Band, they are original performances by Koko Taylor, Otis Rush, Magic Slim, Ike Turner and Sam Lay.",
+          "popularity": 0.871,
+          "poster_path": "/8unJ3T69erkkZsz5aj8Ci89TAdM.jpg",
+          "release_date": "2003-10-02",
+          "title": "Godfathers and Sons",
+          "video": true,
+          "vote_average": 7.5,
+          "vote_count": 1
+      },
+      {
+          "adult": false,
+          "backdrop_path": "/7p0uo17fk1iXREkoRK6gQuCWxKy.jpg",
+          "genre_ids": [
+              53,
+              28,
+              80
+          ],
+          "id": 261181,
+          "original_language": "cn",
+          "original_title": "衝擊天子門生",
+          "overview": "When the boss of a highly profitable Triad family is forced to flee from Hong Kong, rival gangs swoop in to steal any piece of the action they can. York Koo (Andy Lau) becomes the family's acting boss, and must do what he can to handle the difficult situation, with mounting pressure from both the Hong Kong police, and rival families.",
+          "popularity": 2.589,
+          "poster_path": "/vk5qm3l8mV2xckuPV4mSplYhkcj.jpg",
+          "release_date": "1991-09-12",
+          "title": "Hong Kong Godfather",
+          "video": false,
+          "vote_average": 9.0,
+          "vote_count": 1
+      },
+      {
+          "adult": false,
+          "backdrop_path": "/tYjyk4Ij7CwVOn2ovcXdRYffR9k.jpg",
+          "genre_ids": [
+              80,
+              18
+          ],
+          "id": 364150,
+          "original_language": "en",
+          "original_title": "The Godfather Trilogy: 1901-1980",
+          "overview": "The multigenerational saga of the rise and fall of the Corleone crime family. Story is told in chronological order, and numerous scenes that were deleted from each film have been restored.",
+          "popularity": 11.519,
+          "poster_path": "/rwEP0RwpF2mKGRbs7jerdC4aeMB.jpg",
+          "release_date": "1992-10-17",
+          "title": "The Godfather Trilogy: 1901-1980",
+          "video": true,
+          "vote_average": 8.9,
+          "vote_count": 140
+      },
+      {
+          "adult": false,
+          "backdrop_path": "/4XvGw14wPnPCJZbfuLjVO5TMqkx.jpg",
+          "genre_ids": [
+              37
+          ],
+          "id": 29244,
+          "original_language": "en",
+          "original_title": "3 Godfathers",
+          "overview": "Three outlaws on the run discover a dying woman and her baby. They swear to bring the infant to safety across the desert, even at the risk of their own lives.",
+          "popularity": 11.514,
+          "poster_path": "/dsVrYIpK2Rcgsr5QrfjBQWee5JE.jpg",
+          "release_date": "1948-12-31",
+          "title": "3 Godfathers",
+          "video": false,
+          "vote_average": 6.721,
+          "vote_count": 145
+      },
+      {
+          "adult": false,
+          "backdrop_path": "/dfiVswa7PGdyaSDC65QvLqYDeRT.jpg",
+          "genre_ids": [
+              18,
+              28
+          ],
+          "id": 98174,
+          "original_language": "en",
+          "original_title": "Da jiao long",
+          "overview": "When two kung-fu brothers attempt to carry out a dying man's wish, they suddenly find themselves caught in a war between two rival gangs. Chow Yin and Si Fong were out for a walk when the spotted dying burglar Ting Chow Ming. Stumbling out from the bushes, Ting used his last breath to request that Chow and Si take the stolen jewels to his wife. Later, as Chow and Sii attempt to seek out Ting's wife and daughter, gangsters who have been charged with the task of recovering the stolen goods ambush them.",
+          "popularity": 0.994,
+          "poster_path": "/wyIUYyANHvuDUiyEF8I6gv5YejQ.jpg",
+          "release_date": "1974-11-10",
+          "title": "Chinese Godfather",
+          "video": false,
+          "vote_average": 4.0,
+          "vote_count": 2
+      },
+      {
+          "adult": false,
+          "backdrop_path": null,
+          "genre_ids": [
+              35
+          ],
+          "id": 260889,
+          "original_language": "it",
+          "original_title": "L'altra faccia del padrino",
+          "overview": "The Godfather Don Vito Monreale knows, by chance, the Italian-American singer Nick Bouillon. Since the two are alike, Don Vito decided to exploit this similarity in his favour.",
+          "popularity": 2.275,
+          "poster_path": "/yFI6AyrblDaTkJu3iYpZhdSp8wx.jpg",
+          "release_date": "1973-05-03",
+          "title": "The Funny Face of the Godfather",
+          "video": false,
+          "vote_average": 2.0,
+          "vote_count": 1
+      },
+      {
+          "adult": false,
+          "backdrop_path": null,
+          "genre_ids": [
+              35,
+              80,
+              878
+          ],
+          "id": 210204,
+          "original_language": "tr",
+          "original_title": "Süpermenler",
+          "overview": "The German professor tries out his time machine in Turkey. Everybody is after this new invention - Superman Detective Murat, his cheating colleagues Atak and Matrak as well as the mob leader. Agatha, the daughter of the mob leader, steals heroin with her father's man. The mob leader wants to detect their place by the time machine. Murat, Matrak and Atak struggle for the machine, but the machine blows up, the Professor loses his memory. Atak and Matrak kidnap him.",
+          "popularity": 1.96,
+          "poster_path": "/pdSmE2q38qFvI7Ok2Jmzlg65QUs.jpg",
+          "release_date": "1979-01-01",
+          "title": "3 Supermen Against Godfather",
+          "video": false,
+          "vote_average": 4.0,
+          "vote_count": 2
+      },
+      {
+          "adult": false,
+          "backdrop_path": null,
+          "genre_ids": [
+              35,
+              80
+          ],
+          "id": 611802,
+          "original_language": "es",
+          "original_title": "El padrino y sus ahijadas",
+          "overview": "",
+          "popularity": 1.49,
+          "poster_path": "/hP5VNAwDUHFMVoLi5iKnacYGXFs.jpg",
+          "release_date": "1974-01-28",
+          "title": "The Godfather and His Goddaughters",
+          "video": false,
+          "vote_average": 5.0,
+          "vote_count": 1
+      },
+      {
+          "adult": false,
+          "backdrop_path": "/tXX0mG4yHl3Z0KqPfAxjPOBolGV.jpg",
+          "genre_ids": [
+              18,
+              35,
+              10749
+          ],
+          "id": 134474,
+          "original_language": "ml",
+          "original_title": "ഗോഡ്ഫാദർ",
+          "overview": "The story of Anjooran, and his four sons Balaraman, Swaminathan, Premachandran and Ramabhadran are in severe enmity with the Anappara family.",
+          "popularity": 2.748,
+          "poster_path": "/3PjEZGTHG1ZQHbTc8K9AWAdxQWc.jpg",
+          "release_date": "1991-09-15",
+          "title": "Godfather",
+          "video": false,
+          "vote_average": 7.519,
+          "vote_count": 27
+      },
+      {
+          "adult": false,
+          "backdrop_path": null,
+          "genre_ids": [
+              80,
+              28
+          ],
+          "id": 90020,
+          "original_language": "it",
+          "original_title": "La mano lunga del padrino",
+          "overview": "A  treacherous low-level mafioso greedily rips off a shipment of arms from his powerful godfather and tries to sell them to an especially dubious group of Arabs",
+          "popularity": 1.393,
+          "poster_path": "/eRwiJc2cFguRcx3sxNOIh63gCfJ.jpg",
+          "release_date": "1972-08-11",
+          "title": "The Long Arm of the Godfather",
+          "video": false,
+          "vote_average": 0.0,
+          "vote_count": 0
+      },
+      {
+          "adult": false,
+          "backdrop_path": null,
+          "genre_ids": [],
+          "id": 303498,
+          "original_language": "cn",
+          "original_title": "大哥讓位",
+          "overview": "Kwong is a mafia king. When a rival gang steals a rare chinese artifact from him, he blaims his two \"bag-men\" and threatens to \"cut their life\" if they don't recover the treasure.",
+          "popularity": 0.6,
+          "poster_path": null,
+          "release_date": "1991-01-25",
+          "title": "Retreat of the Godfather",
+          "video": false,
+          "vote_average": 7.0,
+          "vote_count": 1
+      }
+  ],
+  "total_pages": 6,
+  "total_results": 105
+}
