@@ -17,6 +17,12 @@ class MovieService
     end
   end
 
+  def movie_details(id)
+    response = conn.get("movie/#{id}")
+    parsed = JSON.parse(response.body, symbolize_names: true)
+    x = Movie.new(parsed)
+  end
+
   private
 
   def conn

@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'rails_helper'
 
 RSpec.describe 'Movies Index Page' do
@@ -8,6 +6,7 @@ RSpec.describe 'Movies Index Page' do
       before do
         top_movies = File.read('spec/fixtures/top_movies.json')
         search_results = File.read('spec/fixtures/search_results.json')
+        movie_details = File.read('spec/fixtures/movie_details.json')
 
         stub_request(:get, 'https://api.themoviedb.org/3/search/movie?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458&query=%7B:params=%3E%22godfather%22%7D')
           .with(
@@ -38,6 +37,15 @@ RSpec.describe 'Movies Index Page' do
             }
           )
           .to_return(status: 200, body: search_results, headers: {})
+
+          stub_request(:get, "https://api.themoviedb.org/3/movie/238?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458").
+         with(
+           headers: {
+          'Accept'=>'*/*',
+          'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'User-Agent'=>'Faraday v2.7.4'
+           }).
+         to_return(status: 200, body: movie_details, headers: {})
 
         @bob = User.create!(name: 'Bob', email: 'bob@bob.com')
 
