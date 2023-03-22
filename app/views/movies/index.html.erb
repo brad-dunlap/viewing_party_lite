@@ -1,9 +1,10 @@
 <h1>Movies Index Page</h1>
 
+<ul id="top-rated">
 <h3>Top Rated Movies</h3>
 <% @movies.each do |movie| %>
-	<%= movie.title%>
+	<p><li> <%= link_to movie.title, "/users/#{@user.id}/movies/#{movie.id}" %></li> </p>
 <% end %>
-
+</ul>
 <h3>Search Movies</h3>
 

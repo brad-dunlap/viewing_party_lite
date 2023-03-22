@@ -4,9 +4,17 @@ RSpec.describe 'Movies Index Page' do
   describe 'As a user' do
     describe 'When I visit the discover movies page' do
       before do
-        stub_request(:get, 'https://api.themoviedb.org/3/movie/top_rated')
-          .with(query: hash_including(api_key: ENV['MOVIE_API_KEY']))
-          .to_return(status: 200, body: '{"results":[]}', headers: {})
+        top_movies = File.read('spec/fixtures/top_movies.json')
+
+        stub_request(:get, 'https://api.themoviedb.org/3/movie/top_rated?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458')
+          .with(
+            headers: {
+              'Accept' => '*/*',
+              'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+              'User-Agent' => 'Faraday v2.7.4'
+            }
+          )
+          .to_return(status: 200, body: top_movies, headers: {})
 
         @bob = User.create!(name: 'Bob', email: 'bob@bob.com')
 
@@ -16,16 +24,19 @@ RSpec.describe 'Movies Index Page' do
       end
 
       describe 'and click on either the Top Movies button or the Search button,' do
-        it 'I should be taken to the movies results page (users/:user_id/movies) where I see: title and vote' do
-          expect(page).to have_content('Top Rated Movies')
-          expect(page).to have_content('Search Movies')
+				it "shows the search results" do	
+				
+					expect(current_path).to eq "/users/#{@bob.id}/movies"
 
-          expect(page).to have_link('The Godfather')
+					expect(page).to have_content('Top Rated Movies')
+					expect(page).to have_content('Search Movies')
 
-          click_link('The Godfather')
+					expect(page).to have_content('The Godfather')
 
-          expect(page).to have_current_path("/users/#{@bob.id}/movies/238")
-        end
+					click_link('The Godfather')
+
+					expect(page).to have_current_path("/users/#{@bob.id}/movies/238")
+				end
       end
     end
   end
