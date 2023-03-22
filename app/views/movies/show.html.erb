@@ -2,16 +2,13 @@
 
 <h2><%= @movie.title %></h2>
 
-<h3>Vote Average: </h3>
-<p><%= @movie.vote_average.round(2) %></h3></p>
+<h3>Vote Average: <%= @movie.vote_average.round(2) %></h3>
 
-<h3>Runtime: </h3> 
-<p><%= "#{@movie.runtime/60}h #{@movie.runtime % 60}min" %></p>
+<h3>Runtime: <%= "#{@movie.runtime/60}h #{@movie.runtime % 60}min" %> </h3>
 
 <h3>Genres:</h3>
 <% @movie.genres.each do |genre| %>
   <p><%= genre[:name] %></p>
 <% end %>
 
-<h3>Overview: </h3>
-<p><%= @movie.overview %></p>
+<h3>Overview: <%= @movie.overview %></h3>
