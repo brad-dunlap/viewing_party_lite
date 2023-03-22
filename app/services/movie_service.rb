@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class MovieService
   def top_twenty_movies
     response = conn.get('movie/top_rated')
