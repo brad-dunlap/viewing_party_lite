@@ -1,5 +1,7 @@
 <h1>Movies Index Page</h1> 
 
+<%= button_to "Discover Movies", "/users/#{@user.id}/discover", method: :get %>
+
 <ul id="top-rated">
 <h3>Top Rated Movies</h3>
 <% @movies.each do |movie| %>
