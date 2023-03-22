@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/kassandraleyba/turing_work/3mod/projects/viewing_party_lite/config/environment.rb": {
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/config/environment.rb": {
         "lines": [
           null,
           null,
@@ -12,7 +12,7 @@
           1
         ]
       },
-      "/Users/kassandraleyba/turing_work/3mod/projects/viewing_party_lite/config/application.rb": {
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/config/application.rb": {
         "lines": [
           null,
           null,
@@ -55,7 +55,7 @@
           null
         ]
       },
-      "/Users/kassandraleyba/turing_work/3mod/projects/viewing_party_lite/config/boot.rb": {
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/config/boot.rb": {
         "lines": [
           null,
           null,
@@ -65,7 +65,7 @@
           1
         ]
       },
-      "/Users/kassandraleyba/turing_work/3mod/projects/viewing_party_lite/config/environments/test.rb": {
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/config/environments/test.rb": {
         "lines": [
           null,
           null,
@@ -131,7 +131,7 @@
           null
         ]
       },
-      "/Users/kassandraleyba/turing_work/3mod/projects/viewing_party_lite/config/initializers/assets.rb": {
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/config/initializers/assets.rb": {
         "lines": [
           null,
           null,
@@ -149,7 +149,7 @@
           null
         ]
       },
-      "/Users/kassandraleyba/turing_work/3mod/projects/viewing_party_lite/config/initializers/content_security_policy.rb": {
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/config/initializers/content_security_policy.rb": {
         "lines": [
           null,
           null,
@@ -160,41 +160,6 @@
           null,
           null,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/kassandraleyba/turing_work/3mod/projects/viewing_party_lite/config/initializers/filter_parameter_logging.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/kassandraleyba/turing_work/3mod/projects/viewing_party_lite/config/initializers/inflections.rb": {
-        "lines": [
           null,
           null,
           null,
@@ -214,7 +179,42 @@
           null
         ]
       },
-      "/Users/kassandraleyba/turing_work/3mod/projects/viewing_party_lite/config/initializers/permissions_policy.rb": {
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/config/initializers/filter_parameter_logging.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/config/initializers/inflections.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/config/initializers/permissions_policy.rb": {
         "lines": [
           null,
           null,
@@ -230,7 +230,7 @@
           null
         ]
       },
-      "/Users/kassandraleyba/turing_work/3mod/projects/viewing_party_lite/config/routes.rb": {
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/config/routes.rb": {
         "lines": [
           1,
           null,
@@ -249,7 +249,7 @@
           null
         ]
       },
-      "/Users/kassandraleyba/turing_work/3mod/projects/viewing_party_lite/app/helpers/application_helper.rb": {
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/app/helpers/application_helper.rb": {
         "lines": [
           null,
           null,
@@ -257,7 +257,7 @@
           null
         ]
       },
-      "/Users/kassandraleyba/turing_work/3mod/projects/viewing_party_lite/spec/features/services/movie_service_spec.rb": {
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/spec/features/services/movie_service_spec.rb": {
         "lines": [
           1,
           null,
@@ -266,41 +266,16 @@
           1,
           1,
           1,
-          1,
-          null,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/kassandraleyba/turing_work/3mod/projects/viewing_party_lite/app/services/movie_service.rb": {
-        "lines": [
-          1,
-          1,
-          0,
-          0,
-          null,
           null,
           1,
-          0,
-          0,
-          null,
           null,
           1,
-          0,
-          0,
           null,
           null,
-          null
-        ]
-      },
-      "/Users/kassandraleyba/turing_work/3mod/projects/viewing_party_lite/spec/features/users/discover/index_spec.rb": {
-        "lines": [
+          null,
+          null,
+          null,
+          null,
           null,
           null,
           1,
@@ -308,28 +283,6 @@
           1,
           1,
           1,
-          3,
-          3,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
           1,
           null,
           null,
@@ -337,21 +290,57 @@
           null
         ]
       },
-      "/Users/kassandraleyba/turing_work/3mod/projects/viewing_party_lite/spec/features/users/movies/index_spec.rb": {
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/app/services/movie_service.rb": {
         "lines": [
           1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          null,
+          20,
+          null,
+          null,
+          null,
+          2,
+          null,
+          null,
+          1,
+          null,
+          1,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/spec/features/users/discover/index_spec.rb": {
+        "lines": [
+          null,
+          null,
+          1,
           null,
           1,
           1,
           1,
           null,
           1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
           1,
           null,
           1,
           null,
           null,
-          1,
+          null,
+          null,
           1,
           1,
           1,
@@ -360,6 +349,52 @@
           null,
           0,
           null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/spec/features/users/movies/index_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          1,
+          1,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
           0,
           null,
           null,
@@ -368,7 +403,7 @@
           null
         ]
       },
-      "/Users/kassandraleyba/turing_work/3mod/projects/viewing_party_lite/spec/features/users/new_spec.rb": {
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/spec/features/users/new_spec.rb": {
         "lines": [
           null,
           null,
@@ -378,41 +413,41 @@
           1,
           1,
           1,
-          1,
+          0,
           null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
+          0,
+          0,
           null,
           null,
           1,
-          1,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          null,
           null,
           1,
-          1,
+          0,
           null,
-          1,
+          0,
+          0,
           null,
-          1,
-          1,
+          0,
+          null,
+          0,
+          0,
           null,
           null,
           null,
           null
         ]
       },
-      "/Users/kassandraleyba/turing_work/3mod/projects/viewing_party_lite/spec/features/users/show_spec.rb": {
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/spec/features/users/show_spec.rb": {
         "lines": [
           null,
           null,
@@ -420,31 +455,31 @@
           null,
           1,
           1,
-          3,
-          3,
+          0,
+          0,
           null,
           null,
           1,
           1,
-          1,
+          0,
           null,
           null,
           1,
-          1,
+          0,
+          null,
+          0,
+          null,
           null,
           1,
-          null,
-          null,
-          1,
-          1,
-          1,
+          0,
+          0,
           null,
           null,
           null,
           null
         ]
       },
-      "/Users/kassandraleyba/turing_work/3mod/projects/viewing_party_lite/spec/models/user_spec.rb": {
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/spec/models/user_spec.rb": {
         "lines": [
           null,
           null,
@@ -452,123 +487,11 @@
           null,
           1,
           1,
-          2,
-          2,
-          null,
-          null,
-          1,
-          2,
-          2,
-          2,
-          null,
-          null
-        ]
-      },
-      "/Users/kassandraleyba/turing_work/3mod/projects/viewing_party_lite/app/models/user.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/kassandraleyba/turing_work/3mod/projects/viewing_party_lite/app/models/application_record.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/kassandraleyba/turing_work/3mod/projects/viewing_party_lite/spec/models/user_viewing_party_spec.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          2,
-          2,
-          null,
-          null
-        ]
-      },
-      "/Users/kassandraleyba/turing_work/3mod/projects/viewing_party_lite/app/models/user_viewing_party.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/kassandraleyba/turing_work/3mod/projects/viewing_party_lite/spec/models/viewing_party_spec.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          2,
-          2,
-          null,
-          null,
-          1,
-          2,
-          2,
-          2,
-          2,
-          2,
-          null,
-          null
-        ]
-      },
-      "/Users/kassandraleyba/turing_work/3mod/projects/viewing_party_lite/app/models/viewing_party.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/kassandraleyba/turing_work/3mod/projects/viewing_party_lite/spec/poros/movie_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          null,
-          1,
           1,
           1,
           null,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           1,
-          null,
-          null,
           1,
           1,
           1,
@@ -576,12 +499,35 @@
           null
         ]
       },
-      "/Users/kassandraleyba/turing_work/3mod/projects/viewing_party_lite/app/poros/movie.rb": {
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/app/models/user.rb": {
         "lines": [
+          null,
+          null,
+          1,
           1,
           1,
           null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/app/models/application_record.rb": {
+        "lines": [
           null,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/spec/models/user_viewing_party_spec.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
           1,
           1,
           1,
@@ -589,7 +535,97 @@
           null
         ]
       },
-      "/Users/kassandraleyba/turing_work/3mod/projects/viewing_party_lite/app/controllers/landing_controller.rb": {
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/app/models/user_viewing_party.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/spec/models/viewing_party_spec.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/app/models/viewing_party.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/spec/poros/movie_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/app/poros/movie.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/app/controllers/landing_controller.rb": {
         "lines": [
           null,
           null,
@@ -600,7 +636,7 @@
           null
         ]
       },
-      "/Users/kassandraleyba/turing_work/3mod/projects/viewing_party_lite/app/controllers/application_controller.rb": {
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/app/controllers/application_controller.rb": {
         "lines": [
           null,
           null,
@@ -608,61 +644,64 @@
           null
         ]
       },
-      "/Users/kassandraleyba/turing_work/3mod/projects/viewing_party_lite/app/controllers/users_controller.rb": {
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/app/controllers/users_controller.rb": {
         "lines": [
           null,
           null,
           1,
           1,
-          5,
-          null,
-          null,
-          1,
-          5,
-          null,
-          null,
-          1,
-          2,
-          2,
-          1,
           1,
           null,
-          1,
           null,
           1,
           1,
           null,
           null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
           null,
           1,
           null,
           1,
-          2,
+          0,
           null,
           null
         ]
       },
-      "/Users/kassandraleyba/turing_work/3mod/projects/viewing_party_lite/app/controllers/discover_controller.rb": {
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/app/controllers/discover_controller.rb": {
         "lines": [
           null,
           null,
           1,
           1,
-          4,
+          1,
           null,
           null
         ]
       },
-      "/Users/kassandraleyba/turing_work/3mod/projects/viewing_party_lite/app/controllers/movies_controller.rb": {
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/app/controllers/movies_controller.rb": {
         "lines": [
           1,
           1,
-          3,
+          1,
+          1,
+          1,
+          1,
           null,
           null
         ]
       }
     },
-    "timestamp": 1679448280
+    "timestamp": 1679463736
   }
 }

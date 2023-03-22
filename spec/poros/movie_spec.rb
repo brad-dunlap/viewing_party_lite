@@ -1,24 +1,25 @@
 require 'rails_helper'
 
 RSpec.describe Movie do
+  before(:each) do
+		
+    top_movies = File.read('spec/fixtures/top_movies.json')
 
-  before :each do
-    json_response = File.read('spec/fixtures/top_movies.json')
-    stub_request(:get, "https://api.themoviedb.org/3/movie/238?api_key=#{ENV['MOVIE_API_KEY']}")
-      .with(
+    stub_request(:get, "https://api.themoviedb.org/3/movie/top_rated?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458").
+      with(
         headers: {
-          'Accept' => '*/*',
-          'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-          'User-Agent' => 'Faraday v2.7.4'
+          'Accept'=>'*/*',
+          'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'User-Agent'=>'Faraday v2.7.4'
         }
-      )
-      .to_return(status: 200, body: json_response, headers: {})
-
-    @movie = Movie.new(JSON.parse(json_response, symbolize_names: true))
+      ).
+      to_return(status: 200, body: top_movies, headers: {})
   end
 
+  let(:movie) { Movie.new({ title: 'The Godfather' }) }
+
   it 'exists' do
-    expect(@movie).to be_a(Movie)
-    expect(@movie.title).to eq('The Godfather')
+    expect(movie).to be_a(Movie)
+    expect(movie.title).to eq('The Godfather')
   end
 end
