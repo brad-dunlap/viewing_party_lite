@@ -29,6 +29,12 @@ class MovieService
     cast = parsed[:cast].take(10)
   end
 
+	def reviews(id)
+    response = conn.get("movie/#{id}/reviews")
+    parsed = JSON.parse(response.body, symbolize_names: true)
+    reviews = parsed[:results]
+  end
+
   private
 
   def conn

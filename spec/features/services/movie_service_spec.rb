@@ -48,5 +48,26 @@ describe MovieService do
         expect(movies.first.vote_average).to eq(8.0)
       end
     end
+
+		describe '#reviews' do
+			it 'returns all the reviews for a movie' do
+				reviews = File.read('spec/fixtures/reviews.json')
+
+				stub_request(:get, "https://api.themoviedb.org/3/movie/550/reviews?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458").
+         with(
+           headers: {
+          'Accept'=>'*/*',
+          'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'User-Agent'=>'Faraday v2.7.4'
+           }).
+         to_return(status: 200, body: reviews, headers: {})
+
+				movies = described_class.new.reviews(550)
+
+				expect(movies).to be_an(Array)
+				expect(movies.count).to eq (8)
+				expect(movies.first[:author]).to eq("elshaarawy")
+			end
+		end
   end
 end
