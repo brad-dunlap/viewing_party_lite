@@ -1,6 +1,7 @@
 <h1>Movie Show Page</h1>
 
 <h2><%= @movie.title %></h2>
+<%= button_to "Create Viewing Party", "/users/#{@user.id}/movies/#{@movie.id}/viewing-party/new", method: :get %>
 
 <h3>Vote Average: <%= @movie.vote_average.round(2) %></h3>
 
@@ -12,8 +13,6 @@
 <% end %>
 
 <h3>Overview: <%= @movie.overview %></h3>
-
-<%= button_to "Create Viewing Party", "/users/#{@user.id}/movies/#{@movie.id}/viewing-party/new", method: :get %>
 
 <h3>Cast:</h3>
 <% @cast.each do |cast| %>
