@@ -73,8 +73,8 @@ RSpec.describe 'Movie Show Page' do
         expect(current_path).to eq("/users/#{@bob.id}/movies/278/viewing-party/new")
       end
 
-      it 'Lists cast members' do
-        expect(page).to have_content('Tim Robbins')
+      it 'Lists cast members and character' do
+        expect(page).to have_content('Tim Robbins as Andy Dufresne')
       end
 
       it 'Counts the total number of reviews' do
