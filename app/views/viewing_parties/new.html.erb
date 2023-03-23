@@ -4,7 +4,7 @@
 
 <%= form_with url: "/users/#{@user.id}/movies/238/viewing-party", method: :post, local: :true do |f| %>
   <%= f.label :duration %>
-  <%= f.number_field :duration, value: @movie.runtime %>
+  <%= f.number_field :duration, value: @movie.runtime, min: @movie.runtime %>
 
   <%= f.label :party_date %>
   <%= f.date_field :party_date, min: Date.today %>
