@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'Movies Index Page' do
@@ -7,77 +9,79 @@ RSpec.describe 'Movies Index Page' do
         top_movies = File.read('spec/fixtures/top_movies.json')
         search_results = File.read('spec/fixtures/search_results.json')
         movie_details = File.read('spec/fixtures/movie_details.json')
-				cast_details = File.read('spec/fixtures/cast_details.json')
-				reviews = File.read('spec/fixtures/reviews.json')
-
+        cast_details = File.read('spec/fixtures/cast_details.json')
+        reviews = File.read('spec/fixtures/reviews.json')
 
         stub_request(:get, 'https://api.themoviedb.org/3/search/movie?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458&query=%7B:params=%3E%22godfather%22%7D')
-        .with(
-          headers: {
-            'Accept' => '*/*',
-            'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-            'User-Agent' => 'Faraday v2.7.4'
-          }
-        )
-        .to_return(status: 200, body: top_movies, headers: {})
-        
+          .with(
+            headers: {
+              'Accept' => '*/*',
+              'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+              'User-Agent' => 'Faraday v2.7.4'
+            }
+          )
+          .to_return(status: 200, body: top_movies, headers: {})
+
         stub_request(:get, 'https://api.themoviedb.org/3/movie/top_rated?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458')
-        .with(
-          headers: {
-            'Accept' => '*/*',
-            'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-            'User-Agent' => 'Faraday v2.7.4'
-          }
-        )
-        .to_return(status: 200, body: search_results, headers: {})
-        
+          .with(
+            headers: {
+              'Accept' => '*/*',
+              'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+              'User-Agent' => 'Faraday v2.7.4'
+            }
+          )
+          .to_return(status: 200, body: search_results, headers: {})
+
         stub_request(:get, 'https://api.themoviedb.org/3/search/movie?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458&query=godfather')
-        .with(
-          headers: {
-            'Accept' => '*/*',
-            'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-            'User-Agent' => 'Faraday v2.7.4'
-          }
-        )
-        .to_return(status: 200, body: search_results, headers: {})
-        
-        stub_request(:get, "https://api.themoviedb.org/3/movie/238?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458").
-        with(
-          headers: {
-            'Accept'=>'*/*',
-            'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-            'User-Agent'=>'Faraday v2.7.4'
-            }).
-            to_return(status: 200, body: movie_details, headers: {})
-            
-				stub_request(:get, "https://api.themoviedb.org/3/movie/238/credits?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458").
-				with(
-					headers: {
-						'Accept'=>'*/*',
-						'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-						'User-Agent'=>'Faraday v2.7.4'
-						}).
-						to_return(status: 200, body: cast_details, headers: {})
-						
-				stub_request(:get, "https://api.themoviedb.org/3/movie/238/reviews?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458").
-				with(
-					headers: {
-					'Accept'=>'*/*',
-					'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-					'User-Agent'=>'Faraday v2.7.4'
-					}).
-				to_return(status: 200, body: reviews, headers: {})
-                
-				@bob = User.create!(name: 'Bob', email: 'bob@bob.com')
-				
-				visit "/users/#{@bob.id}/discover"
-			end
-              
+          .with(
+            headers: {
+              'Accept' => '*/*',
+              'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+              'User-Agent' => 'Faraday v2.7.4'
+            }
+          )
+          .to_return(status: 200, body: search_results, headers: {})
+
+        stub_request(:get, 'https://api.themoviedb.org/3/movie/238?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458')
+          .with(
+            headers: {
+              'Accept' => '*/*',
+              'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+              'User-Agent' => 'Faraday v2.7.4'
+            }
+          )
+          .to_return(status: 200, body: movie_details, headers: {})
+
+        stub_request(:get, 'https://api.themoviedb.org/3/movie/238/credits?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458')
+          .with(
+            headers: {
+              'Accept' => '*/*',
+              'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+              'User-Agent' => 'Faraday v2.7.4'
+            }
+          )
+          .to_return(status: 200, body: cast_details, headers: {})
+
+        stub_request(:get, 'https://api.themoviedb.org/3/movie/238/reviews?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458')
+          .with(
+            headers: {
+              'Accept' => '*/*',
+              'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+              'User-Agent' => 'Faraday v2.7.4'
+            }
+          )
+          .to_return(status: 200, body: reviews, headers: {})
+
+        @bob = User.create!(name: 'Bob', email: 'bob@bob.com')
+
+        visit "/users/#{@bob.id}/discover"
+      end
+
       describe 'and click on the Top Movies button' do
         it 'shows the top 20 search results' do
           click_button 'Top Rated Movies'
 
-          expect(current_path). to eq "/users/#{@bob.id}/movies"
+          expect(current_path).to eq "/users/#{@bob.id}/movies"
 
           expect(page).to have_content('Top Rated Movies')
 
@@ -86,7 +90,7 @@ RSpec.describe 'Movies Index Page' do
 
           click_link('The Godfather')
 
-          expect(current_path). to eq("/users/#{@bob.id}/movies/238")
+          expect(current_path).to eq("/users/#{@bob.id}/movies/238")
         end
       end
 
@@ -95,7 +99,7 @@ RSpec.describe 'Movies Index Page' do
           fill_in :search, with: 'godfather'
           click_button 'Search Movies'
 
-          expect(current_path). to eq "/users/#{@bob.id}/movies"
+          expect(current_path).to eq "/users/#{@bob.id}/movies"
 
           expect(page).to have_content('Search Movies')
 
@@ -104,7 +108,7 @@ RSpec.describe 'Movies Index Page' do
 
           click_link('The Godfather')
 
-          expect(current_path). to eq("/users/#{@bob.id}/movies/238")
+          expect(current_path).to eq("/users/#{@bob.id}/movies/238")
         end
       end
 
@@ -116,7 +120,7 @@ RSpec.describe 'Movies Index Page' do
 
           click_button 'Discover Movies'
 
-          expect(page).to have_current_path("/users/#{@bob.id}/discover")
+          expect(current_path).to eq("/users/#{@bob.id}/discover")
         end
       end
     end

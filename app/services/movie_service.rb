@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MovieService
   def top_twenty_movies
     response = conn.get('movie/top_rated')
@@ -29,7 +31,7 @@ class MovieService
     cast = parsed[:cast].take(10)
   end
 
-	def reviews(id)
+  def reviews(id)
     response = conn.get("movie/#{id}/reviews")
     parsed = JSON.parse(response.body, symbolize_names: true)
     reviews = parsed[:results]

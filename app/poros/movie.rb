@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 class Movie
   attr_accessor :title,
                 :vote_average,
                 :id,
                 :runtime,
                 :genres,
-                :overview, 
+                :overview,
                 :cast
 
   def initialize(data)
