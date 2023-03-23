@@ -1,1 +1,24 @@
 <h1>Viewing Parties New Page</h1>
+
+<%= @movie.title %>
+
+<%= form_with url: "/users/#{@user.id}/movies/238/viewing-party", method: :post, local: :true do |f| %>
+  <%= f.label :duration %>
+  <%= f.number_field :duration, value: @movie.runtime, min: @movie.runtime %>
+
+  <%= f.label :party_date %>
+  <%= f.date_field :party_date, min: Date.today %>
+
+  <%= f.label :party_time %>
+  <%= f.time_field :party_time %>
+
+  <% @users.each do |user| %>
+    <%= f.label user.name %>
+    <%= f.check_box user.id %>
+  <% end %> 
+
+  <%= f.hidden_field :host_id, value: @user.id %>
+  <%= f.hidden_field :movie_id, value: @movie.id %>
+
+  <%= f.submit "Create Party" %>
+<% end %>
