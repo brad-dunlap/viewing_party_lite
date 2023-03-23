@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-03-23T13:28:04-06:00">2023-03-23T13:28:04-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-03-23T13:50:13-06:00">2023-03-23T13:50:13-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         5.35
+         5.51
        </span>
     </span> hits/line
     )
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>358</b> relevant lines,
-    <span class="green"><b>358</b> lines covered</span> and
+    <b>346</b> relevant lines,
+    <span class="green"><b>346</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -209,7 +209,7 @@
             <td class="cell--number">28</td>
             <td class="cell--number">28</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">11.54</td>
+            <td class="cell--number">11.68</td>
             
           </tr>
         
@@ -326,9 +326,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#fe47742d83322ebd41b8440dbde3762b6a0afbd3" class="src_link" title="spec/features/services/movie_service_spec.rb">spec/features/services/movie_service_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">101</td>
-            <td class="cell--number">40</td>
-            <td class="cell--number">40</td>
+            <td class="cell--number">92</td>
+            <td class="cell--number">28</td>
+            <td class="cell--number">28</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -2620,8 +2620,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="11" data-linenumber="29">
-            <span class="hits">11</span>
+          <li class="covered" data-hits="12" data-linenumber="29">
+            <span class="hits">12</span>
             
 
             
@@ -2631,8 +2631,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="11" data-linenumber="30">
-            <span class="hits">11</span>
+          <li class="covered" data-hits="12" data-linenumber="30">
+            <span class="hits">12</span>
             
 
             
@@ -2642,8 +2642,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="11" data-linenumber="31">
-            <span class="hits">11</span>
+          <li class="covered" data-hits="12" data-linenumber="31">
+            <span class="hits">12</span>
             
 
             
@@ -2774,8 +2774,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="42" data-linenumber="43">
-            <span class="hits">42</span>
+          <li class="covered" data-hits="43" data-linenumber="43">
+            <span class="hits">43</span>
             
 
             
@@ -5500,8 +5500,8 @@
     
 
     <div class="t-line-summary">
-      <b>40</b> relevant lines.
-      <span class="green"><b>40</b> lines covered</span> and
+      <b>28</b> relevant lines.
+      <span class="green"><b>28</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -5739,7 +5739,7 @@
 
             
 
-            <code class="ruby">        movies = described_class.new.top_twenty_movies</code>
+            <code class="ruby">        expect(described_class.new.top_twenty_movies).to be_an(Array)</code>
           </li>
         </div>
       
@@ -5750,29 +5750,29 @@
 
             
 
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="23">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="24">
+            
+            
+
+            
+
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="23">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(movies).to be_an(Array)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="24">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(movies.count).to eq(20)</code>
           </li>
         </div>
       
@@ -5783,7 +5783,7 @@
 
             
 
-            <code class="ruby">        expect(movies.first.title).to eq(&#39;The Godfather&#39;)</code>
+            <code class="ruby">    describe &#39;#search_results&#39; do</code>
           </li>
         </div>
       
@@ -5794,67 +5794,12 @@
 
             
 
-            <code class="ruby">        expect(movies.first.vote_average).to eq(8.7)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="27">
-            
-            
-
-            
-
-            <code class="ruby">      end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="28">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="29">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="30">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    describe &#39;#search_results&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="31">
-            <span class="hits">1</span>
-            
-
-            
-
             <code class="ruby">      it &#39;returns 20 search results&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="32">
+          <li class="covered" data-hits="1" data-linenumber="27">
             <span class="hits">1</span>
             
 
@@ -5865,7 +5810,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="33">
+          <li class="covered" data-hits="1" data-linenumber="28">
             <span class="hits">1</span>
             
 
@@ -5876,13 +5821,68 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="34">
+          <li class="never" data-hits="" data-linenumber="29">
             
             
 
             
 
             <code class="ruby">          .with(</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="30">
+            
+            
+
+            
+
+            <code class="ruby">            headers: {</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="31">
+            
+            
+
+            
+
+            <code class="ruby">              &#39;Accept&#39; =&gt; &#39;*/*&#39;,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="32">
+            
+            
+
+            
+
+            <code class="ruby">              &#39;Accept-Encoding&#39; =&gt; &#39;gzip;q=1.0,deflate;q=0.6,identity;q=0.3&#39;,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="33">
+            
+            
+
+            
+
+            <code class="ruby">              &#39;User-Agent&#39; =&gt; &#39;Faraday v2.7.4&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="34">
+            
+            
+
+            
+
+            <code class="ruby">            }</code>
           </li>
         </div>
       
@@ -5893,7 +5893,7 @@
 
             
 
-            <code class="ruby">            headers: {</code>
+            <code class="ruby">          )</code>
           </li>
         </div>
       
@@ -5904,7 +5904,7 @@
 
             
 
-            <code class="ruby">              &#39;Accept&#39; =&gt; &#39;*/*&#39;,</code>
+            <code class="ruby">          .to_return(status: 200, body: search_results, headers: {})</code>
           </li>
         </div>
       
@@ -5915,18 +5915,18 @@
 
             
 
-            <code class="ruby">              &#39;Accept-Encoding&#39; =&gt; &#39;gzip;q=1.0,deflate;q=0.6,identity;q=0.3&#39;,</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="38">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="38">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">              &#39;User-Agent&#39; =&gt; &#39;Faraday v2.7.4&#39;</code>
+            
+
+            <code class="ruby">        expect(described_class.new.search_results(&#39;godfather&#39;)).to be_an(Array)</code>
           </li>
         </div>
       
@@ -5937,7 +5937,7 @@
 
             
 
-            <code class="ruby">            }</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -5948,7 +5948,7 @@
 
             
 
-            <code class="ruby">          )</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -5959,122 +5959,12 @@
 
             
 
-            <code class="ruby">          .to_return(status: 200, body: search_results, headers: {})</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="42">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="43">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        movies = described_class.new.search_results(&#39;godfather&#39;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="44">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="45">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(movies).to be_an(Array)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="46">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(movies.count).to eq(20)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="47">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(movies.first.title).to eq(&#39;Godfather&#39;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="48">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(movies.first.vote_average).to eq(8.0)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="49">
-            
-            
-
-            
-
-            <code class="ruby">      end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="50">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="51">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="52">
+          <li class="covered" data-hits="1" data-linenumber="42">
             <span class="hits">1</span>
             
 
@@ -6085,7 +5975,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="53">
+          <li class="covered" data-hits="1" data-linenumber="43">
             <span class="hits">1</span>
             
 
@@ -6096,7 +5986,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="54">
+          <li class="covered" data-hits="1" data-linenumber="44">
             <span class="hits">1</span>
             
 
@@ -6107,7 +5997,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="55">
+          <li class="covered" data-hits="1" data-linenumber="45">
             <span class="hits">1</span>
             
 
@@ -6118,7 +6008,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="56">
+          <li class="never" data-hits="" data-linenumber="46">
             
             
 
@@ -6129,7 +6019,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="57">
+          <li class="never" data-hits="" data-linenumber="47">
             
             
 
@@ -6140,7 +6030,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="58">
+          <li class="never" data-hits="" data-linenumber="48">
             
             
 
@@ -6151,7 +6041,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="59">
+          <li class="never" data-hits="" data-linenumber="49">
             
             
 
@@ -6162,7 +6052,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="60">
+          <li class="never" data-hits="" data-linenumber="50">
             
             
 
@@ -6173,7 +6063,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="61">
+          <li class="never" data-hits="" data-linenumber="51">
             
             
 
@@ -6184,7 +6074,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="62">
+          <li class="never" data-hits="" data-linenumber="52">
             
             
 
@@ -6195,7 +6085,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="63">
+          <li class="never" data-hits="" data-linenumber="53">
             
             
 
@@ -6206,73 +6096,18 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="64">
+          <li class="covered" data-hits="1" data-linenumber="54">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">        movie = described_class.new.movie_details(278)</code>
+            <code class="ruby">        expect(described_class.new.movie_details(278)).to be_a(Movie)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="65">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="66">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(movie).to be_a(Movie)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="67">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(movie.title).to eq(&quot;The Shawshank Redemption&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="68">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(movie.vote_average.round(1)).to eq(8.7)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="69">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(movie.runtime).to eq(142)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="70">
+          <li class="never" data-hits="" data-linenumber="55">
             
             
 
@@ -6283,7 +6118,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="71">
+          <li class="never" data-hits="" data-linenumber="56">
             
             
 
@@ -6294,7 +6129,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="72">
+          <li class="never" data-hits="" data-linenumber="57">
             
             
 
@@ -6305,7 +6140,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="73">
+          <li class="covered" data-hits="1" data-linenumber="58">
             <span class="hits">1</span>
             
 
@@ -6316,7 +6151,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="74">
+          <li class="covered" data-hits="1" data-linenumber="59">
             <span class="hits">1</span>
             
 
@@ -6327,7 +6162,106 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="75">
+          <li class="covered" data-hits="1" data-linenumber="60">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        cast_details = File.read(&#39;spec/fixtures/cast_details.json&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="61">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        stub_request(:get, &quot;https://api.themoviedb.org/3/movie/278/credits?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458&quot;).</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="62">
+            
+            
+
+            
+
+            <code class="ruby">        with(</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="63">
+            
+            
+
+            
+
+            <code class="ruby">          headers: {</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="64">
+            
+            
+
+            
+
+            <code class="ruby">         &#39;Accept&#39;=&gt;&#39;*/*&#39;,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="65">
+            
+            
+
+            
+
+            <code class="ruby">         &#39;Accept-Encoding&#39;=&gt;&#39;gzip;q=1.0,deflate;q=0.6,identity;q=0.3&#39;,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="66">
+            
+            
+
+            
+
+            <code class="ruby">         &#39;User-Agent&#39;=&gt;&#39;Faraday v2.7.4&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="67">
+            
+            
+
+            
+
+            <code class="ruby">          }).</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="68">
+            
+            
+
+            
+
+            <code class="ruby">        to_return(status: 200, body: cast_details, headers: {})</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="69">
             
             
 
@@ -6338,7 +6272,18 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="76">
+          <li class="covered" data-hits="1" data-linenumber="70">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(described_class.new.cast_details(278)).to be_an(Array)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="71">
             
             
 
@@ -6349,7 +6294,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="77">
+          <li class="never" data-hits="" data-linenumber="72">
             
             
 
@@ -6360,7 +6305,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="78">
+          <li class="never" data-hits="" data-linenumber="73">
             
             
 
@@ -6371,7 +6316,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="79">
+          <li class="covered" data-hits="1" data-linenumber="74">
             <span class="hits">1</span>
             
 
@@ -6382,7 +6327,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="80">
+          <li class="covered" data-hits="1" data-linenumber="75">
             <span class="hits">1</span>
             
 
@@ -6393,7 +6338,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="81">
+          <li class="covered" data-hits="1" data-linenumber="76">
             <span class="hits">1</span>
             
 
@@ -6404,7 +6349,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="82">
+          <li class="never" data-hits="" data-linenumber="77">
             
             
 
@@ -6415,7 +6360,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="83">
+          <li class="covered" data-hits="1" data-linenumber="78">
             <span class="hits">1</span>
             
 
@@ -6426,7 +6371,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="84">
+          <li class="never" data-hits="" data-linenumber="79">
             
             
 
@@ -6437,7 +6382,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="85">
+          <li class="never" data-hits="" data-linenumber="80">
             
             
 
@@ -6448,7 +6393,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="86">
+          <li class="never" data-hits="" data-linenumber="81">
             
             
 
@@ -6459,7 +6404,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="87">
+          <li class="never" data-hits="" data-linenumber="82">
             
             
 
@@ -6470,7 +6415,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="88">
+          <li class="never" data-hits="" data-linenumber="83">
             
             
 
@@ -6481,7 +6426,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="89">
+          <li class="never" data-hits="" data-linenumber="84">
             
             
 
@@ -6492,7 +6437,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="90">
+          <li class="never" data-hits="" data-linenumber="85">
             
             
 
@@ -6503,7 +6448,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="91">
+          <li class="never" data-hits="" data-linenumber="86">
             
             
 
@@ -6514,7 +6459,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="92">
+          <li class="never" data-hits="" data-linenumber="87">
             
             
 
@@ -6525,62 +6470,18 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="93">
+          <li class="covered" data-hits="1" data-linenumber="88">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">        movies = described_class.new.reviews(278)</code>
+            <code class="ruby">        expect(described_class.new.reviews(278)).to be_an(Array)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="94">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="95">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(movies).to be_an(Array)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="96">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(movies.count).to eq(8)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="97">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(movies.first[:author]).to eq(&#39;elshaarawy&#39;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="98">
+          <li class="never" data-hits="" data-linenumber="89">
             
             
 
@@ -6591,7 +6492,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="99">
+          <li class="never" data-hits="" data-linenumber="90">
             
             
 
@@ -6602,7 +6503,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="100">
+          <li class="never" data-hits="" data-linenumber="91">
             
             
 
@@ -6613,7 +6514,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="101">
+          <li class="never" data-hits="" data-linenumber="92">
             
             
 
