@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'Discover Index Page' do
@@ -43,7 +45,7 @@ RSpec.describe 'Discover Index Page' do
 
         click_button 'Search Movies'
 
-        expect(current_path). to eq("/users/#{@bob.id}/movies")
+        expect(current_path).to eq("/users/#{@bob.id}/movies")
       end
     end
   end
