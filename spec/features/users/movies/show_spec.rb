@@ -75,11 +75,10 @@ RSpec.describe 'Movie Show Page' do
 				expect(page).to have_content("Number of Reviews: 8")
 			end
 
-			it 'Shows each review and its author' do
-				save_and_open_page
-				
+			it 'Shows each review and its author' do		
 				expect(page).to have_content("Review by: John Chard")
 				expect(page).to have_content("Some birds aren't meant to be caged.")
+				expect(page).to have_content("Rating: 10.0")
 			end
     end
   end

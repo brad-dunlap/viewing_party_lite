@@ -26,6 +26,7 @@
 
 <% @reviews.each do |review| %>
 	<h4>Review by: <%= review[:author] %></h4>
+	<p>Rating: <%= review[:author_details][:rating] %></p>
 	<p><%= review[:content] %></p>
 	<br>
 	<br>
