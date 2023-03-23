@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class MoviesController < ApplicationController
   def index
     @user = User.find(params[:user_id])
@@ -17,5 +15,6 @@ class MoviesController < ApplicationController
     @user = User.find(params[:user_id])
     movie_service = MovieService.new
     @movie = movie_service.movie_details(params[:id])
+    @cast = movie_service.cast_details(params[:id])
   end
 end

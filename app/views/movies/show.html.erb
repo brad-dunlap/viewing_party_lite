@@ -13,4 +13,9 @@
 
 <h3>Overview: <%= @movie.overview %></h3>
 
-<%= button_to "Create Viewing Party", "users/#{@user.id}/movies/#{@movie.id}/viewing-party/new" %>
+<%= button_to "Create Viewing Party", "/users/#{@user.id}/movies/#{@movie.id}/viewing-party/new" %>
+
+<h3>Cast:</h3>
+<% @cast.each do |cast| %>
+  <p><%= cast[:name] %></p>
+<% end %>

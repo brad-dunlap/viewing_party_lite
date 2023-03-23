@@ -23,6 +23,12 @@ class MovieService
     x = Movie.new(parsed)
   end
 
+  def cast_details(id)
+    response = conn.get("movie/#{id}/credits")
+    parsed = JSON.parse(response.body, symbolize_names: true)
+    cast = parsed[:cast].take(10)
+  end
+
   private
 
   def conn
