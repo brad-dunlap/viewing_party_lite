@@ -69,6 +69,8 @@ RSpec.describe 'Movie Show Page' do
 
       it 'I see a button to create a viewing party for this movie' do
         expect(page).to have_button('Create Viewing Party')
+        click_button "Create Viewing Party"
+        expect(current_path).to eq("/users/#{@bob.id}/movies/278/viewing-party/new")
       end
 
       it 'Lists cast members' do
