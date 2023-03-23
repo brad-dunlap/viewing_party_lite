@@ -49,6 +49,33 @@ describe MovieService do
       end
     end
 
+    describe '#movie_details' do
+      it 'returns the details for a movie' do
+        movie_details = File.read('spec/fixtures/movie_details.json')
+        stub_request(:get, "https://api.themoviedb.org/3/movie/278?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458").
+         with(
+           headers: {
+          'Accept'=>'*/*',
+          'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'User-Agent'=>'Faraday v2.7.4'
+           }).
+         to_return(status: 200, body: movie_details, headers: {})
+
+        movie = described_class.new.movie_details(278)
+
+        expect(movie).to be_a(Movie)
+        expect(movie.title).to eq("The Shawshank Redemption")
+        expect(movie.vote_average.round(1)).to eq(8.7)
+        expect(movie.runtime).to eq(142)
+      end
+    end
+
+    describe '#cast_details' do
+      it 'returns the cast for a movie' do
+
+      end
+    end
+
     describe '#reviews' do
       it 'returns all the reviews for a movie' do
         reviews = File.read('spec/fixtures/reviews.json')

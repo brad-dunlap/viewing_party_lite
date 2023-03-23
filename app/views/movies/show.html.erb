@@ -13,7 +13,7 @@
 
 <h3>Overview: <%= @movie.overview %></h3>
 
-<%= button_to "Create Viewing Party", "/users/#{@user.id}/movies/#{@movie.id}/viewing-party/new" %>
+<%= button_to "Create Viewing Party", "/users/#{@user.id}/movies/#{@movie.id}/viewing-party/new", method: :get %>
 
 <h3>Cast:</h3>
 <% @cast.each do |cast| %>
