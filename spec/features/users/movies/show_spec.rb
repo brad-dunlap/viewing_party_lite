@@ -5,7 +5,8 @@ RSpec.describe 'Movie Show Page' do
 
     before :each do
       movie_details = File.read('spec/fixtures/movie_details.json')
-
+      cast_details = File.read('spec/fixtures/cast_details.json')
+        
       stub_request(:get, "https://api.themoviedb.org/3/movie/278?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458").
          with(
            headers: {
@@ -14,6 +15,15 @@ RSpec.describe 'Movie Show Page' do
           'User-Agent'=>'Faraday v2.7.4'
            }).
          to_return(status: 200, body: movie_details, headers: {})
+
+        stub_request(:get, "https://api.themoviedb.org/3/movie/278/credits?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458").
+         with(
+           headers: {
+          'Accept'=>'*/*',
+          'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'User-Agent'=>'Faraday v2.7.4'
+           }).
+         to_return(status: 200, body: cast_details, headers: {})
 
       @bob = User.create!(name: 'Bob', email: 'bob@bob.com')
 
@@ -43,8 +53,12 @@ RSpec.describe 'Movie Show Page' do
         expect(page).to have_content("Overview: Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope.")
       end
 
-      xit 'I see a button to create a viewing party for this movie' do
+      it 'I see a button to create a viewing party for this movie' do
+        expect(page).to have_button("Create Viewing Party")
+      end
 
+      it 'Lists cast members' do
+        expect(page).to have_content("Tim Robbins")
       end
     end
   end
