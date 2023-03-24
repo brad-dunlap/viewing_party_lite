@@ -2,6 +2,14 @@
 
 <%= button_to "Discover Movies", "/users/#{@user.id}/discover", method: :get %>
 
-<ul id="viewing-parties">
+
   <h2> Viewing Parties </h2>
-</ul>
+	<% @parties_info.each do |party| %>
+
+			<h3><%= party[:title] %></h3>
+			<p>Duration: <%= party[:duration] %> minutes</p>
+			<p>Start Time: <%= party[:time] %></p>
+			<p>Date: <%= party[:date] %></p>
+			<p>Host: <%= party[:host] %></p>
+
+	<% end %>
