@@ -15,9 +15,10 @@ class ViewingPartiesController < ApplicationController
     viewing_party = ViewingParty.new(viewing_party_params)
     if viewing_party.valid?
       if viewing_party.save
+				UserViewingParty.create!(user_id: user.id, viewing_party_id: viewing_party.id)
         attendees_ids = params[:users]
         attendees_ids.each do |id|
-          UserViewingParty.create(user_id: id, viewing_party_id: viewing_party.id)
+          UserViewingParty.create!(user_id: id, viewing_party_id: viewing_party.id)
         end
         redirect_to "/users/#{user.id}"
       end
