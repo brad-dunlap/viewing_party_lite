@@ -7,11 +7,15 @@ RSpec.describe 'User Show Page' do
 		movie_details = File.read('spec/fixtures/movie_details.json')
 
     @bob = User.create!(name: 'Bob', email: 'bob@bob.com')
+    @sally = User.create!(name: 'Sally', email: 'sally@sally.com')
+    @joe = User.create!(name: 'Joe', email: 'joe@joe.com')
 
 		@movie = Movie.new(JSON.parse(movie_details, symbolize_names: true))
 
 		@viewing_party = @bob.viewing_parties.create!(movie_id: @movie.id, host_id: @bob.id, party_date: '2023-06-01', party_time: '12:00',duration: 120)
-		
+		@viewing_party.users << @sally
+    @viewing_party.users << @joe
+
 		stub_request(:get, "https://api.themoviedb.org/3/movie/278?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458").
          with(
            headers: {
@@ -40,10 +44,13 @@ RSpec.describe 'User Show Page' do
     end
 
 		it 'shows the viewing parties the user has created' do
-			expect(page).to have_content("Shawshank Redemption")
+			expect(page).to have_link("Shawshank Redemption")
 			expect(page).to have_content("2023-06-01")
 			expect(page).to have_content("12:00")
 			expect(page).to have_content("120")
+      expect(page).to have_content("I am hosting this party.")
+
+      expect(page).to have_content("Attendees:\nSally\nJoe")
 		end
   end
 end

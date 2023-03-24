@@ -49,6 +49,12 @@ RSpec.describe 'Viewing Party New Page' do
 
         expect(current_path).to eq("/users/#{@bob.id}")
       end
+
+      it 'sad path for create form' do
+        click_button 'Create Party'
+
+        expect(page).to have_content("Invalid Input")
+      end
     end
   end
 end
