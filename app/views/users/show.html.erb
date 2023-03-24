@@ -9,7 +9,7 @@
 	<% @parties_info.each do |party| %>
 		<% if @user.name == party[:host] %>
 			<p><img src=<%= "#{party[:image]}"%>></p>
-			<h3><%= party[:title] %></h3>
+			<h3><%= link_to party[:title], "/users/#{@user.id}/movies/#{party[:movie_id]}" %></h3>
 			<p>Duration: <%= party[:duration] %> minutes</p>
 			<p>Start Time: <%= party[:time] %></p>
 			<p>Date: <%= party[:date] %></p>
@@ -24,7 +24,7 @@
 
 		<% else %>
 			<p><img src=<%= "#{party[:image]}"%>></p>
-			<h3><%= party[:title] %></h3>
+			<h3><%= link_to party[:title], "/users/#{@user.id}/movies/#{party[:movie_id]}" %></h3>
 			<p>Duration: <%= party[:duration] %> minutes</p>
 			<p>Start Time: <%= party[:time] %></p>
 			<p>Date: <%= party[:date] %></p>
