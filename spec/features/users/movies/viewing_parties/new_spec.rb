@@ -46,7 +46,6 @@ RSpec.describe 'Viewing Party New Page' do
 				check @sally.name
 				check @brad.name
         click_button 'Create Party'
-				save_and_open_page
 
         expect(current_path).to eq("/users/#{@bob.id}")
       end
