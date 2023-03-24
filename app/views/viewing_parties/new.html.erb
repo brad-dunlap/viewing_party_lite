@@ -1,22 +1,30 @@
-<h1>Viewing Parties New Page</h1>
+<h1>Create A Viewing Party</h1>
 
-<%= @movie.title %>
+<h3><%= @movie.title %> </h3>
+<br>
+<%= form_with url: "/users/#{@user.id}/movies/#{@movie.id}/viewing-party",
+			 method: :post,
+			 local: :true,
+			 html: { style: "text-align: left;" } do |f| %>
 
-<%= form_with url: "/users/#{@user.id}/movies/#{@movie.id}/viewing-party", method: :post, local: :true do |f| %>
   <%= f.label :duration %>
-  <%= f.number_field :duration, value: @movie.runtime, min: @movie.runtime %>
-
+  <%= f.number_field :duration, value: @movie.runtime, min: @movie.runtime %> min
+	<br>
+	<br>
   <%= f.label :party_date %>
   <%= f.date_field :party_date, min: Date.today %>
-
+	<br>
+	<br>
   <%= f.label :party_time %>
   <%= f.time_field :party_time %>
-
+<br>
+<br>
 	<%= f.label :users, "Invite Other Users" %>
   <%= f.collection_check_boxes(:users, User.all, :id, :name, include_hidden: false) %>
 
 	<%= f.hidden_field :host_id, value: @user.id %>
 	<%= f.hidden_field :movie_id, value: @movie.id %>
-
+	<br>
+	<br>
   <%= f.submit "Create Party" %>
 <% end %>
