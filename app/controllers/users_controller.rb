@@ -3,6 +3,10 @@
 class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
+		@parties = ViewingParty.where(host_id: @user.id)
+		@parties_info = @parties.map do |party| 
+			party.party_details
+		end
   end
 
   def new

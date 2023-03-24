@@ -2,7 +2,7 @@
 
 <%= @movie.title %>
 
-<%= form_with url: "/users/#{@user.id}/movies/238/viewing-party", method: :post, local: :true do |f| %>
+<%= form_with url: "/users/#{@user.id}/movies/#{@movie.id}/viewing-party", method: :post, local: :true do |f| %>
   <%= f.label :duration %>
   <%= f.number_field :duration, value: @movie.runtime, min: @movie.runtime %>
 
