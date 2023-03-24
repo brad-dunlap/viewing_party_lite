@@ -9,7 +9,7 @@
 			<p><img src=<%= "#{party[:image]}"%>></p>
 			<h3><%= link_to party[:title], "/users/#{@user.id}/movies/#{party[:movie_id]}" %></h3>
 			<p>Duration: <%= party[:duration] %> minutes</p>
-			<p>Start Time: <%= party[:time] %></p>
+			<p>Start Time: <%= party[:time].strftime("%I:%M %p") %></p>
 			<p>Date: <%= party[:date] %></p>
 
 			<p>I am hosting this party.</p>
@@ -24,7 +24,7 @@
 			<p><img src=<%= "#{party[:image]}"%>></p>
 			<h3><%= link_to party[:title], "/users/#{@user.id}/movies/#{party[:movie_id]}" %></h3>
 			<p>Duration: <%= party[:duration] %> minutes</p>
-			<p>Start Time: <%= party[:time] %></p>
+			<p>Start Time: <%= party[:time].strftime("%I:%M %p") %></p>
 			<p>Date: <%= party[:date] %></p>
 
 			<p>Host: <%= party[:host] %></p>
