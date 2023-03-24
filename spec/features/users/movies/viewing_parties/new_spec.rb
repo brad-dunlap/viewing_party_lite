@@ -34,8 +34,8 @@ RSpec.describe 'Viewing Party New Page' do
         expect(page).to have_field('Duration')
         expect(page).to have_field(:party_date)
         expect(page).to have_field(:party_time)
-        expect(page).to have_content(@bob.email)
-        expect(page).to have_content(@sally.email)
+        expect(page).to have_content(@bob.name)
+        expect(page).to have_content(@sally.name)
         expect(page).to have_button('Create Party')
       end
 
@@ -43,8 +43,8 @@ RSpec.describe 'Viewing Party New Page' do
         fill_in 'Duration', with: 180
         fill_in :party_date, with: '2021-10-10'
         fill_in :party_time, with: '12:00'
-				check @sally.email
-				check @brad.email
+				check @sally.name
+				check @brad.name
         click_button 'Create Party'
 				save_and_open_page
 
