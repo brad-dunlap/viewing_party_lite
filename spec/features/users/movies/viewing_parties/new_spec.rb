@@ -25,6 +25,7 @@ RSpec.describe 'Viewing Party New Page' do
 
         @bob = User.create!(name: 'Bob', email: 'bob@gmail.com')
         @sally = User.create!(name: 'Sally', email: 'sally@gmail.com')
+				@brad = User.create!(name: 'Brad', email: 'brad@gmail.com')
         
         visit "/users/#{@bob.id}/movies/238/viewing-party/new"
       end
@@ -33,8 +34,8 @@ RSpec.describe 'Viewing Party New Page' do
         expect(page).to have_field('Duration')
         expect(page).to have_field(:party_date)
         expect(page).to have_field(:party_time)
-        expect(page).to have_content(@bob.name)
-        expect(page).to have_content(@sally.name)
+        expect(page).to have_content(@bob.email)
+        expect(page).to have_content(@sally.email)
         expect(page).to have_button('Create Party')
       end
 
@@ -42,14 +43,13 @@ RSpec.describe 'Viewing Party New Page' do
         fill_in 'Duration', with: 180
         fill_in :party_date, with: '2021-10-10'
         fill_in :party_time, with: '12:00'
-        check @sally.name
-
+				check @sally.email
+				check @brad.email
         click_button 'Create Party'
+				save_and_open_page
 
         expect(current_path).to eq("/users/#{@bob.id}")
-				save_and_open_page
       end
-
     end
   end
 end

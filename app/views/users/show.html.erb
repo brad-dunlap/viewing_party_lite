@@ -18,5 +18,7 @@
 			<p>Host: <%= party[:host] %></p>
 		<% end %>
 			
-		<p> Attendees: <%= party[:attendees] %></p>
+		<p> Attendees: <% party[:attendees].each do |atten| %></p>
+			<p><%= atten %></p>
+			<% end %>
 	<% end %>
