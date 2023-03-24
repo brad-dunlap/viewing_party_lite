@@ -14,8 +14,13 @@ class ViewingPartiesController < ApplicationController
     movie = MovieService.new.movie_details(params[:movie_id])
     viewing_party = ViewingParty.new(viewing_party_params)
     if viewing_party.valid?
-      viewing_party.save
-      redirect_to "/users/#{user.id}"
+      if viewing_party.save
+        attendees_ids = params[:users]
+        attendees_ids.each do |id|
+          UserViewingParty.create(user_id: id, viewing_party_id: viewing_party.id)
+        end
+        redirect_to "/users/#{user.id}"
+      end
     else
       flash[:notice] = "Invalid Input"
       redirect_to "/users/#{user.id}/movies/#{movie.id}/viewing-party/new"
