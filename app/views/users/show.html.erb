@@ -1,45 +1,43 @@
 <h1><%= @user.name %>'s Dashboard</h1>
 
-<%= button_to "Discover Movies", "/users/#{@user.id}/discover", method: :get %>
+<div class="header1">
+	<h2> Viewing Parties </h2>
+	<%= button_to "Discover Movies", "/users/#{@user.id}/discover", method: :get, :class => "discover" %>
+</div>
 
-<h2> Viewing Parties </h2>
+<% @parties_info.each do |party| %>
+	<% if @user.name == party[:host] %>
+		<p><img src=<%= "#{party[:image]}"%>></p>
+		<h3><%= link_to party[:title], "/users/#{@user.id}/movies/#{party[:movie_id]}" %></h3>
+		<p>Duration: <%= party[:duration] %> minutes</p>
+		<p>Start Time: <%= party[:time].strftime("%I:%M %p") %></p>
+		<p>Date: <%= party[:date] %></p>
 
-	<% @parties_info.each do |party| %>
-		<% if @user.name == party[:host] %>
-			<p><img src=<%= "#{party[:image]}"%>></p>
-			<h3><%= link_to party[:title], "/users/#{@user.id}/movies/#{party[:movie_id]}" %></h3>
-			<p>Duration: <%= party[:duration] %> minutes</p>
-			<p>Start Time: <%= party[:time].strftime("%I:%M %p") %></p>
-			<p>Date: <%= party[:date] %></p>
+		<p>I am hosting this party.</p>
 
-			<p>I am hosting this party.</p>
-
-			<p> Attendees: <% party[:attendees].each do |atten| %></p>
-				<% if atten != party[:host] %>
-					<p><%= atten %></p>
-				<% end%>
-			<% end %>
-
-		<% else %>
-			<p><img src=<%= "#{party[:image]}"%>></p>
-			<h3><%= link_to party[:title], "/users/#{@user.id}/movies/#{party[:movie_id]}" %></h3>
-			<p>Duration: <%= party[:duration] %> minutes</p>
-			<p>Start Time: <%= party[:time].strftime("%I:%M %p") %></p>
-			<p>Date: <%= party[:date] %></p>
-
-			<p>Host: <%= party[:host] %></p>
-
-			<p>I am attending this party.</p>
-			<p>Attendees:</p>
-			<% party[:attendees].each do |atten| %>
-				<% if atten == @user.name %>
-					<p><b><%= atten %></b></p>
-				<% else %>
-					<p><%= atten %></p>
-				<% end %>
-			<% end %>
-
+		<p> Attendees: <% party[:attendees].each do |atten| %></p>
+			<% if atten != party[:host] %>
+				<p><%= atten %></p>
+			<% end%>
 		<% end %>
 
-	<% end %>
+	<% else %>
+		<p><img src=<%= "#{party[:image]}"%>></p>
+		<h3><%= link_to party[:title], "/users/#{@user.id}/movies/#{party[:movie_id]}" %></h3>
+		<p>Duration: <%= party[:duration] %> minutes</p>
+		<p>Start Time: <%= party[:time].strftime("%I:%M %p") %></p>
+		<p>Date: <%= party[:date] %></p>
 
+		<p>Host: <%= party[:host] %></p>
+
+		<p>I am attending this party.</p>
+		<p>Attendees:</p>
+		<% party[:attendees].each do |atten| %>
+			<% if atten == @user.name %>
+				<p><b><%= atten %></b></p>
+			<% else %>
+				<p><%= atten %></p>
+			<% end %>
+		<% end %>
+	<% end %>
+<% end %>
