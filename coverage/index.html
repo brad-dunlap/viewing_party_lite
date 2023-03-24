@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-03-24T11:40:32-06:00">2023-03-24T11:40:32-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-03-24T12:19:55-06:00">2023-03-24T12:19:55-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         5.27
+         5.26
        </span>
     </span> hits/line
     )
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>410</b> relevant lines,
-    <span class="green"><b>408</b> lines covered</span> and
+    <b>411</b> relevant lines,
+    <span class="green"><b>409</b> lines covered</span> and
     <span class="red"><b>2</b> lines missed. </span>
     (<span class="green">
   99.51%
@@ -127,12 +127,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#c2286202af7b75c3a7805c77ac9aacdd3e09b61e" class="src_link" title="app/controllers/viewing_parties_controller.rb">app/controllers/viewing_parties_controller.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">90.48 %</td>
-            <td class="cell--number">34</td>
-            <td class="cell--number">21</td>
-            <td class="cell--number">19</td>
+            <td class="green strong cell--number t-file__coverage">90.91 %</td>
+            <td class="cell--number">35</td>
+            <td class="cell--number">22</td>
+            <td class="cell--number">20</td>
             <td class="cell--number">2</td>
-            <td class="cell--number">1.24</td>
+            <td class="cell--number">1.23</td>
             
           </tr>
         
@@ -1124,7 +1124,7 @@
 
             
 
-            <code class="ruby">		@parties = ViewingParty.where(host_id: @user.id)</code>
+            <code class="ruby">		@parties = @user.viewing_parties</code>
           </li>
         </div>
       
@@ -1446,7 +1446,7 @@
     <h3>app/controllers/viewing_parties_controller.rb</h3>
     <h4>
       <span class="green">
-  90.48%
+  90.91%
 </span>
 
       lines covered
@@ -1455,8 +1455,8 @@
     
 
     <div class="t-line-summary">
-      <b>21</b> relevant lines.
-      <span class="green"><b>19</b> lines covered</span> and
+      <b>22</b> relevant lines.
+      <span class="green"><b>20</b> lines covered</span> and
       <span class="red"><b>2</b> lines missed.</span>
     </div>
 
@@ -1661,7 +1661,7 @@
 
             
 
-            <code class="ruby">        attendees_ids = params[:users]</code>
+            <code class="ruby">				UserViewingParty.create!(user_id: user.id, viewing_party_id: viewing_party.id)</code>
           </li>
         </div>
       
@@ -1672,23 +1672,34 @@
 
             
 
+            <code class="ruby">        attendees_ids = params[:users]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="20">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">        attendees_ids.each do |id|</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="20">
+          <li class="covered" data-hits="2" data-linenumber="21">
             <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">          UserViewingParty.create(user_id: id, viewing_party_id: viewing_party.id)</code>
+            <code class="ruby">          UserViewingParty.create!(user_id: id, viewing_party_id: viewing_party.id)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="21">
+          <li class="never" data-hits="" data-linenumber="22">
             
             
 
@@ -1699,7 +1710,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="22">
+          <li class="covered" data-hits="1" data-linenumber="23">
             <span class="hits">1</span>
             
 
@@ -1710,7 +1721,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="23">
+          <li class="never" data-hits="" data-linenumber="24">
             
             
 
@@ -1721,7 +1732,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="24">
+          <li class="never" data-hits="" data-linenumber="25">
             
             
 
@@ -1732,7 +1743,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="25">
+          <li class="missed" data-hits="0" data-linenumber="26">
             
             
 
@@ -1743,7 +1754,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="26">
+          <li class="missed" data-hits="0" data-linenumber="27">
             
             
 
@@ -1754,7 +1765,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="27">
+          <li class="never" data-hits="" data-linenumber="28">
             
             
 
@@ -1765,7 +1776,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="28">
+          <li class="never" data-hits="" data-linenumber="29">
             
             
 
@@ -1776,7 +1787,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="29">
+          <li class="never" data-hits="" data-linenumber="30">
             
             
 
@@ -1787,7 +1798,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="30">
+          <li class="covered" data-hits="1" data-linenumber="31">
             <span class="hits">1</span>
             
 
@@ -1798,7 +1809,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="31">
+          <li class="covered" data-hits="1" data-linenumber="32">
             <span class="hits">1</span>
             
 
@@ -1809,7 +1820,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="32">
+          <li class="covered" data-hits="1" data-linenumber="33">
             <span class="hits">1</span>
             
 
@@ -1820,7 +1831,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="33">
+          <li class="never" data-hits="" data-linenumber="34">
             
             
 
@@ -1831,7 +1842,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="34">
+          <li class="never" data-hits="" data-linenumber="35">
             
             
 
