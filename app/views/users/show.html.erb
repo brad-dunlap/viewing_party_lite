@@ -6,10 +6,17 @@
   <h2> Viewing Parties </h2>
 	<% @parties_info.each do |party| %>
 
-			<h3><%= party[:title] %></h3>
-			<p>Duration: <%= party[:duration] %> minutes</p>
-			<p>Start Time: <%= party[:time] %></p>
-			<p>Date: <%= party[:date] %></p>
-			<p>Host: <%= party[:host] %></p>
+		<p><img src=<%= "#{party[:image]}"%>></p>
+		<h3><%= party[:title] %></h3>
+		<p>Duration: <%= party[:duration] %> minutes</p>
+		<p>Start Time: <%= party[:time] %></p>
+		<p>Date: <%= party[:date] %></p>
 
+		<% if @user.name == party[:host] %>
+			<p>I am the host</p>
+		<% else %>
+			<p>Host: <%= party[:host] %></p>
+		<% end %>
+			
+		<p> Attendees: <%= party[:attendees] %></p>
 	<% end %>

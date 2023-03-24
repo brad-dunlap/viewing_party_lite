@@ -12,11 +12,9 @@
   <%= f.label :party_time %>
   <%= f.time_field :party_time %>
 
-  <% @users.each do |user| %>
-    <%= f.label user.name %>
-    <%= f.check_box user.id %>
-  <% end %> 
-
+  <%= f.label :check_boxes, "Invite Other Users" %>
+	<%= f.collection_check_boxes(:attendees, @users, :id, :name) %>
+  
   <%= f.hidden_field :host_id, value: @user.id %>
   <%= f.hidden_field :movie_id, value: @movie.id %>
 

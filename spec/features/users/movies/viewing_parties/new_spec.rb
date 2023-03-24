@@ -42,7 +42,7 @@ RSpec.describe 'Viewing Party New Page' do
         fill_in 'Duration', with: 180
         fill_in :party_date, with: '2021-10-10'
         fill_in :party_time, with: '12:00'
-        check @sally.id
+        check @sally.name
 
         click_button 'Create Party'
 
