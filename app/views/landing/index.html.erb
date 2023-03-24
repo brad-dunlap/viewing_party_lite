@@ -2,6 +2,7 @@
 
 <%= button_to "New User", register_path, method: :get, :class => "discover" %>
 
+<h3>Current Users:</h3>
 <% @users.each do |user| %>
   <p><%= link_to "#{user.name}", "/users/#{user.id}", method: :get, :class => "user" %></p>
 <% end %>
