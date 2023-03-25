@@ -1,30 +1,28 @@
 <h1>Create A Viewing Party</h1>
 
-<h3><%= @movie.title %> </h3>
-<br>
-<%= form_with url: "/users/#{@user.id}/movies/#{@movie.id}/viewing-party",
-			 method: :post,
-			 local: :true,
-			 html: { style: "text-align: left;" } do |f| %>
+<div class="form">
+	<h3><%= @movie.title %> </h3>
 
-  <%= f.label :duration %>
-  <%= f.number_field :duration, value: @movie.runtime, min: @movie.runtime %> min
-	<br>
-	<br>
-  <%= f.label :party_date %>
-  <%= f.date_field :party_date, min: Date.today %>
-	<br>
-	<br>
-  <%= f.label :party_time %>
-  <%= f.time_field :party_time %>
-<br>
-<br>
-	<%= f.label :users, "Invite Other Users" %>
-  <%= f.collection_check_boxes(:users, User.all, :id, :name, include_hidden: false) %>
+	<p><%= form_with url: "/users/#{@user.id}/movies/#{@movie.id}/viewing-party",
+				method: :post,
+				local: :true,
+				html: { style: "text-align: left;" } do |f| %></p>
 
-	<%= f.hidden_field :host_id, value: @user.id %>
-	<%= f.hidden_field :movie_id, value: @movie.id %>
-	<br>
-	<br>
-  <%= f.submit "Create Party" %>
-<% end %>
+		<p><%= f.label :duration %>
+		<%= f.number_field :duration, value: @movie.runtime, min: @movie.runtime %> min</p>
+
+		<p><%= f.label :party_date %>
+		<%= f.date_field :party_date, min: Date.today %></p>
+
+		<p><%= f.label :party_time %>
+		<%= f.time_field :party_time %></p>
+
+		<p><%= f.label :users, "Invite Other Users" %>
+		<%= f.collection_check_boxes(:users, User.all, :id, :name, include_hidden: false) %></p>
+
+		<p><%= f.hidden_field :host_id, value: @user.id %>
+		<%= f.hidden_field :movie_id, value: @movie.id %></p>
+
+		<p><%= f.submit "Create Party", :class => "discover" %></p>
+	<% end %>
+</div>
