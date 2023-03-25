@@ -1,6 +1,6 @@
 <h1>Movies Index Page</h1> 
 
-<%= button_to "Discover Movies", "/users/#{@user.id}/discover", method: :get %>
+<%= button_to "Discover Movies", "/users/#{@user.id}/discover", method: :get, :class => "discover" %>
 
 <ul id="movies">
 	<% if params[:top_rated] %>
