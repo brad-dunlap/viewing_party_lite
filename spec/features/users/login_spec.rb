@@ -22,15 +22,15 @@ RSpec.describe "Logging In" do
     expect(page).to have_content("Welcome, #{user.name}")
   end
 
-  xit "cannot log in with bad credentials" do
+  it "cannot log in with bad credentials" do
     user = User.create!(name: 'Bob', email: 'bob@bob.com', password: "password1")
-  
-    # we don't have to go through root_path and click the "I have an account" link any more
+
     visit login_path
     
-  
-    fill_in :username, with: user.username
+    fill_in :name, with: user.name
+    fill_in :email, with: user.email
     fill_in :password, with: "incorrect password"
+    fill_in :password_confirmation, with: user.password_confirmation
   
     click_on "Log In"
   
