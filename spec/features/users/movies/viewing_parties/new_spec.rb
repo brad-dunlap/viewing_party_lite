@@ -23,9 +23,9 @@ RSpec.describe 'Viewing Party New Page' do
            }).
          to_return(status: 200, body: movie_details, headers: {})
 
-        @bob = User.create!(name: 'Bob', email: 'bob@gmail.com')
-        @sally = User.create!(name: 'Sally', email: 'sally@gmail.com')
-				@brad = User.create!(name: 'Brad', email: 'brad@gmail.com')
+        @bob = User.create!(name: 'Bob', email: 'bob@gmail.com', password: 'test')
+        @sally = User.create!(name: 'Sally', email: 'sally@gmail.com', password: 'test')
+				@brad = User.create!(name: 'Brad', email: 'brad@gmail.com', password: 'test')
         
         visit "/users/#{@bob.id}/movies/238/viewing-party/new"
       end

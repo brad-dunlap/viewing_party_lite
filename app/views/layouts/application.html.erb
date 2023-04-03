@@ -11,14 +11,12 @@
   </head>
 
   <body>
-	<br>
-	<br>
-	<% flash.each do |type, msg| %>
-      <div>
-        <%= msg %>
-      </div>
-    <% end %>
     <%= link_to "Landing Page", root_path %>
+    <br>
+    <br>
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, class: name %>
+    <% end %>
     <%= yield %>
   </body>
 </html>

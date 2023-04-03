@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get '/sign_in', to: 'sessions#new'
-	get '/sign_out', to: 'sessions#destroy'
-	resource :sessions, only: %i[create]
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

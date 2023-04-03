@@ -6,9 +6,9 @@ RSpec.describe 'User Show Page' do
   before do
 		movie_details = File.read('spec/fixtures/movie_details.json')
 
-    @bob = User.create!(name: 'Bob', email: 'bob@bob.com')
-    @sally = User.create!(name: 'Sally', email: 'sally@sally.com')
-    @joe = User.create!(name: 'Joe', email: 'joe@joe.com')
+		@bob = User.create!(name: 'Bob', email: 'bob@bob.com', password: 'test')
+		@sally = User.create!(name: 'Sally', email: 'sally@sally.com', password: 'test')
+    @joe = User.create!(name: 'Joe', email: 'joe@joe.com', password: 'test')
 
 		@movie = Movie.new(JSON.parse(movie_details, symbolize_names: true))
 

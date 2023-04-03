@@ -28,7 +28,7 @@ RSpec.describe ViewingParty, type: :model do
         }).
       to_return(status: 200, body: movie_details, headers: {})
 
-      bob = User.create!(name: 'Bob', email: 'bob@bob.com')
+      bob = User.create!(name: 'Bob', email: 'bob@bob.com', password: 'test')
       movie = Movie.new(JSON.parse(movie_details, symbolize_names: true))
       viewing_party = bob.viewing_parties.create!(movie_id: movie.id, host_id: bob.id, party_date: '2023-06-01', party_time: '12:00',duration: 120)
 

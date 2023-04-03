@@ -17,11 +17,12 @@ RSpec.describe 'Register New User' do
 
         fill_in 'Name', with: 'Jimbob'
         fill_in 'Email', with: 'Jimbob@bobjim.com'
+				fill_in 'Password', with: 'test'
 
         click_on 'Register'
 
         expect(page).to have_current_path("/users/#{User.last.id}")
-        expect(page).to have_content('User successfully created')
+        expect(page).to have_content("Welcome #{User.last.name}!")
       end
 
       it 'sad path for creates a new user' do
