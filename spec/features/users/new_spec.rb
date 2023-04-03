@@ -38,7 +38,7 @@ RSpec.describe 'Register New User' do
         click_on 'Register'
 
         expect(page).to have_current_path('/register')
-        expect(page).to have_content('Unable to add user')
+        expect(page).to have_content("Email can't be blank")
       end
 
       it 'cannot create a new user if password and password confirmation is empty' do
@@ -52,7 +52,7 @@ RSpec.describe 'Register New User' do
         click_on 'Register'
 
         expect(page).to have_current_path('/register')
-        expect(page).to have_content('Unable to add user')
+        expect(page).to have_content("Password can't be blank")
       end
 
       it 'cannot create a new user if password confirmation is empty' do
@@ -66,7 +66,7 @@ RSpec.describe 'Register New User' do
         click_on 'Register'
         
         expect(page).to have_current_path('/register')
-        expect(page).to have_content('Unable to add user')
+        expect(page).to have_content("Password confirmation doesn't match")
       end
 
       it 'cannot create a new user if password is empty' do
@@ -80,7 +80,7 @@ RSpec.describe 'Register New User' do
         click_on 'Register'
 
         expect(page).to have_current_path('/register')
-        expect(page).to have_content('Unable to add user')
+        expect(page).to have_content("Password can't be blank")
       end
 
       it 'cannot create a new user if password and password confirmation dont match' do
@@ -94,7 +94,7 @@ RSpec.describe 'Register New User' do
         click_on 'Register'
 
         expect(page).to have_current_path('/register')
-        expect(page).to have_content('Unable to add user')
+        expect(page).to have_content("Password confirmation doesn't match")
       end
     end
   end

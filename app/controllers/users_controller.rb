@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 
       redirect_to "/users/#{user.id}"
     else
-      flash[:notice] = 'Unable to add user'
+      flash[:alert] = user.errors.full_messages.join(',')
       redirect_to '/register'
     end
   end
