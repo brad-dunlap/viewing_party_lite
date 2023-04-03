@@ -18,8 +18,8 @@ RSpec.describe 'Register New User' do
         fill_in 'Name', with: 'Jimbob'
         fill_in 'Email', with: 'Jimbob@bobjim.com'
         # authentication challenge
-        fill_in 'password', with: 'password'
-        fill_in 'password confirmation', with: 'password confirmation'
+        fill_in 'Password', with: 'password1'
+        fill_in 'Confirmation', with: 'password1'
 
         click_on 'Register'
 
@@ -32,6 +32,64 @@ RSpec.describe 'Register New User' do
 
         fill_in 'Name', with: 'Jimbob'
         fill_in 'Email', with: ''
+        fill_in 'Password', with: 'password1'
+        fill_in 'Confirmation', with: 'password1'
+
+        click_on 'Register'
+
+        expect(page).to have_current_path('/register')
+        expect(page).to have_content('Unable to add user')
+      end
+
+      it 'cannot create a new user if password and password confirmation is empty' do
+        visit register_path
+
+        fill_in 'Name', with: 'Jimbob'
+        fill_in 'Email', with: 'Jimbob@bobjim.com'
+        fill_in 'Password', with: ''
+        fill_in 'Confirmation', with: ''
+
+        click_on 'Register'
+
+        expect(page).to have_current_path('/register')
+        expect(page).to have_content('Unable to add user')
+      end
+
+      it 'cannot create a new user if password confirmation is empty' do
+        visit register_path
+
+        fill_in 'Name', with: 'Jimbob'
+        fill_in 'Email', with: 'Jimbob@bobjim.com'
+        fill_in 'Password', with: 'password1'
+        fill_in 'Confirmation', with: ''
+
+        click_on 'Register'
+        
+        expect(page).to have_current_path('/register')
+        expect(page).to have_content('Unable to add user')
+      end
+
+      it 'cannot create a new user if password is empty' do
+        visit register_path
+
+        fill_in 'Name', with: 'Jimbob'
+        fill_in 'Email', with: 'Jimbob@bobjim.com'
+        fill_in 'Password', with: ''
+        fill_in 'Confirmation', with: 'password1'
+
+        click_on 'Register'
+
+        expect(page).to have_current_path('/register')
+        expect(page).to have_content('Unable to add user')
+      end
+
+      it 'cannot create a new user if password and password confirmation dont match' do
+        visit register_path
+
+        fill_in 'Name', with: 'Jimbob'
+        fill_in 'Email', with: 'Jimbob@bobjim.com'
+        fill_in 'Password', with: 'password1'
+        fill_in 'Confirmation', with: 'password2'
 
         click_on 'Register'
 
