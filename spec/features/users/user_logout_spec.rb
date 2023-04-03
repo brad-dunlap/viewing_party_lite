@@ -29,4 +29,5 @@ RSpec.describe "Logging out" do
 		expect(page).to have_button("I already have an account")
 		expect(page).to_not have_button("Log Out")
   end
+	
 end
