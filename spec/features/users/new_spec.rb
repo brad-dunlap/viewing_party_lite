@@ -35,6 +35,18 @@ RSpec.describe 'Register New User' do
         expect(page).to have_current_path('/register')
         expect(page).to have_content('Unable to add user')
       end
+
+      #authentication challenge
+      it 'can have a password and confirmation field' do
+        visit register_path
+
+        fill_in :user_password, with: password
+
+        click_on 'Register'
+
+        expect(page).to have_current_path("/users/#{User.last.id}")
+        expect(page).to have_content('User successfully created')
+      end
     end
   end
 end
