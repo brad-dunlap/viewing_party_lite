@@ -18,9 +18,9 @@ RSpec.describe 'Register New User' do
         fill_in 'Name', with: 'Jimbob'
         fill_in 'Email', with: 'Jimbob@bobjim.com'
 				fill_in 'Password', with: 'test'
+				fill_in 'Confirm', with: 'test'
 
         click_on 'Register'
-
         expect(page).to have_current_path("/users/#{User.last.id}")
         expect(page).to have_content("Welcome #{User.last.name}!")
       end
@@ -30,11 +30,27 @@ RSpec.describe 'Register New User' do
 
         fill_in 'Name', with: 'Jimbob'
         fill_in 'Email', with: ''
+				fill_in 'Password', with: 'test'
+				fill_in 'Confirm', with: 'test'
 
         click_on 'Register'
 
         expect(page).to have_current_path('/register')
-        expect(page).to have_content('Unable to add user')
+        expect(page).to have_content('Please fill in all required information')
+      end
+
+      it 'passwords do not match' do
+        visit register_path
+
+        fill_in 'Name', with: 'Jimbob'
+        fill_in 'Email', with: 'jimbob@jimbob.com'
+				fill_in 'Password', with: 'jimbob'
+				fill_in 'Confirm', with: 'bobjim.'
+
+        click_on 'Register'
+
+        expect(page).to have_current_path('/register')
+        expect(page).to have_content('Passwords do not match')
       end
     end
   end

@@ -9,9 +9,10 @@ RSpec.describe 'Landing Page' do
         visit root_path
 
         expect(page).to have_content('Welcome to Viewing Party')
-        expect(page).to have_button('New User')
+        expect(page).to have_button('Register as a User')
+        expect(page).to have_button('I already have an account')
 
-        click_on 'New User'
+        click_on 'Register as a User'
 
         expect(page).to have_current_path('/register')
       end
