@@ -24,6 +24,7 @@ class UsersController < ApplicationController
 			flash[:notice] = 'Passwords do not match'
 			redirect_to register_path
 		elsif @user.save
+			session[:user_id] = @user.id
 			flash[:success] = "Welcome #{@user.name}!"
       redirect_to user_path(@user)
 		else
@@ -39,6 +40,7 @@ class UsersController < ApplicationController
 	def login_user
 		@user = User.find_by(email: params[:user][:email])
 		if @user && @user.authenticate(params[:user][:password])
+			session[:user_id] = @user.id
 			flash[:success] = "Welcome back, #{@user.name}!"
 			redirect_to "/users/#{@user.id}"
 		else
@@ -46,6 +48,12 @@ class UsersController < ApplicationController
 			redirect_to login_path
 		end
 	end
+
+	def logout_user
+		User.find(session[:user_id])    
+    session[:user_id] = nil         
+    redirect_to root_path
+  end
 
   private
 
