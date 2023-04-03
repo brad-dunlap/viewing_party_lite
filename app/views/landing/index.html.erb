@@ -2,13 +2,13 @@
 
 <% if current_user %>
   <%= button_to "Log Out", logout_path, method: :delete %>
+<h3>Current Users:</h3>
+<% @users.each do |user| %>
+  <p><%= link_to "#{user.name}", "/users/#{user.id}", method: :get, :class => "user" %></p>
+<% end %>
 <% else %>
 	<%= button_to "Register as a User", register_path, method: :get, :class => "discover" %> 
 	<br>
 	<%= button_to "I already have an account", login_path, method: :get, :class => "discover" %>
 <% end %>
 <br>
-<h3>Current Users:</h3>
-<% @users.each do |user| %>
-  <p><%= link_to "#{user.name}", "/users/#{user.id}", method: :get, :class => "user" %></p>
-<% end %>
