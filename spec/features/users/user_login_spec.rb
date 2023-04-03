@@ -25,5 +25,12 @@ RSpec.describe "Logging In" do
 
     expect(current_path).to eq(login_path)
     expect(page).to have_content("Incorrect email or password")
+
+		fill_in :email, with: "bob@bob.com"
+    fill_in :password, with: @joe.password
+    click_on "Log In"
+
+		expect(current_path).to eq(login_path)
+    expect(page).to have_content("Incorrect email or password")
   end
 end
