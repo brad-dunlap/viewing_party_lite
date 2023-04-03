@@ -3,11 +3,14 @@
 <form action="/users" method="post">
 	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
-	<p><label for="name">Name:</label>
-	<input type="text" name="user[name]" id="name", value="<%=@user.name %>"></p>
+	<label for="name">Name:</label>
+	<input type="text" name="user[name]" id="name", value="<%=@user.name %>">
 
-	<p><label for="email">Email:</label>
-	<input type="email" name="user[email]" id="email", value="<%= @user.email %>"></p>
+	<label for="email">Email:</label>
+	<input type="email" name="user[email]" id="email", value="<%= @user.email %>">
+
+	<label for="password">Password:</label>
+	<input type="password" name="user[password]" id="password">	
 
 	<input type="submit" value="Register", class="discover">
 	</form>
