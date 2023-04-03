@@ -36,7 +36,7 @@ RSpec.describe 'Register New User' do
         click_on 'Register'
 
         expect(page).to have_current_path('/register')
-        expect(page).to have_content('Please fill in all required information')
+        expect(page).to have_content("Email can't be blank")
       end
 
       it 'passwords do not match' do
@@ -50,7 +50,22 @@ RSpec.describe 'Register New User' do
         click_on 'Register'
 
         expect(page).to have_current_path('/register')
-        expect(page).to have_content('Passwords do not match')
+        expect(page).to have_content("Password confirmation doesn't match")
+      end
+
+      it 'is not a unique email' do
+				@Jimbob = User.create(name: "Jimbob", email: "jimbob@jimbob.com", password: "jimbob")
+        visit register_path
+
+        fill_in 'Name', with: 'Jimbob'
+        fill_in 'Email', with: 'jimbob@jimbob.com'
+				fill_in 'Password', with: 'jimbob'
+				fill_in 'Confirm', with: 'jimbob'
+
+        click_on 'Register'
+
+        expect(page).to have_current_path('/register')
+        expect(page).to have_content("Email has already been taken")
       end
     end
   end

@@ -17,20 +17,30 @@ class UsersController < ApplicationController
     user_input = user_params
 		user_input[:email] = user_input[:email].downcase
 		@user = User.new(user_input)
-		if user_params[:name].blank? || user_params[:email].blank? || user_params[:password].blank? || user_params[:password_confirmation].blank?
-			flash[:notice] = 'Please fill in all required information'
-			redirect_to register_path
-    elsif @user.password != @user.password_confirmation 
-			flash[:notice] = 'Passwords do not match'
-			redirect_to register_path
-		elsif @user.save
+		if @user.save
 			session[:user_id] = @user.id
 			flash[:success] = "Welcome #{@user.name}!"
-      redirect_to user_path(@user)
+
+			redirect_to user_path(@user)
 		else
-      flash[:notice] = 'Please use a unique email address'
-      redirect_to register_path
-    end
+			flash[:alert] = @user.errors.full_messages.join(', ')
+			redirect_to register_path
+		end
+				
+		# if user_params[:name].blank? || user_params[:email].blank? || user_params[:password].blank? || user_params[:password_confirmation].blank?
+		# 	flash[:notice] = 'Please fill in all required information'
+		# 	redirect_to register_path
+    # elsif @user.password != @user.password_confirmation 
+		# 	flash[:notice] = 'Passwords do not match'
+		# 	redirect_to register_path
+		# elsif @user.save
+		# 	session[:user_id] = @user.id
+		# 	flash[:success] = "Welcome #{@user.name}!"
+    #   redirect_to user_path(@user)
+		# else
+    #   flash[:notice] = 'Please use a unique email address'
+    #   redirect_to register_path
+    # end
   end
 
 	def login_form

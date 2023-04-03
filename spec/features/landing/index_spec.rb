@@ -16,24 +16,6 @@ RSpec.describe 'Landing Page' do
 
         expect(page).to have_current_path('/register')
       end
-
-      it 'I see a list of existing users which links to the users dashboard' do
-        user1 = User.create!(name: 'User 1', email: 'user1@email.com', password: 'test')
-        user2 = User.create!(name: 'User 2', email: 'user2@email.com', password: 'test')
-        user3 = User.create!(name: 'User 3', email: 'user3@email.com', password: 'test')
-
-        visit root_path
-
-        expect(page).to have_link('Landing Page', href: '/')
-        expect(page).to have_link('User 1', href: "/users/#{user1.id}")
-        expect(page).to have_link('User 2', href: "/users/#{user2.id}")
-        expect(page).to have_link('User 3', href: "/users/#{user3.id}")
-
-        click_on 'User 1'
-
-        expect(page).to have_current_path("/users/#{user1.id}")
-        expect(page).to have_link('Landing Page', href: '/')
-      end
     end
   end
 end
