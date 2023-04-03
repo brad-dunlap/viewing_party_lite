@@ -19,6 +19,7 @@ RSpec.describe 'Register New User' do
         fill_in 'Email', with: 'Jimbob@bobjim.com'
         # authentication challenge
         fill_in 'password', with: 'password'
+        fill_in 'password confirmation', with: 'password confirmation'
 
         click_on 'Register'
 

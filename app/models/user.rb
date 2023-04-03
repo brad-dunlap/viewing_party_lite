@@ -10,4 +10,5 @@ class User < ApplicationRecord
   validates_presence_of :password
 
   has_secure_password
+  validates_confirmation_of :password
 end
