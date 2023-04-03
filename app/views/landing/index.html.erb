@@ -1,6 +1,8 @@
 <h1> Welcome to Viewing Party </h1>
 
 <%= button_to "New User", register_path, method: :get, :class => "discover" %>
+<%= button_to "Log In", login_path, :class => "discover" %>
+<%= link_to "I already have an account", login_path, :class => "discover" %>
 
 <h3>Current Users:</h3>
 <% @users.each do |user| %>
