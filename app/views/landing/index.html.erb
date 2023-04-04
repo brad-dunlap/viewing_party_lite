@@ -1,7 +1,12 @@
 <h1> Welcome to Viewing Party </h1>
 
-<p><%= button_to "New User", register_path, method: :get, :class => "discover" %></p>
-<p><%= link_to "Log In", login_path, :class => "discover" %></p>
+
+<% if session[:user_id].present? == false %>
+  <p><%= button_to "New User", register_path, method: :get, :class => "discover" %></p>
+  <p><%= link_to "Log In", login_path, :class => "discover" %></p>
+<% elsif session[:user_id].present? == true %>
+  <p><%= link_to "Log Out", "/logout", :class => "discover" %></p>
+<% end %>
 
 <h3>Current Users:</h3>
 <% @users.each do |user| %>

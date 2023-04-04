@@ -17,20 +17,20 @@ RSpec.describe 'Landing Page' do
       end
 
       it 'I see a list of existing users which links to the users dashboard' do
-        user1 = User.create!(name: 'User 1', email: 'user1@email.com', password: "password1")
-        user2 = User.create!(name: 'User 2', email: 'user2@email.com', password: "password2")
-        user3 = User.create!(name: 'User 3', email: 'user3@email.com', password: "password3")
+        user4 = User.create!(name: 'User 4', email: 'user4@email.com', password: "password1")
+        user5 = User.create!(name: 'User 5', email: 'user5@email.com', password: "password2")
+        user6 = User.create!(name: 'User 6', email: 'user6@email.com', password: "password3")
 
         visit root_path
 
         expect(page).to have_link('Landing Page', href: '/')
-        expect(page).to have_link('User 1', href: "/users/#{user1.id}")
-        expect(page).to have_link('User 2', href: "/users/#{user2.id}")
-        expect(page).to have_link('User 3', href: "/users/#{user3.id}")
+        expect(page).to have_link('User 4', href: "/users/#{user4.id}")
+        expect(page).to have_link('User 5', href: "/users/#{user5.id}")
+        expect(page).to have_link('User 6', href: "/users/#{user6.id}")
+     
+        click_on 'User 4'
 
-        click_on 'User 1'
-
-        expect(page).to have_current_path("/users/#{user1.id}")
+        expect(page).to have_current_path("/users/#{user4.id}")
         expect(page).to have_link('Landing Page', href: '/')
       end
     end

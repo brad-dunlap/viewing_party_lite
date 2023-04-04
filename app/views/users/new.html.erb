@@ -1,23 +1,5 @@
 <h1>Register as a User!</h1>
 
-<%# <form action="/users" method="post"> %>
-	<%# <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>
-
-	<%# <p><label for="name">Name:</label> %>
-	<%# <input type="text" name="user[name]" id="name", value="<%=@user.name %>
-
-	<%# <p><label for="email">Email:</label> %>
-	<%# <input type="email" name="user[email]" id="email", value="<%= @user.email %>
-
-	<%# <p><label for="password">Password:</label> %>
-	<%# <input type="password" name="user[password]" id="password", value="<%= @user.password %>
-
-	<%# <p><label for="password confirmation">Confirmation:</label> %>
-	<%# <input type="password confirmation" name="user[password confirmation]" id="password confirmation", value="<%= @user.password_confirmation %>
-
-	<%# <input type="submit" value="Register", class="discover"> %>
-<%# </form> %>
-
 <p><%= form_with model: @user do |form| %></p>
 	<p><%= form.label :name, 'Name:' %></p>
   <p><%= form.text_field :name %></p>
