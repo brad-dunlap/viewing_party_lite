@@ -27,6 +27,11 @@ RSpec.describe 'Viewing Party New Page' do
         @sally = User.create!(name: 'Sally', email: 'sally@gmail.com', password: 'test')
 				@brad = User.create!(name: 'Brad', email: 'brad@gmail.com', password: 'test')
         
+				visit login_path
+				
+				fill_in :email, with: @bob.email
+				fill_in :password, with: @bob.password
+				click_on "Log In"
         visit "/users/#{@bob.id}/movies/238/viewing-party/new"
       end
 

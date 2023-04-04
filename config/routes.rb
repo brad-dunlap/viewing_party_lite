@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 	get '/logout', to: 'users#logout_user'
 	delete '/logout', to: 'users#logout_user'
 
+	get '/discover', to: 'discover#show'
+
   resources :users, only: %i[show create] do
     resources :discover, only: [:index]
     resources :movies, only: %i[index show] do

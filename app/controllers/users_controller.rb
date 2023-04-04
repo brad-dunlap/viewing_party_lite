@@ -26,21 +26,6 @@ class UsersController < ApplicationController
 			flash[:alert] = @user.errors.full_messages.join(', ')
 			redirect_to register_path
 		end
-				
-		# if user_params[:name].blank? || user_params[:email].blank? || user_params[:password].blank? || user_params[:password_confirmation].blank?
-		# 	flash[:notice] = 'Please fill in all required information'
-		# 	redirect_to register_path
-    # elsif @user.password != @user.password_confirmation 
-		# 	flash[:notice] = 'Passwords do not match'
-		# 	redirect_to register_path
-		# elsif @user.save
-		# 	session[:user_id] = @user.id
-		# 	flash[:success] = "Welcome #{@user.name}!"
-    #   redirect_to user_path(@user)
-		# else
-    #   flash[:notice] = 'Please use a unique email address'
-    #   redirect_to register_path
-    # end
   end
 
 	def login_form
@@ -61,10 +46,10 @@ class UsersController < ApplicationController
 
 	def logout_user
 		User.find(session[:user_id])    
-    session[:user_id] = nil         
+    session[:user_id] = nil 
     redirect_to root_path
   end
-
+	
   private
 
   def user_params

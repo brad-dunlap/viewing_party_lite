@@ -25,7 +25,10 @@ RSpec.describe 'User Show Page' do
            }).
          to_return(status: 200, body: movie_details, headers: {})
 	
-	visit user_path(@bob)
+	visit login_path
+	fill_in :email, with: @bob.email
+	fill_in :password, with: @bob.password
+	click_on "Log In"
   end
 
   describe 'As a visitor when I visit a user show page' do

@@ -23,7 +23,10 @@ RSpec.describe "Logging out" do
 		expect(current_path).to eq("/users/#{@joe.id}")	
 		
 		visit root_path
-		click_on "Log Out"
+
+		within "#logout" do
+			click_on "Log Out"
+		end
 	
 		expect(current_path).to eq(root_path)
 		expect(page).to have_button("I already have an account")
