@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 class UsersController < ApplicationController
-	before_action :require_user, only: [:show]
+	
   def show
-    @user = User.find(params[:id])
+    @user = current_user
 		@parties = @user.viewing_parties
 		@parties_info = @parties.map do |party| 
 			party.party_details
@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 			session[:user_id] = @user.id
 			flash[:success] = "Welcome #{@user.name}!"
 
-			redirect_to user_path(@user)
+			redirect_to '/dashboard'
 		else
 			flash[:alert] = @user.errors.full_messages.join(', ')
 			redirect_to register_path
@@ -37,7 +37,7 @@ class UsersController < ApplicationController
 		if @user && @user.authenticate(params[:user][:password])
 			session[:user_id] = @user.id
 			flash[:success] = "Welcome back, #{@user.name}!"
-			redirect_to "/users/#{@user.id}"
+			redirect_to '/dashboard'
 		else
 			flash[:notice] = 'Incorrect email or password'
 			redirect_to login_path

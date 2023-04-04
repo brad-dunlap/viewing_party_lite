@@ -41,7 +41,12 @@ RSpec.describe 'Movie Show Page' do
 
       @bob = User.create!(name: 'Bob', email: 'bob@bob.com', password: 'testing')
 
-      visit "/users/#{@bob.id}/movies/278"
+			visit '/login'
+			fill_in 'email', with: @bob.email
+			fill_in 'password', with: @bob.password
+			click_on 'Log In'
+
+      visit "/dashboard/movies/278"
     end
 
     describe 'When I visit a movie show page' do
@@ -70,7 +75,7 @@ RSpec.describe 'Movie Show Page' do
       it 'I see a button to create a viewing party for this movie' do
         expect(page).to have_button('Create Viewing Party')
         click_button "Create Viewing Party"
-        expect(current_path).to eq("/users/#{@bob.id}/movies/278/viewing-party/new")
+        expect(current_path).to eq("/dashboard/movies/278/viewing-party/new")
       end
 
       it 'Lists cast members and character' do

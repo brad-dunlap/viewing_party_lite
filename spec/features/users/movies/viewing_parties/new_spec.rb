@@ -32,7 +32,7 @@ RSpec.describe 'Viewing Party New Page' do
 				fill_in :email, with: @bob.email
 				fill_in :password, with: @bob.password
 				click_on "Log In"
-        visit "/users/#{@bob.id}/movies/238/viewing-party/new"
+        visit "/dashboard/movies/238/viewing-party/new"
       end
 
       it 'I see a form to create a viewing party' do
@@ -52,7 +52,7 @@ RSpec.describe 'Viewing Party New Page' do
 				check @brad.name
         click_button 'Create Party'
 
-        expect(current_path).to eq("/users/#{@bob.id}")
+        expect(current_path).to eq('/dashboard')
       end
 
       it 'sad path for create form' do

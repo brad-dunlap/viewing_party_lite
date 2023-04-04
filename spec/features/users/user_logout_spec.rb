@@ -1,7 +1,7 @@
 require 'rails_helper'
 RSpec.describe "Logging out" do
 	before(:each) do
-		@joe = User.create(name: "Joe", email: "joe@joe.com", password: "joeisthebest")
+		@joe = User.create!(name: "Joe", email: "joe@joe.com", password: "joeisthebest")
 	
 		visit login_path
 	 
@@ -11,7 +11,7 @@ RSpec.describe "Logging out" do
 	end
 
 	it "can recognize a session once logged in" do	
-		expect(current_path).to eq("/users/#{@joe.id}")	
+		expect(current_path).to eq("/dashboard")
 
 		visit root_path
 		
@@ -20,7 +20,7 @@ RSpec.describe "Logging out" do
 	end
 	
 	it "can log out a user" do
-		expect(current_path).to eq("/users/#{@joe.id}")	
+		expect(current_path).to eq("/dashboard")	
 		
 		visit root_path
 

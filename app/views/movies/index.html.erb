@@ -1,20 +1,20 @@
 <h1>Movies Index Page</h1> 
 
-<%= button_to "Discover Movies", "/users/#{@user.id}/discover", method: :get, :class => "discover" %>
+<%= button_to "Discover Movies", "/dashboard/discover", method: :get, :class => "discover" %>
 
 <ul id="movies">
 	<% if params[:top_rated] %>
 		<h3>Top Rated Movies</h3>
 
 		<% @movies.each do |movie| %>
-			<p><li> <%= link_to movie.title, "/users/#{@user.id}/movies/#{movie.id}" %> Vote Average <%= movie.vote_average %></li> </p>
+			<p><li> <%= link_to movie.title, "/dashboard/movies/#{movie.id}" %> Vote Average <%= movie.vote_average %></li> </p>
 		<% end %>
 
 	<% elsif params[:search] %>
 		<h3>Search Movies</h3>
 
 		<% @movies.each do |movie| %>
-			<p><li> <%= link_to movie.title, "/users/#{@user.id}/movies/#{movie.id}" %> Vote Average <%= movie.vote_average %></li> </p>
+			<p><li> <%= link_to movie.title, "/dashboard/movies/#{movie.id}" %> Vote Average <%= movie.vote_average %></li> </p>
 		<% end %>
 	<% end %>
 </ul>

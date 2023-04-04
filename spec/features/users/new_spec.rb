@@ -21,7 +21,7 @@ RSpec.describe 'Register New User' do
 				fill_in 'Confirm', with: 'testing'
 
         click_on 'Register'
-        expect(page).to have_current_path("/users/#{User.last.id}")
+        expect(page).to have_current_path("/dashboard")
         expect(page).to have_content("Welcome #{User.last.name}!")
       end
 

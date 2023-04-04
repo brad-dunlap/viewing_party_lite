@@ -18,10 +18,11 @@ Rails.application.routes.draw do
 
 	get '/discover', to: 'discover#show'
 
-  resources :users, only: %i[show create] do
+  resource :user, only: %i[show], :path => '/dashboard' do
     resources :discover, only: [:index]
     resources :movies, only: %i[index show] do
       resources :viewing_parties, :path => '/viewing-party', only: [:new, :create]
     end
   end
+	resources :users, only: [:create] 
 end

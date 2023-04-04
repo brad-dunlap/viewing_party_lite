@@ -74,14 +74,14 @@ RSpec.describe 'Movies Index Page' do
 
         @bob = User.create!(name: 'Bob', email: 'bob@bob.com', password: 'testing')
 
-        visit "/users/#{@bob.id}/discover"
+        visit "/dashboard/discover"
       end
 
       describe 'and click on the Top Movies button' do
         it 'shows the top 20 search results' do
           click_button 'Top Rated Movies'
 
-          expect(current_path).to eq "/users/#{@bob.id}/movies"
+          expect(current_path).to eq "/dashboard/movies"
 
           expect(page).to have_content('Top Rated Movies')
 
@@ -90,7 +90,7 @@ RSpec.describe 'Movies Index Page' do
 
           click_link('The Godfather')
 
-          expect(current_path).to eq("/users/#{@bob.id}/movies/238")
+          expect(current_path).to eq("/dashboard/movies/238")
         end
       end
 
@@ -99,7 +99,7 @@ RSpec.describe 'Movies Index Page' do
           fill_in :search, with: 'godfather'
           click_button 'Search Movies'
 
-          expect(current_path).to eq "/users/#{@bob.id}/movies"
+          expect(current_path).to eq "/dashboard/movies"
 
           expect(page).to have_content('Search Movies')
 
@@ -108,7 +108,7 @@ RSpec.describe 'Movies Index Page' do
 
           click_link('The Godfather')
 
-          expect(current_path).to eq("/users/#{@bob.id}/movies/238")
+          expect(current_path).to eq("/dashboard/movies/238")
         end
       end
 
@@ -120,7 +120,7 @@ RSpec.describe 'Movies Index Page' do
 
           click_button 'Discover Movies'
 
-          expect(current_path).to eq("/users/#{@bob.id}/discover")
+          expect(current_path).to eq("/dashboard/discover")
         end
       end
     end
