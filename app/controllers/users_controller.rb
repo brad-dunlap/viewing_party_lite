@@ -1,11 +1,15 @@
 # frozen_string_literal: true
 class UsersController < ApplicationController
-	
   def show
     @user = current_user
-		@parties = @user.viewing_parties
-		@parties_info = @parties.map do |party| 
-			party.party_details
+		if @user.present?
+			@parties = @user.viewing_parties
+			@parties_info = @parties.map do |party| 
+				party.party_details
+			end
+		else
+			flash[:notice] = "You must be logged in to view your dashboard"
+			redirect_to root_path
 		end
   end
 
