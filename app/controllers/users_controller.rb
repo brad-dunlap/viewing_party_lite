@@ -33,7 +33,7 @@ class UsersController < ApplicationController
 	end
 
 	def login_user
-		@user = User.find_by(email: params[:user][:email])
+		@user = User.find_by(email: user_params[:email])
 		if @user && @user.authenticate(params[:user][:password])
 			session[:user_id] = @user.id
 			flash[:success] = "Welcome back, #{@user.name}!"
@@ -45,7 +45,8 @@ class UsersController < ApplicationController
 	end
 
 	def logout_user
-    session[:user_id] = nil
+    session.delete(:user_id)
+		flash[:notice] = "You have been successfully logged out"
     redirect_to root_path
   end
 	
