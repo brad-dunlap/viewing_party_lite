@@ -45,8 +45,7 @@ class UsersController < ApplicationController
 	end
 
 	def logout_user
-		User.find(session[:user_id])    
-    session[:user_id] = nil 
+    session[:user_id] = nil
     redirect_to root_path
   end
 	
