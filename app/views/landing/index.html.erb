@@ -6,5 +6,10 @@
   <p><%= link_to "Log In", login_path, :class => "discover" %></p>
 <% elsif session[:user_id].present? == true %>
   <p><%= link_to "Log Out", "/logout", :class => "discover" %></p>
+  
+  <% @users.each do |user| %>
+    <p><%= user.email %></p>
+  <% end %>
+  
 <% end %>
 

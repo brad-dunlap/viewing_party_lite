@@ -25,6 +25,35 @@ RSpec.describe 'Landing Page' do
 
         expect(page).to have_link('Landing Page', href: '/')
       end
+
+      it "can see a list of user emails when logged in" do
+        user4 = User.create!(name: 'User 4', email: 'user4@email.com', password: "password1")
+        user5 = User.create!(name: 'User 5', email: 'user5@email.com', password: "password2")
+        user6 = User.create!(name: 'User 6', email: 'user6@email.com', password: "password3")
+
+        visit root_path
+
+        click_link "Log In"
+
+        expect(current_path).to eq(login_path)
+
+        fill_in :name, with: user4.name
+        fill_in :email, with: user4.email
+        fill_in :password, with: user4.password
+        fill_in :password_confirmation, with: user4.password
+    
+        click_on "Log In"
+     
+        expect(current_path).to eq("/users/#{user4.id}")
+
+        click_on "Landing Page"
+
+        expect(current_path).to eq(root_path)
+
+        expect(page).to have_content(user4.email)
+        expect(page).to have_content(user5.email)
+        expect(page).to have_content(user6.email)
+      end
     end
   end
 end
