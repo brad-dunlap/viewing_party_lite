@@ -72,7 +72,7 @@ RSpec.describe 'Movies Index Page' do
           )
           .to_return(status: 200, body: reviews, headers: {})
 
-        @bob = User.create!(name: 'Bob', email: 'bob@bob.com', password: 'test')
+        @bob = User.create!(name: 'Bob', email: 'bob@bob.com', password: 'testing')
 
         visit "/users/#{@bob.id}/discover"
       end

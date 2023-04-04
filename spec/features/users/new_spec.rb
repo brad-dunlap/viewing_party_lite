@@ -17,8 +17,8 @@ RSpec.describe 'Register New User' do
 
         fill_in 'Name', with: 'Jimbob'
         fill_in 'Email', with: 'Jimbob@bobjim.com'
-				fill_in 'Password', with: 'test'
-				fill_in 'Confirm', with: 'test'
+				fill_in 'Password', with: 'testing'
+				fill_in 'Confirm', with: 'testing'
 
         click_on 'Register'
         expect(page).to have_current_path("/users/#{User.last.id}")
@@ -30,8 +30,8 @@ RSpec.describe 'Register New User' do
 
         fill_in 'Name', with: 'Jimbob'
         fill_in 'Email', with: ''
-				fill_in 'Password', with: 'test'
-				fill_in 'Confirm', with: 'test'
+				fill_in 'Password', with: 'testing'
+				fill_in 'Confirm', with: 'testing'
 
         click_on 'Register'
 
@@ -51,6 +51,20 @@ RSpec.describe 'Register New User' do
 
         expect(page).to have_current_path('/register')
         expect(page).to have_content("Password confirmation doesn't match")
+      end
+
+      it 'password is too short (minimum)' do
+        visit register_path
+
+        fill_in 'Name', with: 'Jimbob'
+        fill_in 'Email', with: 'jimbob@jimbob.com'
+				fill_in 'Password', with: 'jim'
+				fill_in 'Confirm', with: 'jim'
+
+        click_on 'Register'
+
+        expect(page).to have_current_path('/register')
+        expect(page).to have_content("Password is too short (minimum is 6 characters)")
       end
 
       it 'is not a unique email' do
