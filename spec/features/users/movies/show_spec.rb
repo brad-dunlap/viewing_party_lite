@@ -68,8 +68,12 @@ RSpec.describe 'Movie Show Page' do
       end
 
       it 'I see a button to create a viewing party for this movie' do
+        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@bob)
+
         expect(page).to have_button('Create Viewing Party')
+        
         click_button "Create Viewing Party"
+
         expect(current_path).to eq("/users/#{@bob.id}/movies/278/viewing-party/new")
       end
 
@@ -85,6 +89,15 @@ RSpec.describe 'Movie Show Page' do
         expect(page).to have_content('Review by: John Chard')
         expect(page).to have_content("Some birds aren't meant to be caged.")
         expect(page).to have_content('Rating: 10.0')
+      end
+
+      it "cannot create a viewing party if logged out" do
+        visit "/users/#{@bob.id}/movies/278"
+
+        click_on "Create Viewing Party"
+
+        expect(current_path).to eq("/users/#{@bob.id}/movies/278")
+        expect(page).to have_content("You must be logged in or registered to access the viewing party.")
       end
     end
   end

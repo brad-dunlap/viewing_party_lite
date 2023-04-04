@@ -27,6 +27,8 @@ RSpec.describe 'Viewing Party New Page' do
         @sally = User.create!(name: 'Sally', email: 'sally@gmail.com', password: "hijklmn")
 				@brad = User.create!(name: 'Brad', email: 'brad@gmail.com', password: "opqrstu")
         
+        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@bob)
+        
         visit "/users/#{@bob.id}/movies/238/viewing-party/new"
       end
 
