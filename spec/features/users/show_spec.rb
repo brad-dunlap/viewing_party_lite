@@ -6,7 +6,7 @@ RSpec.describe 'User Show Page' do
   before do
 		movie_details = File.read('spec/fixtures/movie_details.json')
 
-    @bob = User.create!(name: 'Bob', email: 'bob@bob.com', password: "gsdhshf")
+    @bob = User.create!(name: 'Bob', email: 'bob@bob.com', password: "gsdhshf", role: 1)
     @sally = User.create!(name: 'Sally', email: 'sally@sally.com', password: "abcdef")
     @joe = User.create!(name: 'Joe', email: 'joe@joe.com', password: "ghijkl")
 
@@ -30,20 +30,64 @@ RSpec.describe 'User Show Page' do
 
   describe 'As a visitor when I visit a user show page' do
     it 'I see the name of the users dashboard' do
+      click_link "Log In"
+
+      expect(current_path).to eq(login_path)
+
+      fill_in :name, with: @bob.name
+      fill_in :email, with: @bob.email
+      fill_in :password, with: @bob.password
+      fill_in :password_confirmation, with: @bob.password
+  
+      click_on "Log In"
+
       expect(page).to have_content("#{@bob.name}'s Dashboard")
     end
 
     it 'I see a button to Discover Movies' do
+      click_link "Log In"
+
+      expect(current_path).to eq(login_path)
+
+      fill_in :name, with: @bob.name
+      fill_in :email, with: @bob.email
+      fill_in :password, with: @bob.password
+      fill_in :password_confirmation, with: @bob.password
+  
+      click_on "Log In"
+
       click_on 'Discover Movies'
 
       expect(page).to have_current_path("/users/#{@bob.id}/discover")
     end
 
     it 'has a section that lists viewing parties' do
+      click_link "Log In"
+
+      expect(current_path).to eq(login_path)
+
+      fill_in :name, with: @bob.name
+      fill_in :email, with: @bob.email
+      fill_in :password, with: @bob.password
+      fill_in :password_confirmation, with: @bob.password
+  
+      click_on "Log In"
+
 			expect(page).to have_content('Viewing Parties')     
     end
 
 		it 'shows the viewing parties the user has created' do
+      click_link "Log In"
+
+      expect(current_path).to eq(login_path)
+
+      fill_in :name, with: @bob.name
+      fill_in :email, with: @bob.email
+      fill_in :password, with: @bob.password
+      fill_in :password_confirmation, with: @bob.password
+  
+      click_on "Log In"
+      
 			expect(page).to have_link("Shawshank Redemption")
 			expect(page).to have_content("2023-06-01")
 			expect(page).to have_content("12:00")

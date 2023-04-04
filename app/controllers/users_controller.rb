@@ -2,11 +2,17 @@
 
 class UsersController < ApplicationController
   def show
-    @user = User.find(params[:id])
-		@parties = @user.viewing_parties
-		@parties_info = @parties.map do |party| 
-			party.party_details
-		end
+    
+    if session[:user_id]
+      @user = User.find(params[:id])
+      @parties = @user.viewing_parties
+      @parties_info = @parties.map do |party| 
+        party.party_details
+      end
+    elsif 
+      flash[:error] = "You must be logged in or registered to access my dashboard."
+      redirect_to root_path
+    end
   end
 
   def new
@@ -35,7 +41,7 @@ class UsersController < ApplicationController
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
       user.role = 1
-      
+
       if user.login?
         flash[:success] = "Welcome, #{user.name}!"
         redirect_to "/users/#{user.id}"

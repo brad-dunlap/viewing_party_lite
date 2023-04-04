@@ -54,6 +54,12 @@ RSpec.describe 'Landing Page' do
         expect(page).to have_content(user5.email)
         expect(page).to have_content(user6.email)
       end
+
+      it "cannot route to /dashboard if logged out" do
+        visit dashboard_path
+
+        expect(page).to have_content("You must be logged in or registered to access my dashboard.")
+      end
     end
   end
 end

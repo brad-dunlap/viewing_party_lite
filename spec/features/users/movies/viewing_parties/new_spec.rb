@@ -47,6 +47,17 @@ RSpec.describe 'Viewing Party New Page' do
 				check @brad.name
         click_button 'Create Party'
 
+        click_link "Log In"
+
+        expect(current_path).to eq(login_path)
+  
+        fill_in :name, with: @bob.name
+        fill_in :email, with: @bob.email
+        fill_in :password, with: @bob.password
+        fill_in :password_confirmation, with: @bob.password
+    
+        click_on "Log In"
+
         expect(current_path).to eq("/users/#{@bob.id}")
       end
 
