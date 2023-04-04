@@ -6,7 +6,7 @@ RSpec.describe "Logging In" do
 
     visit root_path
 
-    click_on "I already have an account"
+    click_on "Log In"
 
     expect(current_path).to eq(login_path)
 
@@ -17,7 +17,7 @@ RSpec.describe "Logging In" do
 
     click_on "Log In"
 
-    expect(current_path).to eq(root_path)
+    expect(current_path).to eq("/users/#{user.id}")
 
     expect(page).to have_content("Welcome, #{user.name}")
   end

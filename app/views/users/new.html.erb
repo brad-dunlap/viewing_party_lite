@@ -18,18 +18,18 @@
 	<%# <input type="submit" value="Register", class="discover"> %>
 <%# </form> %>
 
-<%= form_with model: @user do |form| %>
-	<%= form.label :name, 'Name:' %>
-  <%= form.text_field :name %>
+<p><%= form_with model: @user do |form| %></p>
+	<p><%= form.label :name, 'Name:' %></p>
+  <p><%= form.text_field :name %></p>
 
-	<%= form.label :email, 'Email:' %>
-  <%= form.text_field :email %>
+	<p><%= form.label :email, 'Email:' %></p>
+  <p><%= form.text_field :email %></p>
 
-  <%= form.label :password, 'Password:' %>
-  <%= form.password_field :password %>
+  <p><%= form.label :password, 'Password:' %></p>
+  <p><%= form.password_field :password %></p>
 
-	<%= form.label :password_confirmation, 'Confirmation:' %>
-  <%= form.password_field :password_confirmation %>
+	<p><%= form.label :password_confirmation, 'Confirmation:' %></p>
+  <p><%= form.password_field :password_confirmation %></p>
 
-  <%= form.submit 'Register' %>
+  <p><%= form.submit 'Register', :class => "discover" %></p>
 <% end %>
