@@ -3,7 +3,7 @@
 <div class="form">
 	<h3><%= @movie.title %> </h3>
 
-	<p><%= form_with url: "/users/#{@user.id}/movies/#{@movie.id}/viewing-party",
+	<p><%= form_with url: "/dashboard/movies/#{@movie.id}/viewing-party",
 				method: :post,
 				local: :true,
 				html: { style: "text-align: left;" } do |f| %></p>
@@ -19,9 +19,8 @@
 
 		<p><%= f.label :users, "Invite Other Users" %>
 		<%= f.collection_check_boxes(:users, User.all, :id, :name, include_hidden: false) %></p>
-
-		<p><%= f.hidden_field :host_id, value: @user.id %>
-		<%= f.hidden_field :movie_id, value: @movie.id %></p>
+		<%= f.hidden_field :host_id, value: @user.id %>
+		<%= f.hidden_field :movie_id, value: @movie.id %>
 
 		<p><%= f.submit "Create Party", :class => "discover" %></p>
 	<% end %>

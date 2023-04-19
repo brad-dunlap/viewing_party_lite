@@ -6,16 +6,15 @@ RSpec.describe 'User Show Page' do
   before do
 		movie_details = File.read('spec/fixtures/movie_details.json')
 
-    @bob = User.create!(name: 'Bob', email: 'bob@bob.com')
-    @sally = User.create!(name: 'Sally', email: 'sally@sally.com')
-    @joe = User.create!(name: 'Joe', email: 'joe@joe.com')
-
+		@bob = User.create!(name: 'Bob', email: 'bob@bob.com', password: 'testing')
+		@sally = User.create!(name: 'Sally', email: 'sally@sally.com', password: 'testing')
+    @joe = User.create!(name: 'Joe', email: 'joe@joe.com', password: 'testing')
 		@movie = Movie.new(JSON.parse(movie_details, symbolize_names: true))
 
 		@viewing_party = @bob.viewing_parties.create!(movie_id: @movie.id, host_id: @bob.id, party_date: '2023-06-01', party_time: '12:00',duration: 120)
 		@viewing_party.users << @sally
     @viewing_party.users << @joe
-
+		
 		stub_request(:get, "https://api.themoviedb.org/3/movie/278?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458").
          with(
            headers: {
@@ -25,7 +24,10 @@ RSpec.describe 'User Show Page' do
            }).
          to_return(status: 200, body: movie_details, headers: {})
 	
-	visit user_path(@bob)
+				 visit login_path
+				 fill_in :email, with: @bob.email
+				 fill_in :password, with: @bob.password
+				 click_on "Log In"
   end
 
   describe 'As a visitor when I visit a user show page' do
@@ -36,7 +38,7 @@ RSpec.describe 'User Show Page' do
     it 'I see a button to Discover Movies' do
       click_on 'Discover Movies'
 
-      expect(page).to have_current_path("/users/#{@bob.id}/discover")
+      expect(page).to have_current_path("/dashboard/discover")
     end
 
     it 'has a section that lists viewing parties' do
@@ -44,7 +46,7 @@ RSpec.describe 'User Show Page' do
     end
 
 		it 'shows the viewing parties the user has created' do
-			expect(page).to have_link("Shawshank Redemption")
+			expect(page).to have_link("The Shawshank Redemption")
 			expect(page).to have_content("2023-06-01")
 			expect(page).to have_content("12:00")
 			expect(page).to have_content("120")

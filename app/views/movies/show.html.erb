@@ -1,5 +1,5 @@
 <h1><%= @movie.title %></h1>
-<%= button_to "Create Viewing Party", "/users/#{@user.id}/movies/#{@movie.id}/viewing-party/new", method: :get, :class => "discover" %>
+<%= button_to "Create Viewing Party", "/dashboard/movies/#{@movie.id}/viewing-party/new", method: :get, :class => "discover" %>
 
 
 <h3>Vote Average: <%= @movie.vote_average.round(2) %></h3>

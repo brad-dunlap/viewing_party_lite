@@ -5,9 +5,15 @@ require 'rails_helper'
 RSpec.describe 'Discover Index Page' do
   describe 'As a user' do
     before do
-      @bob = User.create!(name: 'Bob', email: 'bob@bob.com')
-
-      visit user_discover_index_path(@bob)
+      @bob = User.create!(name: 'Bob', email: 'bob@bob.com', password: 'password')
+			
+			visit login_path
+				
+			fill_in :email, with: @bob.email
+			fill_in :password, with: @bob.password
+			click_on "Log In"
+			
+      visit '/dashboard/discover'
 
       top_movies = File.read('spec/fixtures/top_movies.json')
     end
@@ -22,7 +28,7 @@ RSpec.describe 'Discover Index Page' do
 
         click_button 'Top Rated Movies'
 
-        expect(current_path).to eq("/users/#{@bob.id}/movies")
+        expect(current_path).to eq("/dashboard/movies")
       end
 
       it 'I see a text field to enter keyword(s) to search by movie title' do
@@ -45,7 +51,7 @@ RSpec.describe 'Discover Index Page' do
 
         click_button 'Search Movies'
 
-        expect(current_path).to eq("/users/#{@bob.id}/movies")
+        expect(current_path).to eq("/dashboard/movies")
       end
     end
   end

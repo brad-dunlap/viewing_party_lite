@@ -23,11 +23,16 @@ RSpec.describe 'Viewing Party New Page' do
            }).
          to_return(status: 200, body: movie_details, headers: {})
 
-        @bob = User.create!(name: 'Bob', email: 'bob@gmail.com')
-        @sally = User.create!(name: 'Sally', email: 'sally@gmail.com')
-				@brad = User.create!(name: 'Brad', email: 'brad@gmail.com')
+        @bob = User.create!(name: 'Bob', email: 'bob@gmail.com', password: 'testing')
+        @sally = User.create!(name: 'Sally', email: 'sally@gmail.com', password: 'testing')
+				@brad = User.create!(name: 'Brad', email: 'brad@gmail.com', password: 'testing')
         
-        visit "/users/#{@bob.id}/movies/238/viewing-party/new"
+				visit login_path
+				
+				fill_in :email, with: @bob.email
+				fill_in :password, with: @bob.password
+				click_on "Log In"
+        visit "/dashboard/movies/238/viewing-party/new"
       end
 
       it 'I see a form to create a viewing party' do
@@ -47,7 +52,7 @@ RSpec.describe 'Viewing Party New Page' do
 				check @brad.name
         click_button 'Create Party'
 
-        expect(current_path).to eq("/users/#{@bob.id}")
+        expect(current_path).to eq('/dashboard')
       end
 
       it 'sad path for create form' do

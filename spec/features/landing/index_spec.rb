@@ -9,29 +9,12 @@ RSpec.describe 'Landing Page' do
         visit root_path
 
         expect(page).to have_content('Welcome to Viewing Party')
-        expect(page).to have_button('New User')
+        expect(page).to have_button('Register as a User')
+        expect(page).to have_button('I already have an account')
 
-        click_on 'New User'
+        click_on 'Register as a User'
 
         expect(page).to have_current_path('/register')
-      end
-
-      it 'I see a list of existing users which links to the users dashboard' do
-        user1 = User.create!(name: 'User 1', email: 'user1@email.com')
-        user2 = User.create!(name: 'User 2', email: 'user2@email.com')
-        user3 = User.create!(name: 'User 3', email: 'user3@email.com')
-
-        visit root_path
-
-        expect(page).to have_link('Landing Page', href: '/')
-        expect(page).to have_link('User 1', href: "/users/#{user1.id}")
-        expect(page).to have_link('User 2', href: "/users/#{user2.id}")
-        expect(page).to have_link('User 3', href: "/users/#{user3.id}")
-
-        click_on 'User 1'
-
-        expect(page).to have_current_path("/users/#{user1.id}")
-        expect(page).to have_link('Landing Page', href: '/')
       end
     end
   end

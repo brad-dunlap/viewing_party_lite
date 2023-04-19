@@ -2,7 +2,7 @@
 
 class MoviesController < ApplicationController
   def index
-    @user = User.find(params[:user_id])
+    @user = current_user
 
     if params[:top_rated]
       movie_service = MovieService.new
@@ -14,7 +14,7 @@ class MoviesController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:user_id])
+    @user = current_user
     movie_service = MovieService.new
     @movie = movie_service.movie_details(params[:id])
     @cast = movie_service.cast_details(params[:id])

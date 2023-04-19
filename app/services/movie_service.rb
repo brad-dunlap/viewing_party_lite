@@ -22,19 +22,19 @@ class MovieService
   def movie_details(id)
     response = conn.get("movie/#{id}")
     parsed = JSON.parse(response.body, symbolize_names: true)
-    x = Movie.new(parsed)
+    Movie.new(parsed)
   end
 
   def cast_details(id)
     response = conn.get("movie/#{id}/credits")
     parsed = JSON.parse(response.body, symbolize_names: true)
-    cast = parsed[:cast].take(10)
+    parsed[:cast].take(10)
   end
 
   def reviews(id)
     response = conn.get("movie/#{id}/reviews")
     parsed = JSON.parse(response.body, symbolize_names: true)
-    reviews = parsed[:results]
+    parsed[:results]
   end
 
   private
