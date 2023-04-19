@@ -6,9 +6,9 @@ class ApplicationController < ActionController::Base
   end
 
 	def require_user
-		if session[:user_id] != params[:id].to_i
+		if current_user.nil?
 			flash[:notice] = "You must be logged in to view this page"
-			redirect_to root_path
+			redirect_back(fallback_location: root_path)
 		end
 	end
 end

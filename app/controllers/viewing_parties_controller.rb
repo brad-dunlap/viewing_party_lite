@@ -1,12 +1,14 @@
 class ViewingPartiesController < ApplicationController
   before_action :set_user, only: [:new, :create]
+	before_action :require_user, only: [:new]
 
   def index
   end
   
   def new
-    @users = User.all
-    @movie = MovieService.new.movie_details(params[:movie_id])
+		@users = User.all
+		@movie = MovieService.new.movie_details(params[:movie_id])
+		
   end
 
   def create 
