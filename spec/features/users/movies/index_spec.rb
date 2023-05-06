@@ -84,11 +84,10 @@ RSpec.describe 'Movies Index Page' do
           expect(current_path).to eq "/dashboard/movies"
 
           expect(page).to have_content('Top Rated Movies')
-
-          expect(page).to have_content('The Godfather')
+          
           expect(page).to have_content('Vote Average 8.7')
 
-          click_link('The Godfather')
+          click_link('', href: "/dashboard/movies/238")
 
           expect(current_path).to eq("/dashboard/movies/238")
         end
@@ -102,11 +101,10 @@ RSpec.describe 'Movies Index Page' do
           expect(current_path).to eq "/dashboard/movies"
 
           expect(page).to have_content('Search Movies')
-
-          expect(page).to have_content('The Godfather')
+          
           expect(page).to have_content('Vote Average 8.7')
 
-          click_link('The Godfather')
+          click_link("", href: "/dashboard/movies/238")
 
           expect(current_path).to eq("/dashboard/movies/238")
         end

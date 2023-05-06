@@ -17,7 +17,7 @@
 		<h3>Search Movies</h3>
 
 		<% @movies.each do |movie| %>
-<%= link_to (image_tag "http://image.tmdb.org/t/p/w500#{movie.poster_path}"), "/dashboard/movies/#{movie.id}" %>
+			<%= link_to (image_tag "http://image.tmdb.org/t/p/w500#{movie.poster_path}"), "/dashboard/movies/#{movie.id}" %>
 			<p>Vote Average <%= movie.vote_average %></p>
 			<br>
 			<br>
