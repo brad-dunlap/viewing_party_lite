@@ -1,43 +1,123 @@
-<h1><%= @user.name %>'s Dashboard</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title><%= @user.name %>'s Dashboard</title>
+    <style>
+      body {
+        background-color: #F1F1F1;
+        font-family: Arial, sans-serif;
+      }
 
-<div class="header1">
-	<h2> Viewing Parties </h2>
-	<%= button_to "Discover Movies", "/dashboard/discover", method: :get, :class => "discover" %>
-</div>
+      
 
-<% @parties_info.each do |party| %>
-	<% if @user.name == party[:host] %>
-		<p><img src=<%= "#{party[:image]}"%>></p>
-		<h3><%= link_to party[:title], "/dashboard/movies/#{party[:movie_id]}" %></h3>
-		<p>Duration: <%= party[:duration] %> minutes</p>
-		<p>Start Time: <%= party[:time].strftime("%I:%M %p") %></p>
-		<p>Date: <%= party[:date] %></p>
+      /* New class for "Discover Movies" button */
+     
 
-		<p>I am hosting this party.</p>
+      .party-container {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: flex-start;
+				align-items: center;
+				margin-bottom: 50px;
+			}
 
-		<p> Attendees: <% party[:attendees].each do |atten| %></p>
-			<% if atten != party[:host] %>
-				<p><%= atten %></p>
-			<% end%>
-		<% end %>
+			.party-info {
+				width: calc(25% - 15px);
+				margin-right: 30px;
+				margin-bottom: 20px;
+				background-color: #ffffff;
+				border-radius: 10px;
+				box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+				padding: 30px;
+				text-align: center;
+			}
 
-	<% else %>
-		<p><img src=<%= "#{party[:image]}"%>></p>
-		<h3><%= link_to party[:title], "/dashboard/movies/#{party[:movie_id]}" %></h3>
-		<p>Duration: <%= party[:duration] %> minutes</p>
-		<p>Start Time: <%= party[:time].strftime("%I:%M %p") %></p>
-		<p>Date: <%= party[:date] %></p>
+			.party-info:nth-child(4n) {
+				margin-right: 0;
+			}
 
-		<p>Host: <%= party[:host] %></p>
+      label {
+        display: block;
+        font-size: 18px;
+        margin-bottom: 10px;
+        text-align: left;
+      }
 
-		<p>I am attending this party.</p>
-		<p>Attendees:</p>
-		<% party[:attendees].each do |atten| %>
-			<% if atten == @user.name %>
-				<p><b><%= atten %></b></p>
-			<% else %>
-				<p><%= atten %></p>
+      input[type="email"],
+      input[type="password"] {
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        font-size: 18px;
+        margin-bottom: 20px;
+        padding: 10px;
+        width: 100%;
+      }
+
+      input[type="submit"] {
+        background-color: #FE8402;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        color: #FFFFFF;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px;
+        width: 100%;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #F57100;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1><%= @user.name %>'s Dashboard</h1>
+
+		<div class="discover-btn">
+			<%= button_to "Discover Movies", "/dashboard/discover", method: :get, :class => "discover" %>
+		</div>
+
+    <div class="header1">
+      <h2>Viewing Parties</h2>
+    </div>
+
+
+<div class="party-container">
+  <% @parties_info.each do |party| %>
+    <div class="party-info">
+      <p><img src=<%= "#{party[:image]}"%>></p>
+      <h3><%= link_to party[:title], "/dashboard/movies/#{party[:movie_id]}" %></h3>
+			<p>Date: <%= party[:date].strftime("%B %d, %Y") %></p>
+			<p>Start Time: <%= party[:time].strftime("%I:%M %p") %></p>
+      <p>Duration: <%= party[:duration] %> minutes</p>
+
+      <% if @user.name == party[:host] %>
+        <p>I am hosting this party.</p>
+      <% else %>
+        <p>Host: <%= party[:host] %></p>
+        <p>I am attending this party.</p>
+      <% end %>
+
+      <p>Attendees:</p>
+      <% party[:attendees].each do |atten| %>
+        <% if atten == @user.name %>
+          <p><b><%= atten %></b></p>
+        <% else %>
+          <p><%= atten %></p>
+        <% end %>
+      <% end %>
+
+			<% if @user.name == party[:host] %>
+				<%= button_to "Edit Party", "/dashboard/parties/#{party[:party_id]}/edit", method: :patch, :class => "edit" %> <br>
+				<%= button_to "Delete Party", "/dashboard/movies/#{party[:movie_id]}/viewing-party/#{party[:party_id]}", method: :destroy, :class => "delete" %>
+
 			<% end %>
-		<% end %>
-	<% end %>
-<% end %>
+    </div>
+  <% end %>
+
+</body>
+</html>

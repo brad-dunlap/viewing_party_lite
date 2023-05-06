@@ -5,16 +5,22 @@
 <ul id="movies">
 	<% if params[:top_rated] %>
 		<h3>Top Rated Movies</h3>
-
 		<% @movies.each do |movie| %>
-			<p><li> <%= link_to movie.title, "/dashboard/movies/#{movie.id}" %> Vote Average <%= movie.vote_average %></li> </p>
+<%= link_to (image_tag "http://image.tmdb.org/t/p/w500#{movie.poster_path}"), "/dashboard/movies/#{movie.id}" %>
+			<p>Vote Average <%= movie.vote_average %></p>
+			<br>
+			<br>
 		<% end %>
+
 
 	<% elsif params[:search] %>
 		<h3>Search Movies</h3>
 
 		<% @movies.each do |movie| %>
-			<p><li> <%= link_to movie.title, "/dashboard/movies/#{movie.id}" %> Vote Average <%= movie.vote_average %></li> </p>
+<%= link_to (image_tag "http://image.tmdb.org/t/p/w500#{movie.poster_path}"), "/dashboard/movies/#{movie.id}" %>
+			<p>Vote Average <%= movie.vote_average %></p>
+			<br>
+			<br>
 		<% end %>
 	<% end %>
 </ul>

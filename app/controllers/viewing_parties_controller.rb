@@ -1,6 +1,6 @@
 class ViewingPartiesController < ApplicationController
-  before_action :set_user, only: [:new, :create]
-	before_action :require_user, only: [:new]
+  before_action :set_user, only: [:new, :create, :destroy, :update]
+	before_action :require_user, only: [:new, :create, :destroy, :update]
 
   def index
   end
@@ -28,6 +28,12 @@ class ViewingPartiesController < ApplicationController
       redirect_to "/dashboard/movies/#{movie.id}/viewing-party/new"
     end
   end
+
+	def destroy
+		party = ViewingParty.find(params[:id])
+		party.destroy
+		redirect_to '/dashboard'
+	end
 
   private
   def viewing_party_params

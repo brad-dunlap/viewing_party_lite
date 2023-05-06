@@ -18,6 +18,11 @@ h1 {
   text-align: center;
 }
 
+h3 {
+	text-align: center;
+}
+
+
 form {
   text-align: center;
 }
@@ -37,11 +42,24 @@ img {
   height: auto;
 }
 
-.header1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+#movies img {
+	max-width: 400px;
+}
+
+li {
+	text-align: center;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	width: 50%;
+}
+
+#header {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 a {
@@ -49,10 +67,21 @@ a {
   text-decoration: none;
   padding: 10px;
   cursor: pointer;
-  background-color: #f1f3f6;
-  color: #4a5568;
+  background-color: #4b8ae9;
+  color: hwb(0 100% 0%);
   border: white;
   border-radius: 6px;
+	margin: 1%;
+	transition: 0.3s;
+}
+
+#movies a {
+	margin-bottom: 0;
+	background-color: #ffffff;
+}
+
+a:hover {
+	background-color: #3b6fc1;
 }
 
 .discover {
@@ -60,10 +89,15 @@ a {
   text-decoration: none;
   padding: 10px;
   cursor: pointer;
-  background-color: #6aa2f6;
+  background-color: #4b8ae9;
   color: #fcfcfc;
   border: white;
   border-radius: 6px;
+	transition: 0.3s;
+}
+
+.discover:hover {
+	background-color: #3b6fc1;
 }
 
 .user {
@@ -75,4 +109,11 @@ a {
   color: #767575;
   border: white;
   border-radius: 6px;
+}
+
+#movies {
+	display: flex;
+	flex-direction: column; 
+	justify-content: center;
+	align-items: center;
 }

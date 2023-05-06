@@ -47,12 +47,12 @@ RSpec.describe 'User Show Page' do
 
 		it 'shows the viewing parties the user has created' do
 			expect(page).to have_link("The Shawshank Redemption")
-			expect(page).to have_content("2023-06-01")
+			expect(page).to have_content("June 01, 2023")
 			expect(page).to have_content("12:00")
 			expect(page).to have_content("120")
       expect(page).to have_content("I am hosting this party.")
 
-      expect(page).to have_content("Attendees:\nSally\nJoe")
+      expect(page).to have_content("Attendees:\nBob\nSally\nJoe")
 		end
   end
 end

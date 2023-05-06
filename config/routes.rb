@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   resource :user, only: %i[show], :path => '/dashboard' do
     resources :discover, only: [:index]
     resources :movies, only: %i[index show] do
-      resources :viewing_parties, :path => '/viewing-party', only: [:new, :create]
+      resources :viewing_parties, :path => '/viewing-party', only: [:new, :create, :destroy, :update]
     end
   end
 	resources :users, only: [:create] 

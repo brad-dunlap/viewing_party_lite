@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   def show
     @user = current_user
 		if @user.present?
-			@parties = @user.viewing_parties
+			@parties = @user.viewing_parties.order(:party_date, :party_time)
 			@parties_info = @parties.map do |party| 
 				party.party_details
 			end

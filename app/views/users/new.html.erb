@@ -1,20 +1,90 @@
-<h1>Register as a User!</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Registration | Viewing Party</title>
+    <style>
+      body {
+        background-color: #F1F1F1;
+        font-family: Arial, sans-serif;
+      }
 
-<form action="/users" method="post" onsubmit="return validateForm()">
-	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+      h1 {
+        color: #3B3B3B;
+        font-size: 36px;
+        font-weight: bold;
+        margin-top: 50px;
+        text-align: center;
+      }
 
-	<label for="name">Name:</label>
-	<input type="text" name="user[name]" id="name", value="<%=@user.name %>">
+      .container {
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        margin: 50px auto;
+        max-width: 400px;
+        padding: 30px;
+        text-align: center;
+      }
 
-	<label for="email">Email:</label>
-	<input type="email" name="user[email]" id="email", value="<%= @user.email %>">
+      label {
+        display: block;
+        font-size: 18px;
+        margin-bottom: 10px;
+        text-align: left;
+      }
 
-	<label for="password">Password:</label>
-	<input type="password" name="user[password]" id="password">	
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        font-size: 18px;
+        margin-bottom: 20px;
+        padding: 10px;
+        width: 100%;
+      }
 
-	<label for="password_confirmation">Confirm:</label>
-	<input type="password" name="user[password_confirmation]" id="password_confirmation">
+      input[type="submit"] {
+        background-color: #FE8402;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        color: #FFFFFF;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px;
+        width: 100%;
+      }
 
-	<input type="submit" value="Register", class="discover">
-</form>
+      input[type="submit"]:hover {
+        background-color: #F57100;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Register as a User!</h1>
 
+      <form action="/users" method="post" onsubmit="return validateForm()">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+        <label for="name">Name:</label>
+        <input type="text" name="user[name]" id="name", value="<%=@user.name %>">
+
+        <label for="email">Email:</label>
+        <input type="email" name="user[email]" id="email", value="<%= @user.email %>">
+
+        <label for="password">Password:</label>
+        <input type="password" name="user[password]" id="password">  
+
+        <label for="password_confirmation">Confirm:</label>
+        <input type="password" name="user[password_confirmation]" id="password_confirmation">
+
+        <input type="submit" value="Register", class="discover">
+      </form>
+    </div>
+  </body>
+</html>

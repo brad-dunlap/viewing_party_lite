@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-05-06T13:08:42-04:00">2023-05-06T13:08:42-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-05-06T14:32:43-04:00">2023-05-06T14:32:43-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -1234,7 +1234,7 @@
 
             
 
-            <code class="ruby">			@parties = @user.viewing_parties</code>
+            <code class="ruby">			@parties = @user.viewing_parties.order(:party_date, :party_time)</code>
           </li>
         </div>
       
@@ -13302,7 +13302,7 @@
 
             
 
-            <code class="ruby">			expect(page).to have_content(&quot;2023-06-01&quot;)</code>
+            <code class="ruby">			expect(page).to have_content(&quot;June 01, 2023&quot;)</code>
           </li>
         </div>
       
@@ -13357,7 +13357,7 @@
 
             
 
-            <code class="ruby">      expect(page).to have_content(&quot;Attendees:\nSally\nJoe&quot;)</code>
+            <code class="ruby">      expect(page).to have_content(&quot;Attendees:\nBob\nSally\nJoe&quot;)</code>
           </li>
         </div>
       

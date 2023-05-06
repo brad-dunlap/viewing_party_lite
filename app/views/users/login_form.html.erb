@@ -1,15 +1,81 @@
-<h1>Please Log in!</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Login | Viewing Party</title>
+    <style>
+      body {
+        background-color: #F1F1F1;
+        font-family: Arial, sans-serif;
+      }
 
-<form action="/login" method="post" onsubmit="return validateForm()">
-	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+      h1 {
+        color: #3B3B3B;
+        font-size: 36px;
+        font-weight: bold;
+        margin-top: 50px;
+        text-align: center;
+      }
 
-	<label for="email">Email:</label>
-	<input type="email" name="user[email]" id="email", value="<%= @user.email %>">
+      form {
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        margin: 50px auto;
+        max-width: 400px;
+        padding: 30px;
+        text-align: center;
+      }
 
-	<label for="password">Password:</label>
-	<input type="password" name="user[password]" id="password">	
-	
+      label {
+        display: block;
+        font-size: 18px;
+        margin-bottom: 10px;
+        text-align: left;
+      }
 
-	<input type="submit" value="Log In", class="discover">
-</form>
+      input[type="email"],
+      input[type="password"] {
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        font-size: 18px;
+        margin-bottom: 20px;
+        padding: 10px;
+        width: 100%;
+      }
 
+      input[type="submit"] {
+        background-color: #FE8402;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        color: #FFFFFF;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px;
+        width: 100%;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #F57100;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Please Log in!</h1>
+
+    <form action="/login" method="post" onsubmit="return validateForm()">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+      <label for="email">Email:</label>
+      <input type="email" name="user[email]" id="email", value="<%= @user.email %>">
+
+      <label for="password">Password:</label>
+      <input type="password" name="user[password]" id="password">    
+
+      <input type="submit" value="Log In", class="discover">
+    </form>
+  </body>
+</html>
