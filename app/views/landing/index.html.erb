@@ -4,10 +4,7 @@
 <div id="logout">
   <%= button_to "Log Out", logout_path, method: :get %>
 	</div>
-<h3>Current Users:</h3>
-<% @users.each do |user| %>
-  <p><%= "#{user.name}"%>,  <%= "#{user.email}"%></p>
-<% end %>
+
 <% else %>
 	<%= button_to "Register as a User", register_path, method: :get, :class => "discover" %> 
 	<br>

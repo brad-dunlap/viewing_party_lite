@@ -5,19 +5,16 @@ class MoviesController < ApplicationController
     @user = current_user
 
     if params[:top_rated]
-      movie_service = MovieService.new
-      @movies = movie_service.top_twenty_movies
+      @movies = MoviesFacade.new.top_twenty
     elsif params[:search]
-      movie_service = MovieService.new
-      @movies = movie_service.search_results(params[:search])
+      @movies = MoviesFacade.new.search(params[:search])
     end
   end
 
   def show
     @user = current_user
-    movie_service = MovieService.new
-    @movie = movie_service.movie_details(params[:id])
-    @cast = movie_service.cast_details(params[:id])
-    @reviews = movie_service.reviews(params[:id])
+    @movie = MoviesFacade.new.movie_details(params[:id])
+    @cast = MoviesFacade.new.cast_details(params[:id])
+    @reviews = MoviesFacade.new.reviews(params[:id])
   end
 end

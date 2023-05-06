@@ -51,7 +51,7 @@ describe MovieService do
            }).
          to_return(status: 200, body: movie_details, headers: {})
 
-        expect(described_class.new.movie_details(278)).to be_a(Movie)
+        expect(described_class.new.movie_details(278)).to be_a(Hash)
       end
     end
 

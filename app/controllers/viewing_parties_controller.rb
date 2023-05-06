@@ -7,12 +7,12 @@ class ViewingPartiesController < ApplicationController
   
   def new
 		@users = User.all
-		@movie = MovieService.new.movie_details(params[:movie_id])
+		@movie = MoviesFacade.new.movie_details(params[:movie_id])
 		
   end
 
   def create 
-    movie = MovieService.new.movie_details(params[:movie_id])
+    movie = MoviesFacade.new.movie_details(params[:movie_id])
     viewing_party = ViewingParty.new(viewing_party_params)
     if viewing_party.valid?
       if viewing_party.save

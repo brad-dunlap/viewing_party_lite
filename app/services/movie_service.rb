@@ -4,25 +4,19 @@ class MovieService
   def top_twenty_movies
     response = conn.get('movie/top_rated')
     parsed = JSON.parse(response.body, symbolize_names: true)
-    movies = parsed[:results].take(20)
-    movies.map do |movie|
-      new_movie = Movie.new(movie)
-    end
+    parsed[:results].take(20)
+    
   end
 
   def search_results(query)
     response = conn.get("search/movie?query=#{query}")
     parsed = JSON.parse(response.body, symbolize_names: true)
     movies = parsed[:results].take(20)
-    movies.map do |movie|
-      new_movie = Movie.new(movie)
-    end
   end
 
   def movie_details(id)
     response = conn.get("movie/#{id}")
-    parsed = JSON.parse(response.body, symbolize_names: true)
-    Movie.new(parsed)
+    JSON.parse(response.body, symbolize_names: true)
   end
 
   def cast_details(id)
