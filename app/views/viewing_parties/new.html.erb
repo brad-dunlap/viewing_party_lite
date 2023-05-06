@@ -18,9 +18,13 @@
 		<%= f.time_field :party_time %></p>
 
 		<p><%= f.label :users, "Invite Other Users" %>
-		<%= f.collection_check_boxes(:users, User.all, :id, :name, include_hidden: false) %></p>
-		<%= f.hidden_field :host_id, value: @user.id %>
-		<%= f.hidden_field :movie_id, value: @movie.id %>
+<% if User.where.not(id: @user.id).count == 0 %>
+  <p>You need to add friends to be able to invite them to parties.</p>
+<% else %>
+  <%= f.collection_check_boxes(:users, User.where.not(id: @user.id), :id, :name, include_hidden: false) %></p>
+  <%= f.hidden_field :host_id, value: @user.id %>
+  <%= f.hidden_field :movie_id, value: @movie.id %>
+<% end %>
 
 		<p><%= f.submit "Create Party", :class => "discover" %></p>
 	<% end %>
