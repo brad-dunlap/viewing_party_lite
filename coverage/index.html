@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-05-06T12:47:50-04:00">2023-05-06T12:47:50-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-05-06T13:08:42-04:00">2023-05-06T13:08:42-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  99.1%
+  99.12%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         4.55
+         4.64
        </span>
     </span> hits/line
     )
@@ -39,15 +39,15 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>37</b> files in total.
+    <b>38</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>554</b> relevant lines,
-    <span class="green"><b>549</b> lines covered</span> and
+    <b>567</b> relevant lines,
+    <span class="green"><b>562</b> lines covered</span> and
     <span class="red"><b>5</b> lines missed. </span>
     (<span class="green">
-  99.1%
+  99.12%
 </span>
 )
   </div>
@@ -139,11 +139,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#d7abfeba3f64d316ca552435575a02c005a789db" class="src_link" title="app/facades/movies_facade.rb">app/facades/movies_facade.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">26</td>
-            <td class="cell--number">14</td>
-            <td class="cell--number">14</td>
+            <td class="cell--number">30</td>
+            <td class="cell--number">16</td>
+            <td class="cell--number">16</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">13.93</td>
+            <td class="cell--number">16.63</td>
             
           </tr>
         
@@ -220,7 +220,7 @@
             <td class="cell--number">10</td>
             <td class="cell--number">10</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">96.20</td>
+            <td class="cell--number">99.00</td>
             
           </tr>
         
@@ -329,6 +329,17 @@
             <td class="cell--number">28</td>
             <td class="cell--number">13</td>
             <td class="cell--number">13</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.00</td>
+            
+          </tr>
+        
+          <tr class="t-file">
+            <td class="strong t-file__name"><a href="#2caf2301bd282cac83ae434f6193467397a3eb28" class="src_link" title="spec/features/landing/index_spec.rb">spec/features/landing/index_spec.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">21</td>
+            <td class="cell--number">11</td>
+            <td class="cell--number">11</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -2333,8 +2344,8 @@
     
 
     <div class="t-line-summary">
-      <b>14</b> relevant lines.
-      <span class="green"><b>14</b> lines covered</span> and
+      <b>16</b> relevant lines.
+      <span class="green"><b>16</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -2363,29 +2374,29 @@
 
             
 
-            <code class="ruby">	def top_twenty</code>
+            <code class="ruby">  def initialize(movie_service = MovieService.new)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="3">
-            <span class="hits">3</span>
+          <li class="covered" data-hits="62" data-linenumber="3">
+            <span class="hits">62</span>
             
 
             
 
-            <code class="ruby">		MovieService.new.top_twenty_movies.map do |movie|</code>
+            <code class="ruby">    @movie_service = movie_service</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="60" data-linenumber="4">
-            <span class="hits">60</span>
+          <li class="never" data-hits="" data-linenumber="4">
+            
             
 
             
 
-            <code class="ruby">			Movie.new(movie)</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -2396,62 +2407,62 @@
 
             
 
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="6">
-            
-            
-
-            
-
-            <code class="ruby">	end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="7">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="8">
+          <li class="covered" data-hits="1" data-linenumber="6">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">	def search(query)</code>
+            <code class="ruby">  def top_twenty</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="9">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="4" data-linenumber="7">
+            <span class="hits">4</span>
             
 
             
 
-            <code class="ruby">		MovieService.new.search_results(query).map do |movie|</code>
+            <code class="ruby">    @movie_service.top_twenty_movies.map do |movie|</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="40" data-linenumber="10">
-            <span class="hits">40</span>
+          <li class="covered" data-hits="62" data-linenumber="8">
+            <span class="hits">62</span>
             
 
             
 
-            <code class="ruby">			Movie.new(movie)</code>
+            <code class="ruby">      Movie.new(movie)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="9">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -2462,62 +2473,62 @@
 
             
 
-            <code class="ruby">		end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="12">
-            
-            
-
-            
-
-            <code class="ruby">	end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="13">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="14">
+          <li class="covered" data-hits="1" data-linenumber="12">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">	def movie_details(id)</code>
+            <code class="ruby">  def search(query)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="31" data-linenumber="15">
-            <span class="hits">31</span>
+          <li class="covered" data-hits="3" data-linenumber="13">
+            <span class="hits">3</span>
             
 
             
 
-            <code class="ruby">		movie = MovieService.new.movie_details(id)</code>
+            <code class="ruby">    @movie_service.search_results(query).map do |movie|</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="31" data-linenumber="16">
-            <span class="hits">31</span>
+          <li class="covered" data-hits="42" data-linenumber="14">
+            <span class="hits">42</span>
             
 
             
 
-            <code class="ruby">		Movie.new(movie)</code>
+            <code class="ruby">      Movie.new(movie)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="15">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="16">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -2528,40 +2539,40 @@
 
             
 
-            <code class="ruby">	end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="18">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="19">
+          <li class="covered" data-hits="1" data-linenumber="18">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">	def cast_details(id)</code>
+            <code class="ruby">  def movie_details(id)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="11" data-linenumber="20">
-            <span class="hits">11</span>
+          <li class="covered" data-hits="31" data-linenumber="19">
+            <span class="hits">31</span>
             
 
             
 
-            <code class="ruby">		MovieService.new.cast_details(id)</code>
+            <code class="ruby">    movie = @movie_service.movie_details(id)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="31" data-linenumber="20">
+            <span class="hits">31</span>
+            
+
+            
+
+            <code class="ruby">    Movie.new(movie)</code>
           </li>
         </div>
       
@@ -2572,7 +2583,7 @@
 
             
 
-            <code class="ruby">	end</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -2594,18 +2605,18 @@
 
             
 
-            <code class="ruby">	def reviews(id)</code>
+            <code class="ruby">  def cast_details(id)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="11" data-linenumber="24">
-            <span class="hits">11</span>
+          <li class="covered" data-hits="12" data-linenumber="24">
+            <span class="hits">12</span>
             
 
             
 
-            <code class="ruby">		MovieService.new.reviews(id)</code>
+            <code class="ruby">    @movie_service.cast_details(id)</code>
           </li>
         </div>
       
@@ -2616,12 +2627,56 @@
 
             
 
-            <code class="ruby">	end</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="26">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="27">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def reviews(id)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="12" data-linenumber="28">
+            <span class="hits">12</span>
+            
+
+            
+
+            <code class="ruby">    @movie_service.reviews(id)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="29">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="30">
             
             
 
@@ -3608,8 +3663,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="137" data-linenumber="13">
-            <span class="hits">137</span>
+          <li class="covered" data-hits="141" data-linenumber="13">
+            <span class="hits">141</span>
             
 
             
@@ -3619,8 +3674,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="137" data-linenumber="14">
-            <span class="hits">137</span>
+          <li class="covered" data-hits="141" data-linenumber="14">
+            <span class="hits">141</span>
             
 
             
@@ -3630,8 +3685,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="137" data-linenumber="15">
-            <span class="hits">137</span>
+          <li class="covered" data-hits="141" data-linenumber="15">
+            <span class="hits">141</span>
             
 
             
@@ -3641,8 +3696,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="137" data-linenumber="16">
-            <span class="hits">137</span>
+          <li class="covered" data-hits="141" data-linenumber="16">
+            <span class="hits">141</span>
             
 
             
@@ -3652,8 +3707,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="137" data-linenumber="17">
-            <span class="hits">137</span>
+          <li class="covered" data-hits="141" data-linenumber="17">
+            <span class="hits">141</span>
             
 
             
@@ -3663,8 +3718,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="137" data-linenumber="18">
-            <span class="hits">137</span>
+          <li class="covered" data-hits="141" data-linenumber="18">
+            <span class="hits">141</span>
             
 
             
@@ -3674,8 +3729,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="137" data-linenumber="19">
-            <span class="hits">137</span>
+          <li class="covered" data-hits="141" data-linenumber="19">
+            <span class="hits">141</span>
             
 
             
@@ -6438,6 +6493,268 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="28">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="2caf2301bd282cac83ae434f6193467397a3eb28">
+  <div class="header">
+    <h3>spec/features/landing/index_spec.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>11</b> relevant lines.
+      <span class="green"><b>11</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="1">
+            
+            
+
+            
+
+            <code class="ruby"># frozen_string_literal: true</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="2">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="3">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">require &#39;rails_helper&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="4">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="5">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">RSpec.describe &#39;Landing Page&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="6">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  describe &#39;As a visitor&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="7">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    describe &#39;When I visit the root path (/)&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="8">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      it &#39;I see a welcome message, a button to create a new user&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="9">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        visit root_path</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="11">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_content(&#39;Welcome to Viewing Party&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="12">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_button(&#39;Register as a User&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="13">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_button(&#39;I already have an account&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="14">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="15">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        click_on &#39;Register as a User&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="16">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="17">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_current_path(&#39;/register&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="18">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="19">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="20">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="21">
             
             
 

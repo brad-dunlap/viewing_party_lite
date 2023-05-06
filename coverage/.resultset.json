@@ -276,6 +276,65 @@
           null
         ]
       },
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/app/facades/movies_facade.rb": {
+        "lines": [
+          1,
+          1,
+          62,
+          null,
+          null,
+          1,
+          4,
+          62,
+          null,
+          null,
+          null,
+          1,
+          3,
+          42,
+          null,
+          null,
+          null,
+          1,
+          31,
+          31,
+          null,
+          null,
+          1,
+          12,
+          null,
+          null,
+          1,
+          12,
+          null,
+          null
+        ]
+      },
+      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/spec/features/landing/index_spec.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/spec/features/services/movie_service_spec.rb": {
         "lines": [
           null,
@@ -1169,13 +1228,13 @@
           null,
           null,
           1,
-          137,
-          137,
-          137,
-          137,
-          137,
-          137,
-          137,
+          141,
+          141,
+          141,
+          141,
+          141,
+          141,
+          141,
           null,
           null
         ]
@@ -1309,36 +1368,6 @@
           null
         ]
       },
-      "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/app/facades/movies_facade.rb": {
-        "lines": [
-          1,
-          1,
-          3,
-          60,
-          null,
-          null,
-          null,
-          1,
-          2,
-          40,
-          null,
-          null,
-          null,
-          1,
-          31,
-          31,
-          null,
-          null,
-          1,
-          11,
-          null,
-          null,
-          1,
-          11,
-          null,
-          null
-        ]
-      },
       "/Users/braddunlap/Desktop/turing_work/3mod/projects/viewing_party_lite/app/controllers/viewing_parties_controller.rb": {
         "lines": [
           1,
@@ -1384,6 +1413,6 @@
         ]
       }
     },
-    "timestamp": 1683391670
+    "timestamp": 1683392922
   }
 }
