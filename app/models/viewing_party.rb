@@ -8,15 +8,6 @@ class ViewingParty < ApplicationRecord
   validates :host_id, presence: true
   validates :movie_id, presence: true
 	
-	validate :at_least_one_attendee
-
-	private
-
-	def at_least_one_attendee
-		unless users.any?
-			errors.add(:base, "Please select at least one attendee")
-		end
-	end
 
   def party_details
     movie = MoviesFacade.new.movie_details(movie_id)
@@ -34,4 +25,5 @@ class ViewingParty < ApplicationRecord
       attendees: attendees
 	}
 	end
+	
 end

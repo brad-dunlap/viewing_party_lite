@@ -39,7 +39,7 @@ RSpec.describe 'Viewing Party New Page' do
         expect(page).to have_field('Duration')
         expect(page).to have_field(:party_date)
         expect(page).to have_field(:party_time)
-        expect(page).to have_content(@bob.name)
+        expect(page).to_not have_content(@bob.name)
         expect(page).to have_content(@sally.name)
         expect(page).to have_button('Create Party')
       end

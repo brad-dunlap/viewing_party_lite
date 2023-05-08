@@ -70,6 +70,7 @@ group :test do
   gem 'simplecov'
   gem 'webmock'
 	gem 'database_cleaner-active_record'
+	gem 'coderay'
 end
 
 gem 'figaro'
