@@ -69,6 +69,7 @@ group :test do
   gem 'shoulda-matchers'
   gem 'simplecov'
   gem 'webmock'
+	gem 'vcr'
 	gem 'database_cleaner-active_record'
 	gem 'coderay'
 end

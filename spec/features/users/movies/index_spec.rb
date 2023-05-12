@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Movies Index Page' do
-  describe 'As a user' do
+  describe 'As a user', :vcr do 
     describe 'When I visit the discover movies page' do
       before do
         top_movies = File.read('spec/fixtures/top_movies.json')
@@ -12,65 +12,7 @@ RSpec.describe 'Movies Index Page' do
         cast_details = File.read('spec/fixtures/cast_details.json')
         reviews = File.read('spec/fixtures/reviews.json')
 
-        stub_request(:get, 'https://api.themoviedb.org/3/search/movie?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458&query=%7B:params=%3E%22godfather%22%7D')
-          .with(
-            headers: {
-              'Accept' => '*/*',
-              'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-              'User-Agent' => 'Faraday v2.7.4'
-            }
-          )
-          .to_return(status: 200, body: top_movies, headers: {})
-
-        stub_request(:get, 'https://api.themoviedb.org/3/movie/top_rated?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458')
-          .with(
-            headers: {
-              'Accept' => '*/*',
-              'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-              'User-Agent' => 'Faraday v2.7.4'
-            }
-          )
-          .to_return(status: 200, body: search_results, headers: {})
-
-        stub_request(:get, 'https://api.themoviedb.org/3/search/movie?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458&query=godfather')
-          .with(
-            headers: {
-              'Accept' => '*/*',
-              'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-              'User-Agent' => 'Faraday v2.7.4'
-            }
-          )
-          .to_return(status: 200, body: search_results, headers: {})
-
-        stub_request(:get, 'https://api.themoviedb.org/3/movie/238?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458')
-          .with(
-            headers: {
-              'Accept' => '*/*',
-              'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-              'User-Agent' => 'Faraday v2.7.4'
-            }
-          )
-          .to_return(status: 200, body: movie_details, headers: {})
-
-        stub_request(:get, 'https://api.themoviedb.org/3/movie/238/credits?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458')
-          .with(
-            headers: {
-              'Accept' => '*/*',
-              'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-              'User-Agent' => 'Faraday v2.7.4'
-            }
-          )
-          .to_return(status: 200, body: cast_details, headers: {})
-
-        stub_request(:get, 'https://api.themoviedb.org/3/movie/238/reviews?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458')
-          .with(
-            headers: {
-              'Accept' => '*/*',
-              'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-              'User-Agent' => 'Faraday v2.7.4'
-            }
-          )
-          .to_return(status: 200, body: reviews, headers: {})
+        
 
         @bob = User.create!(name: 'Bob', email: 'bob@bob.com', password: 'testing')
 

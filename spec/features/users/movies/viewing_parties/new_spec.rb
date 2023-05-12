@@ -1,38 +1,19 @@
 require 'rails_helper'
 
 RSpec.describe 'Viewing Party New Page' do
-  describe 'As a user' do
+  describe 'As a user', :vcr do
     describe 'When I visit the new viewing party page' do
       before do
-        movie_details = File.read('spec/fixtures/movie_details.json')
-        stub_request(:get, "https://api.themoviedb.org/3/movie/238?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458").
-         with(
-           headers: {
-          'Accept'=>'*/*',
-          'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-          'User-Agent'=>'Faraday v2.7.4'
-           }).
-         to_return(status: 200, body: movie_details, headers: {})
-
-         stub_request(:get, "https://api.themoviedb.org/3/movie/278?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458").
-         with(
-           headers: {
-          'Accept'=>'*/*',
-          'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-          'User-Agent'=>'Faraday v2.7.4'
-           }).
-         to_return(status: 200, body: movie_details, headers: {})
-
         @bob = User.create!(name: 'Bob', email: 'bob@gmail.com', password: 'testing')
         @sally = User.create!(name: 'Sally', email: 'sally@gmail.com', password: 'testing')
-				@brad = User.create!(name: 'Brad', email: 'brad@gmail.com', password: 'testing')
-        
-				visit login_path
-				
-				fill_in :email, with: @bob.email
-				fill_in :password, with: @bob.password
-				click_on "Log In"
-        visit "/dashboard/movies/238/viewing-party/new"
+        @brad = User.create!(name: 'Brad', email: 'brad@gmail.com', password: 'testing')
+
+        visit login_path
+
+        fill_in :email, with: @bob.email
+        fill_in :password, with: @bob.password
+        click_on 'Log In'
+        visit '/dashboard/movies/238/viewing-party/new'
       end
 
       it 'I see a form to create a viewing party' do
@@ -44,21 +25,21 @@ RSpec.describe 'Viewing Party New Page' do
         expect(page).to have_button('Create Party')
       end
 
-      it 'I see a form to create a viewing party' do
+      it 'creates a viewing party' do
         fill_in 'Duration', with: 180
         fill_in :party_date, with: '2021-10-10'
         fill_in :party_time, with: '12:00'
-				check @sally.name
-				check @brad.name
+        check @sally.name
+        check @brad.name
         click_button 'Create Party'
 
         expect(current_path).to eq('/dashboard')
       end
 
-      it 'sad path for create form' do
+      it 'shows an error message for invalid input' do
         click_button 'Create Party'
 
-        expect(page).to have_content("Invalid Input")
+        expect(page).to have_content('Invalid Input')
       end
     end
   end

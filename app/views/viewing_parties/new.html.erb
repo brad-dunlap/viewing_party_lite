@@ -21,6 +21,7 @@
 		<%= f.collection_check_boxes(:users, User.all.reject { |user| user == current_user}, :id, :name, include_hidden: false) %></p>
 		<%= f.hidden_field :host_id, value: @user.id %>
 		<%= f.hidden_field :movie_id, value: @movie.id %>
+		
 
 		<p><%= f.submit "Create Party", :class => "discover" %></p>
 	<% end %>
