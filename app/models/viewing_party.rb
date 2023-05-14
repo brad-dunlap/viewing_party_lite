@@ -1,5 +1,5 @@
 class ViewingParty < ApplicationRecord
-  has_many :user_viewing_parties
+  has_many :user_viewing_parties, dependent: :destroy
   has_many :users, through: :user_viewing_parties
 
   validates :duration, presence: true
@@ -15,6 +15,7 @@ class ViewingParty < ApplicationRecord
 		attendees = users.pluck(:name)
 
     details = {
+			id: id,
       image: "http://image.tmdb.org/t/p/w500/#{movie.poster_path}",
       movie_id: movie_id,
       title: movie.title,

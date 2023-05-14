@@ -15,8 +15,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_20_231043) do
   enable_extension "plpgsql"
 
   create_table "user_viewing_parties", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "viewing_party_id"
+    t.bigint "user_id", null: false
+    t.bigint "viewing_party_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_user_viewing_parties_on_user_id"

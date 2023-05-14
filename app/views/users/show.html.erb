@@ -112,10 +112,11 @@
       <% end %>
 
 			<% if @user.name == party[:host] %>
-				<%= button_to "Edit Party", "/dashboard/parties/#{party[:party_id]}/edit", method: :patch, :class => "edit" %> <br>
-				<%= button_to "Delete Party", "/dashboard/movies/#{party[:movie_id]}/viewing-party/#{party[:party_id]}", method: :destroy, :class => "delete" %>
-
+				<%= button_to "Edit Party", edit_user_movie_viewing_party_path(party[:movie_id], party[:id]), method: :get, class: "edit" %> <br>
+				<%= button_to "Delete Party", user_movie_viewing_party_path(party[:movie_id], party[:id]), method: :delete, class: "delete" %>
 			<% end %>
+
+
     </div>
   <% end %>
 

@@ -28,9 +28,10 @@ class ViewingPartiesController < ApplicationController
       redirect_to "/dashboard/movies/#{movie.id}/viewing-party/new"
     end
   end
+	
 
 	def destroy
-		party = ViewingParty.find(params[:id])
+		party = ViewingParty.find(params[:party_id])
 		party.destroy
 		redirect_to '/dashboard'
 	end
