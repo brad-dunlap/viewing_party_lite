@@ -31,7 +31,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/brad-dunlap/viewing_party_lite">
-    <img src= alt="Logo" width="80" height="80">
+    <img src= db/images/camera.webp  alt="Logo" width="100" height="80">
   </a>
 
 <h3 align="center">Viewing Party</h3>
@@ -191,7 +191,16 @@ You must have the following software installed on your system:
 <br />
 Users:
 
-![Users_table](/images/users_table.png)
+![Users_table](db/images/users_table.png)
+
+Viewing Parties:
+
+![Viewing_parties_table](db/images/viewing_parties_table.png)
+
+Users Viewing Parties:
+
+![Users_viewing_parties_table](db/images/user_viewing_parties_table.png)
+
 
 See the [open issues](https://github.com/wise-app-team/wise-app-be/issues) for a full list of proposed features (and known issues).
 
@@ -200,30 +209,6 @@ See the [open issues](https://github.com/wise-app-team/wise-app-be/issues) for a
 <br />
 ### Requests and Responses
 <br />
-
-Weather Requests
-![weather_request](/images/weather_request.png)
-![weather_response](/images/weather_response.png)
-<br />
-<br />
-Registration Requests
-
-![registration](/images/registration_request_and_response.png)
-<br />
-<br />
-Login Requests
-
-![login](/images/login_request_and_response.png)
-<br />
-<br />
-RoadTrip Requests
-
-![roadtrip_request](/images/roadtrip_request.png)
-![roadtrip_response](/images/roadtrip_response.png)
-<br />
-<br />
-
-
 
 
 <!-- CONTRIBUTING -->
@@ -263,7 +248,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- PROJECT MANAGER -->
 ## Project Manager
 
-* Mike Dao and Abdul Redd (instructor team)
+* Abdul Redd
 
 <a href="#top">Back to top</a>
 <br />
