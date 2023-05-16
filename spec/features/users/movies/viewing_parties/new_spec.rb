@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'Viewing Party New Page' do
@@ -20,7 +22,7 @@ RSpec.describe 'Viewing Party New Page' do
         expect(page).to have_field('Duration')
         expect(page).to have_field(:party_date)
         expect(page).to have_field(:party_time)
-        expect(page).to_not have_content(@bob.name)
+        expect(page).not_to have_content(@bob.name)
         expect(page).to have_content(@sally.name)
         expect(page).to have_button('Create Party')
       end
@@ -33,7 +35,7 @@ RSpec.describe 'Viewing Party New Page' do
         check @brad.name
         click_button 'Create Party'
 
-        expect(current_path).to eq('/dashboard')
+        expect(page).to have_current_path('/dashboard')
       end
 
       it 'shows an error message for invalid input' do

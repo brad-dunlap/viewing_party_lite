@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'Movie Show Page' do
@@ -10,7 +12,7 @@ RSpec.describe 'Movie Show Page' do
       fill_in 'password', with: @bob.password
       click_on 'Log In'
 
-      visit "/dashboard/movies/278"
+      visit '/dashboard/movies/278'
     end
 
     it 'displays the movie details' do
@@ -40,7 +42,7 @@ RSpec.describe 'Movie Show Page' do
 
     it 'navigates to the new viewing party page' do
       click_button 'Create Viewing Party'
-      expect(current_path).to eq('/dashboard/movies/278/viewing-party/new')
+      expect(page).to have_current_path('/dashboard/movies/278/viewing-party/new')
     end
   end
 end

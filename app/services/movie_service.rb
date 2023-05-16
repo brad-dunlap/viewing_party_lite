@@ -5,13 +5,12 @@ class MovieService
     response = conn.get('movie/top_rated')
     parsed = JSON.parse(response.body, symbolize_names: true)
     parsed[:results].take(20)
-    
   end
 
   def search_results(query)
     response = conn.get("search/movie?query=#{query}")
     parsed = JSON.parse(response.body, symbolize_names: true)
-    movies = parsed[:results].take(20)
+    parsed[:results].take(20)
   end
 
   def movie_details(id)

@@ -15,6 +15,9 @@ Rails.application.routes.draw do
   resource :user, only: [:show], path: '/dashboard' do
     resources :discover, only: [:index]
     resources :movies, only: [:index, :show] do
+      collection do
+        get :search # Route for searching movies without query parameters
+      end
       resources :viewing_parties, path: 'viewing-party', only: [:new, :create, :edit, :update]
     end
   end

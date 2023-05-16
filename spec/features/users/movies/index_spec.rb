@@ -3,35 +3,33 @@
 require 'rails_helper'
 
 RSpec.describe 'Movies Index Page' do
-  describe 'As a user', :vcr do 
+  describe 'As a user', :vcr do
     describe 'When I visit the discover movies page' do
       before do
-        top_movies = File.read('spec/fixtures/top_movies.json')
-        search_results = File.read('spec/fixtures/search_results.json')
-        movie_details = File.read('spec/fixtures/movie_details.json')
-        cast_details = File.read('spec/fixtures/cast_details.json')
-        reviews = File.read('spec/fixtures/reviews.json')
-
-        
+        File.read('spec/fixtures/top_movies.json')
+        File.read('spec/fixtures/search_results.json')
+        File.read('spec/fixtures/movie_details.json')
+        File.read('spec/fixtures/cast_details.json')
+        File.read('spec/fixtures/reviews.json')
 
         @bob = User.create!(name: 'Bob', email: 'bob@bob.com', password: 'testing')
 
-        visit "/dashboard/discover"
+        visit '/dashboard/discover'
       end
 
       describe 'and click on the Top Movies button' do
         it 'shows the top 20 search results' do
           click_button 'Top Rated Movies'
 
-          expect(current_path).to eq "/dashboard/movies"
+          expect(page).to have_current_path('/dashboard/movies', ignore_query: true)
 
           expect(page).to have_content('Top Rated Movies')
-          
+
           expect(page).to have_content('Vote Average 8.7')
 
-          click_link('', href: "/dashboard/movies/238")
+          click_link('', href: '/dashboard/movies/238')
 
-          expect(current_path).to eq("/dashboard/movies/238")
+          expect(page).to have_current_path('/dashboard/movies/238', ignore_query: true)
         end
       end
 
@@ -40,15 +38,15 @@ RSpec.describe 'Movies Index Page' do
           fill_in :search, with: 'godfather'
           click_button 'Search Movies'
 
-          expect(current_path).to eq "/dashboard/movies"
+          expect(page).to have_current_path('/dashboard/movies', ignore_query: true)
 
           expect(page).to have_content('Search Movies')
-          
+
           expect(page).to have_content('Vote Average 8.7')
 
-          click_link("", href: "/dashboard/movies/238")
+          click_link('', href: '/dashboard/movies/238')
 
-          expect(current_path).to eq("/dashboard/movies/238")
+          expect(page).to have_current_path('/dashboard/movies/238')
         end
       end
 
@@ -60,7 +58,7 @@ RSpec.describe 'Movies Index Page' do
 
           click_button 'Discover Movies'
 
-          expect(current_path).to eq("/dashboard/discover")
+          expect(page).to have_current_path('/dashboard/discover')
         end
       end
     end

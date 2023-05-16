@@ -9,7 +9,7 @@ RSpec.describe 'Discover Index Page' do
       visit login_path
       fill_in :email, with: @bob.email
       fill_in :password, with: @bob.password
-      click_on "Log In"
+      click_on 'Log In'
       visit '/dashboard/discover'
     end
 
@@ -19,8 +19,8 @@ RSpec.describe 'Discover Index Page' do
           expect(page).to have_button('Top Rated Movies')
 
           click_button 'Top Rated Movies'
-
-          expect(current_path).to eq("/dashboard/movies")
+					save_and_open_page
+          expect(page).to have_current_path('/dashboard/movies', ignore_query: true)
         end
       end
 
@@ -34,7 +34,7 @@ RSpec.describe 'Discover Index Page' do
 
           click_button 'Search Movies'
 
-          expect(current_path).to eq("/dashboard/movies")
+          expect(page).to have_current_path('/dashboard/movies', ignore_query: true)
         end
       end
     end

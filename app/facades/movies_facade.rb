@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MoviesFacade
   def initialize(movie_service = MovieService.new)
     @movie_service = movie_service

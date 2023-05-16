@@ -42,14 +42,15 @@ describe MovieService do
     describe '#movie_details' do
       it 'returns the details for a movie' do
         movie_details = File.read('spec/fixtures/movie_details.json')
-        stub_request(:get, "https://api.themoviedb.org/3/movie/278?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458").
-         with(
-           headers: {
-          'Accept'=>'*/*',
-          'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-          'User-Agent'=>'Faraday v2.7.4'
-           }).
-         to_return(status: 200, body: movie_details, headers: {})
+        stub_request(:get, 'https://api.themoviedb.org/3/movie/278?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458')
+          .with(
+            headers: {
+              'Accept' => '*/*',
+              'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+              'User-Agent' => 'Faraday v2.7.4'
+            }
+          )
+          .to_return(status: 200, body: movie_details, headers: {})
 
         expect(described_class.new.movie_details(278)).to be_a(Hash)
       end
@@ -58,14 +59,15 @@ describe MovieService do
     describe '#cast_details' do
       it 'returns the cast for a movie' do
         cast_details = File.read('spec/fixtures/cast_details.json')
-        stub_request(:get, "https://api.themoviedb.org/3/movie/278/credits?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458").
-        with(
-          headers: {
-         'Accept'=>'*/*',
-         'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-         'User-Agent'=>'Faraday v2.7.4'
-          }).
-        to_return(status: 200, body: cast_details, headers: {})
+        stub_request(:get, 'https://api.themoviedb.org/3/movie/278/credits?api_key=0ec9f3b92d1ab9c1631a6787b9aa3458')
+          .with(
+            headers: {
+              'Accept' => '*/*',
+              'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+              'User-Agent' => 'Faraday v2.7.4'
+            }
+          )
+          .to_return(status: 200, body: cast_details, headers: {})
 
         expect(described_class.new.cast_details(278)).to be_an(Array)
       end
