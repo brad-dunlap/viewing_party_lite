@@ -31,13 +31,16 @@
 <br />
 <div align="center">
   <a href="https://github.com/brad-dunlap/viewing_party_lite">
-    <img src= db/images/camera.webp  alt="Logo" width="100" height="80">
+    <img src= db/images/camera.webp  alt="Logo" width="200" height="160">
   </a>
 
-<h3 align="center">Viewing Party</h3>
+<h3 align="center"><a href="https://watch-together.herokuapp.com/">Viewing Party</a></h3>
 
   <p align="center">
     Mod 3 Paired Project
+    <br />
+  <p align="center">
+    <a href="https://watch-together.herokuapp.com/">Live Application Link</a>
     <br />
        ·
     <a href="https://github.com/brad-dunlap/viewing_party_lite/issues">Report Bug</a>
